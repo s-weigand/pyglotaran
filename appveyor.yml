@@ -106,7 +106,7 @@ deploy_script:
   - python -m pip install twine
   # upload to PyPi
 ############## TESTING #################
-  - 'if "%APPVEYOR_REPO_TAG%"=="true" and "%APPVEYOR_REPO_BRANCH%"=="master" ( python -m twine upload --skip-existing --repository-url https://test.pypi.org/legacy/ dist/*.whl)'
+  - 'if "%APPVEYOR_REPO_TAG%"=="true" and "%APPVEYOR_REPO_BRANCH%"=="test-fix-win-deploy" ( python -m twine upload --skip-existing --repository-url https://test.pypi.org/legacy/ dist/*.whl)'
 ############## TESTING #################
 ############# PRODUCTION ###############
 #  - if "%APPVEYOR_REPO_TAG%"=="true" ( python -m twine upload --skip-existing dist/*.whl)
