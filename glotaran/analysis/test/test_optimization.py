@@ -227,6 +227,8 @@ def test_fitting(suite, index_dependend, grouped):
     print(result.optimized_parameter)
     print(result.data['dataset1'])
 
+    # assert result.fit_aborted is not True
+
     for _, param in result.optimized_parameter.all():
         assert np.allclose(param.value, wanted.get(param.full_label).value,
                            rtol=1e-1)

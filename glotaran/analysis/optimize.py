@@ -60,7 +60,8 @@ def optimize_task(initial_parameter, scheme, verbose):
 
     return Result(scheme, datasets, parameter,
                   lm_result.nfev, lm_result.nvarys, lm_result.ndata, lm_result.nfree,
-                  lm_result.chisqr, lm_result.redchi, lm_result.var_names, covar)
+                  lm_result.chisqr, lm_result.redchi, lm_result.var_names, covar,
+                  fit_aborted=lm_result.aborted)
 
 
 def calculate_penalty(parameter, scheme, bag, groups):

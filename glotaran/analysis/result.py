@@ -26,6 +26,7 @@ class Result:
                  red_chisqr: float,
                  var_names: typing.List[str],
                  covar: np.ndarray,
+                 fit_aborted: bool
                  ):
         """The result of a global analysis.
 
@@ -55,6 +56,12 @@ class Result:
         self._red_chisqr = red_chisqr
         self._var_names = var_names
         self._covar = covar
+        self._fit_aborted = fit_aborted
+
+    @property
+    def fit_aborted(self) -> bool:
+        """Whether or not, the fit was aborted."""
+        return self._fit_aborted
 
     @property
     def scheme(self) -> Scheme:
