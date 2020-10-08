@@ -1,0 +1,5 @@
+datasets
+========
+
+.. autoattribute:: glotaran.model.weight.Weight.datasets
+    :noindex:

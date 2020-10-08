@@ -1,0 +1,5 @@
+collect\_usage\_pieces
+======================
+
+.. automethod:: glotaran.cli.main.Cli.collect_usage_pieces
+    :noindex:

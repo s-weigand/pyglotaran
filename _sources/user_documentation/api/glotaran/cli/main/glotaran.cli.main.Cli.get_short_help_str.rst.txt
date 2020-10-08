@@ -1,0 +1,5 @@
+get\_short\_help\_str
+=====================
+
+.. automethod:: glotaran.cli.main.Cli.get_short_help_str
+    :noindex:

@@ -1,0 +1,5 @@
+rate
+====
+
+.. autoattribute:: glotaran.builtin.models.doas.oscillation.Oscillation.rate
+    :noindex:

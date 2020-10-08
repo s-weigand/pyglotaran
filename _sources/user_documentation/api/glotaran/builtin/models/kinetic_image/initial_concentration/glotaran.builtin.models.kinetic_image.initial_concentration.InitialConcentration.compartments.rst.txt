@@ -1,0 +1,5 @@
+compartments
+============
+
+.. autoattribute:: glotaran.builtin.models.kinetic_image.initial_concentration.InitialConcentration.compartments
+    :noindex:

@@ -1,0 +1,62 @@
+
+doas\_model
+===========
+
+.. currentmodule:: glotaran.builtin.models.doas
+
+.. automodule:: glotaran.builtin.models.doas.doas_model
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: doas_model
+      :nosignatures:
+
+      
+        calculate_doas_matrix
+        calculate_doas_spectral_matrix
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: doas_model
+      :nosignatures:
+
+      
+        DOASModel
+
+  
+
+
+
+
+
+  
+
+
+
+

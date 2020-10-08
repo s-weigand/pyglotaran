@@ -1,0 +1,161 @@
+KineticSpectrumModel
+====================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model
+
+.. autoclass:: KineticSpectrumModel
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~KineticSpectrumModel.dataset
+        ~KineticSpectrumModel.equal_area_penalties
+        ~KineticSpectrumModel.global_dimension
+        ~KineticSpectrumModel.index_depended_matrix
+        ~KineticSpectrumModel.initial_concentration
+        ~KineticSpectrumModel.irf
+        ~KineticSpectrumModel.k_matrix
+        ~KineticSpectrumModel.megacomplex
+        ~KineticSpectrumModel.model_dimension
+        ~KineticSpectrumModel.model_type
+        ~KineticSpectrumModel.shape
+        ~KineticSpectrumModel.spectral_constraints
+        ~KineticSpectrumModel.spectral_relations
+        ~KineticSpectrumModel.weights
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~KineticSpectrumModel.add_equal_area_penalties
+      
+      
+        ~KineticSpectrumModel.add_spectral_constraints
+      
+      
+        ~KineticSpectrumModel.add_spectral_relations
+      
+      
+        ~KineticSpectrumModel.add_weights
+      
+      
+        ~KineticSpectrumModel.additional_penalty_function
+      
+      
+        ~KineticSpectrumModel.constrain_matrix_function
+      
+      
+        ~KineticSpectrumModel.finalize_data
+      
+      
+        ~KineticSpectrumModel.from_dict
+      
+      
+        ~KineticSpectrumModel.get_dataset
+      
+      
+        ~KineticSpectrumModel.get_initial_concentration
+      
+      
+        ~KineticSpectrumModel.get_irf
+      
+      
+        ~KineticSpectrumModel.get_k_matrix
+      
+      
+        ~KineticSpectrumModel.get_megacomplex
+      
+      
+        ~KineticSpectrumModel.get_shape
+      
+      
+        ~KineticSpectrumModel.global_matrix
+      
+      
+        ~KineticSpectrumModel.grouped
+      
+      
+        ~KineticSpectrumModel.has_additional_penalty_function
+      
+      
+        ~KineticSpectrumModel.has_matrix_constraints_function
+      
+      
+        ~KineticSpectrumModel.index_dependent
+      
+      
+        ~KineticSpectrumModel.markdown
+      
+      
+        ~KineticSpectrumModel.matrix
+      
+      
+        ~KineticSpectrumModel.optimize
+      
+      
+        ~KineticSpectrumModel.problem_list
+      
+      
+        ~KineticSpectrumModel.result_from_parameter
+      
+      
+        ~KineticSpectrumModel.set_dataset
+      
+      
+        ~KineticSpectrumModel.set_initial_concentration
+      
+      
+        ~KineticSpectrumModel.set_irf
+      
+      
+        ~KineticSpectrumModel.set_k_matrix
+      
+      
+        ~KineticSpectrumModel.set_megacomplex
+      
+      
+        ~KineticSpectrumModel.set_shape
+      
+      
+        ~KineticSpectrumModel.simulate
+      
+      
+        ~KineticSpectrumModel.valid
+      
+      
+        ~KineticSpectrumModel.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

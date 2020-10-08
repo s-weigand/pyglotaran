@@ -1,0 +1,92 @@
+IrfGaussianCoherentArtifact
+===========================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum.spectral_irf
+
+.. autoclass:: IrfGaussianCoherentArtifact
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~IrfGaussianCoherentArtifact.backsweep
+        ~IrfGaussianCoherentArtifact.backsweep_period
+        ~IrfGaussianCoherentArtifact.center
+        ~IrfGaussianCoherentArtifact.center_dispersion
+        ~IrfGaussianCoherentArtifact.coherent_artifact_order
+        ~IrfGaussianCoherentArtifact.coherent_artifact_width
+        ~IrfGaussianCoherentArtifact.dispersion_center
+        ~IrfGaussianCoherentArtifact.label
+        ~IrfGaussianCoherentArtifact.model_dispersion_with_wavenumber
+        ~IrfGaussianCoherentArtifact.normalize
+        ~IrfGaussianCoherentArtifact.scale
+        ~IrfGaussianCoherentArtifact.type
+        ~IrfGaussianCoherentArtifact.width
+        ~IrfGaussianCoherentArtifact.width_dispersion
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~IrfGaussianCoherentArtifact.calculate
+      
+      
+        ~IrfGaussianCoherentArtifact.calculate_coherent_artifact
+      
+      
+        ~IrfGaussianCoherentArtifact.calculate_dispersion
+      
+      
+        ~IrfGaussianCoherentArtifact.clp_labels
+      
+      
+        ~IrfGaussianCoherentArtifact.fill
+      
+      
+        ~IrfGaussianCoherentArtifact.from_dict
+      
+      
+        ~IrfGaussianCoherentArtifact.from_list
+      
+      
+        ~IrfGaussianCoherentArtifact.mprint
+      
+      
+        ~IrfGaussianCoherentArtifact.parameter
+      
+      
+        ~IrfGaussianCoherentArtifact.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

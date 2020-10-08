@@ -1,0 +1,5 @@
+envvar\_list\_splitter
+======================
+
+.. autoattribute:: glotaran.cli.commands.util.ValOrRangeOrList.envvar_list_splitter
+    :noindex:

@@ -1,0 +1,5 @@
+make\_parser
+============
+
+.. automethod:: glotaran.cli.main.Cli.make_parser
+    :noindex:

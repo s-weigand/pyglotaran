@@ -1,0 +1,47 @@
+
+kinetic\_image\_megacomplex
+===========================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_image
+
+.. automodule:: glotaran.builtin.models.kinetic_image.kinetic_image_megacomplex
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: kinetic_image_megacomplex
+      :nosignatures:
+
+      
+        KineticImageMegacomplex
+
+  
+
+
+
+
+
+  
+
+
+
+

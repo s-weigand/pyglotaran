@@ -1,0 +1,5 @@
+optimize
+========
+
+.. automethod:: glotaran.builtin.models.doas.doas_model.DOASModel.optimize
+    :noindex:

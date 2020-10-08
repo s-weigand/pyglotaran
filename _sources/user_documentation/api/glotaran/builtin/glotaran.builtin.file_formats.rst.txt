@@ -1,0 +1,49 @@
+
+file\_formats
+=============
+
+.. currentmodule:: glotaran.builtin.file_formats
+
+.. automodule:: glotaran.builtin.file_formats
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: file_formats
+    :recursive:
+
+    
+      
+        glotaran.builtin.file_formats.ascii
+      
+      
+        glotaran.builtin.file_formats.sdt
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

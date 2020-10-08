@@ -1,0 +1,5 @@
+matrix\_as\_markdown
+====================
+
+.. automethod:: glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.matrix_as_markdown
+    :noindex:

@@ -1,0 +1,5 @@
+nfree
+=====
+
+.. autoattribute:: glotaran.analysis.result.Result.nfree
+    :noindex:

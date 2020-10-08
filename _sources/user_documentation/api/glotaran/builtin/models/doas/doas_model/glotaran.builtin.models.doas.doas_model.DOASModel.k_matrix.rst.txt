@@ -1,0 +1,5 @@
+k\_matrix
+=========
+
+.. autoattribute:: glotaran.builtin.models.doas.doas_model.DOASModel.k_matrix
+    :noindex:

@@ -1,0 +1,5 @@
+resolve\_command
+================
+
+.. automethod:: glotaran.cli.main.Cli.resolve_command
+    :noindex:

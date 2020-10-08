@@ -1,0 +1,5 @@
+get\_k\_matrices
+================
+
+.. automethod:: glotaran.builtin.models.kinetic_image.kinetic_image_dataset_descriptor.KineticImageDatasetDescriptor.get_k_matrices
+    :noindex:

@@ -1,0 +1,5 @@
+from\_dict
+==========
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.spectral_constraints.ZeroConstraint.from_dict
+    :noindex:

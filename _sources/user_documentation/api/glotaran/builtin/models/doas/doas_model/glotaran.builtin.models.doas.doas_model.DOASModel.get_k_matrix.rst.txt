@@ -1,0 +1,5 @@
+get\_k\_matrix
+==============
+
+.. automethod:: glotaran.builtin.models.doas.doas_model.DOASModel.get_k_matrix
+    :noindex:

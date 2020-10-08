@@ -1,0 +1,5 @@
+get\_format\_name
+=================
+
+.. automethod:: glotaran.builtin.file_formats.ascii.wavelength_time_explicit_file.WavelengthExplicitFile.get_format_name
+    :noindex:

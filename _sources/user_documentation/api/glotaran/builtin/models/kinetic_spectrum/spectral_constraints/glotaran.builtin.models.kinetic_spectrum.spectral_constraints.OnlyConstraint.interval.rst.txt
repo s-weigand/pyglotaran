@@ -1,0 +1,5 @@
+interval
+========
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.spectral_constraints.OnlyConstraint.interval
+    :noindex:

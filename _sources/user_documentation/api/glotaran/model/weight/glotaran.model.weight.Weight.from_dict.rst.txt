@@ -1,0 +1,5 @@
+from\_dict
+==========
+
+.. automethod:: glotaran.model.weight.Weight.from_dict
+    :noindex:

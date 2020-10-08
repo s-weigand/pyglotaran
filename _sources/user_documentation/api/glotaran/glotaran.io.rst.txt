@@ -1,0 +1,49 @@
+
+io
+==
+
+.. currentmodule:: glotaran
+
+.. automodule:: glotaran.io
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: io
+    :recursive:
+
+    
+      
+        glotaran.io.prepare_dataset
+      
+      
+        glotaran.io.reader
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

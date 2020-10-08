@@ -1,0 +1,5 @@
+label
+=====
+
+.. autoattribute:: glotaran.parameter.parameter.Parameter.label
+    :noindex:

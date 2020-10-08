@@ -1,0 +1,5 @@
+exclude\_from\_normalize
+========================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_image.initial_concentration.InitialConcentration.exclude_from_normalize
+    :noindex:

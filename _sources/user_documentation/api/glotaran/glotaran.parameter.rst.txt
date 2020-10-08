@@ -1,0 +1,49 @@
+
+parameter
+=========
+
+.. currentmodule:: glotaran
+
+.. automodule:: glotaran.parameter
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: parameter
+    :recursive:
+
+    
+      
+        glotaran.parameter.parameter
+      
+      
+        glotaran.parameter.parameter_group
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

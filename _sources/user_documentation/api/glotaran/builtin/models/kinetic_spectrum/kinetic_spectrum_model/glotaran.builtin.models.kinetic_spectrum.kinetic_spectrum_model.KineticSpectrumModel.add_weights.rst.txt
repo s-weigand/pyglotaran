@@ -1,0 +1,5 @@
+add\_weights
+============
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model.KineticSpectrumModel.add_weights
+    :noindex:

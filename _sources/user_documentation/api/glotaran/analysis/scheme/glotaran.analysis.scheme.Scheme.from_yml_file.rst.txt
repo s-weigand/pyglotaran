@@ -1,0 +1,5 @@
+from\_yml\_file
+===============
+
+.. automethod:: glotaran.analysis.scheme.Scheme.from_yml_file
+    :noindex:

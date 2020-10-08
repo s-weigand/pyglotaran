@@ -1,0 +1,5 @@
+from\_list
+==========
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.spectral_constraints.OnlyConstraint.from_list
+    :noindex:

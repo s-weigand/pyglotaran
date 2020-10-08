@@ -1,0 +1,4 @@
+create\_index\_dependent\_ungrouped\_matrix\_jobs
+=================================================
+
+.. autofunction:: glotaran.analysis.matrix_calculation.create_index_dependent_ungrouped_matrix_jobs

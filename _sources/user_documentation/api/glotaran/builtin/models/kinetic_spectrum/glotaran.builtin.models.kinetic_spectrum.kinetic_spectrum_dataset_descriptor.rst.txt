@@ -1,0 +1,47 @@
+
+kinetic\_spectrum\_dataset\_descriptor
+======================================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum
+
+.. automodule:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_dataset_descriptor
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: kinetic_spectrum_dataset_descriptor
+      :nosignatures:
+
+      
+        KineticSpectrumDatasetDescriptor
+
+  
+
+
+
+
+
+  
+
+
+
+

@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>result_from_parameter &mdash; pyglotaran 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/copybutton.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../../../_static/glotaran_favicon.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../" src="../../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../../_static/language_data.js"></script>
+        <script src="../../../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../search.html" />
+    <link rel="next" title="set_dataset" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.set_dataset.html" />
+    <link rel="prev" title="problem_list" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.problem_list.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../../index.html" class="icon icon-home"> pyglotaran
+          
+
+          
+            
+            <img src="../../../../../../../_static/glotaran.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../quickstart.html">Quickstart/Cheat-Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../dataio.html">Data IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../modelling.html">Modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../parameter.html">Parameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../optimizing.html">Optimizing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api_documentation.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../../glotaran.html">glotaran</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../../glotaran.analysis.html">analysis</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../glotaran.builtin.html">builtin</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../glotaran.builtin.file_formats.html">file_formats</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../glotaran.builtin.models.html">models</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../../glotaran.builtin.models.doas.html">doas</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="../../glotaran.builtin.models.kinetic_image.html">kinetic_image</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="../glotaran.builtin.models.kinetic_image.initial_concentration.html">initial_concentration</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../glotaran.builtin.models.kinetic_image.irf.html">irf</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../glotaran.builtin.models.kinetic_image.k_matrix.html">k_matrix</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../glotaran.builtin.models.kinetic_image.kinetic_image_dataset_descriptor.html">kinetic_image_dataset_descriptor</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../glotaran.builtin.models.kinetic_image.kinetic_image_matrix.html">kinetic_image_matrix</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../glotaran.builtin.models.kinetic_image.kinetic_image_megacomplex.html">kinetic_image_megacomplex</a></li>
+<li class="toctree-l6 current"><a class="reference internal" href="../glotaran.builtin.models.kinetic_image.kinetic_image_model.html">kinetic_image_model</a><ul class="current">
+<li class="toctree-l7"><a class="reference internal" href="../glotaran.builtin.models.kinetic_image.kinetic_image_model.html#functions">Functions</a></li>
+<li class="toctree-l7 current"><a class="reference internal" href="../glotaran.builtin.models.kinetic_image.kinetic_image_model.html#classes">Classes</a><ul class="current">
+<li class="toctree-l8 current"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.html">KineticImageModel</a><ul class="current">
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.additional_penalty_function.html">additional_penalty_function</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.constrain_matrix_function.html">constrain_matrix_function</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.dataset.html">dataset</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.global_dimension.html">global_dimension</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.global_matrix.html">global_matrix</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.has_additional_penalty_function.html">has_additional_penalty_function</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.has_matrix_constraints_function.html">has_matrix_constraints_function</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.index_depended_matrix.html">index_depended_matrix</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.initial_concentration.html">initial_concentration</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.irf.html">irf</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.k_matrix.html">k_matrix</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.megacomplex.html">megacomplex</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.model_dimension.html">model_dimension</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.model_type.html">model_type</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.weights.html">weights</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.add_weights.html">add_weights</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.finalize_data.html">finalize_data</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.from_dict.html">from_dict</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.get_dataset.html">get_dataset</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.get_initial_concentration.html">get_initial_concentration</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.get_irf.html">get_irf</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.get_k_matrix.html">get_k_matrix</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.get_megacomplex.html">get_megacomplex</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.grouped.html">grouped</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.index_dependent.html">index_dependent</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.markdown.html">markdown</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.matrix.html">matrix</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.optimize.html">optimize</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.problem_list.html">problem_list</a></li>
+<li class="toctree-l9 current"><a class="current reference internal" href="#">result_from_parameter</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.set_dataset.html">set_dataset</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.set_initial_concentration.html">set_initial_concentration</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.set_irf.html">set_irf</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.set_k_matrix.html">set_k_matrix</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.set_megacomplex.html">set_megacomplex</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.simulate.html">simulate</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.valid.html">valid</a></li>
+<li class="toctree-l9"><a class="reference internal" href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.validate.html">validate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../glotaran.builtin.models.kinetic_image.kinetic_image_result.html">kinetic_image_result</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../glotaran.builtin.models.kinetic_spectrum.html">kinetic_spectrum</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../glotaran.cli.html">cli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../glotaran.io.html">io</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../glotaran.model.html">model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../glotaran.parameter.html">parameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../glotaran.parse.html">parse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../contributing.html">Contributing</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../index.html">pyglotaran</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../../../../api_documentation.html">API Documentation</a> &raquo;</li>
+        
+          <li><a href="../../../../../glotaran.html">glotaran</a> &raquo;</li>
+        
+          <li><a href="../../../../glotaran.builtin.html">builtin</a> &raquo;</li>
+        
+          <li><a href="../../../glotaran.builtin.models.html">models</a> &raquo;</li>
+        
+          <li><a href="../../glotaran.builtin.models.kinetic_image.html">kinetic_image</a> &raquo;</li>
+        
+          <li><a href="../glotaran.builtin.models.kinetic_image.kinetic_image_model.html">kinetic_image_model</a> &raquo;</li>
+        
+          <li><a href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.html">KineticImageModel</a> &raquo;</li>
+        
+      <li>result_from_parameter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../../../../_sources/user_documentation/api/glotaran/builtin/models/kinetic_image/kinetic_image_model/glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.result_from_parameter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="result-from-parameter">
+<h1>result_from_parameter<a class="headerlink" href="#result-from-parameter" title="Permalink to this headline">¶</a></h1>
+<dl class="py method">
+<dt>
+<code class="sig-prename descclassname">KineticImageModel.</code><code class="sig-name descname">result_from_parameter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parameter</span><span class="p">:</span> <span class="n"><a class="reference internal" href="../../../../parameter/parameter_group/glotaran.parameter.parameter_group.ParameterGroup.html#glotaran.parameter.parameter_group.ParameterGroup" title="glotaran.parameter.parameter_group.ParameterGroup">glotaran.parameter.parameter_group.ParameterGroup</a></span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">, </span>Union<span class="p">[</span>xarray.core.dataarray.DataArray<span class="p">, </span>xarray.core.dataset.Dataset<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">nnls</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a></span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">group_atol</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></span> <span class="o">=</span> <span class="default_value">0.0</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../../../../analysis/result/glotaran.analysis.result.Result.html#glotaran.analysis.result.Result" title="glotaran.analysis.result.Result">glotaran.analysis.result.Result</a></dt>
+<dd><p>Loads a result from parameters without optimization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – A dictionary containing all datasets with their labels as keys.</p></li>
+<li><p><strong>parameter</strong> (<em>glotaran.model.ParameterGroup</em>) – The parameter.</p></li>
+<li><p><strong>nnls</strong> – If <cite>True</cite> non-linear least squares optimizing is used instead of variable projection.</p></li>
+<li><p><strong>group_atol</strong> – The tolerance for grouping datasets along the global axes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.set_dataset.html" class="btn btn-neutral float-right" title="set_dataset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.problem_list.html" class="btn btn-neutral float-left" title="problem_list" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, Joern Weissenborn, Joris Snellenburg, Ivo van Stokkum
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

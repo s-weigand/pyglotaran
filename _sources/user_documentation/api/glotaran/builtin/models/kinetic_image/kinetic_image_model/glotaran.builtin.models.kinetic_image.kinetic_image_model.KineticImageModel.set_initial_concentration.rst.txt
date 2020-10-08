@@ -1,0 +1,5 @@
+set\_initial\_concentration
+===========================
+
+.. automethod:: glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.set_initial_concentration
+    :noindex:

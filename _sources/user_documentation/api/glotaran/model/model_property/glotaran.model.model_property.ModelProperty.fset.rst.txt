@@ -1,0 +1,5 @@
+fset
+====
+
+.. autoattribute:: glotaran.model.model_property.ModelProperty.fset
+    :noindex:

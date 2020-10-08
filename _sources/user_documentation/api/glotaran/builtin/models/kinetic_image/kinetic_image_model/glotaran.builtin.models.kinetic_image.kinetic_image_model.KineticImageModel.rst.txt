@@ -1,0 +1,132 @@
+KineticImageModel
+=================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_image.kinetic_image_model
+
+.. autoclass:: KineticImageModel
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~KineticImageModel.additional_penalty_function
+        ~KineticImageModel.constrain_matrix_function
+        ~KineticImageModel.dataset
+        ~KineticImageModel.global_dimension
+        ~KineticImageModel.global_matrix
+        ~KineticImageModel.has_additional_penalty_function
+        ~KineticImageModel.has_matrix_constraints_function
+        ~KineticImageModel.index_depended_matrix
+        ~KineticImageModel.initial_concentration
+        ~KineticImageModel.irf
+        ~KineticImageModel.k_matrix
+        ~KineticImageModel.megacomplex
+        ~KineticImageModel.model_dimension
+        ~KineticImageModel.model_type
+        ~KineticImageModel.weights
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~KineticImageModel.add_weights
+      
+      
+        ~KineticImageModel.finalize_data
+      
+      
+        ~KineticImageModel.from_dict
+      
+      
+        ~KineticImageModel.get_dataset
+      
+      
+        ~KineticImageModel.get_initial_concentration
+      
+      
+        ~KineticImageModel.get_irf
+      
+      
+        ~KineticImageModel.get_k_matrix
+      
+      
+        ~KineticImageModel.get_megacomplex
+      
+      
+        ~KineticImageModel.grouped
+      
+      
+        ~KineticImageModel.index_dependent
+      
+      
+        ~KineticImageModel.markdown
+      
+      
+        ~KineticImageModel.matrix
+      
+      
+        ~KineticImageModel.optimize
+      
+      
+        ~KineticImageModel.problem_list
+      
+      
+        ~KineticImageModel.result_from_parameter
+      
+      
+        ~KineticImageModel.set_dataset
+      
+      
+        ~KineticImageModel.set_initial_concentration
+      
+      
+        ~KineticImageModel.set_irf
+      
+      
+        ~KineticImageModel.set_k_matrix
+      
+      
+        ~KineticImageModel.set_megacomplex
+      
+      
+        ~KineticImageModel.simulate
+      
+      
+        ~KineticImageModel.valid
+      
+      
+        ~KineticImageModel.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

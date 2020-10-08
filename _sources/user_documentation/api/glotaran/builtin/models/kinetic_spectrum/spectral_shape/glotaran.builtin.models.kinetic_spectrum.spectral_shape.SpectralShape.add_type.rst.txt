@@ -1,0 +1,5 @@
+add\_type
+=========
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.spectral_shape.SpectralShape.add_type
+    :noindex:

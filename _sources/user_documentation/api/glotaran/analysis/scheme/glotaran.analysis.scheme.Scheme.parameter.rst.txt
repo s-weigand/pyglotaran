@@ -1,0 +1,5 @@
+parameter
+=========
+
+.. autoattribute:: glotaran.analysis.scheme.Scheme.parameter
+    :noindex:

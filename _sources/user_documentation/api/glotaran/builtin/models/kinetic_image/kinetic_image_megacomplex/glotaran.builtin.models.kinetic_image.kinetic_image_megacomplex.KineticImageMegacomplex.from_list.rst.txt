@@ -1,0 +1,5 @@
+from\_list
+==========
+
+.. automethod:: glotaran.builtin.models.kinetic_image.kinetic_image_megacomplex.KineticImageMegacomplex.from_list
+    :noindex:

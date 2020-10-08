@@ -1,0 +1,65 @@
+
+matrix\_calculation
+===================
+
+.. currentmodule:: glotaran.analysis
+
+.. automodule:: glotaran.analysis.matrix_calculation
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: matrix_calculation
+      :nosignatures:
+
+      
+        calculate_index_independent_grouped_matrices
+        calculate_index_independent_ungrouped_matrices
+        create_index_dependent_grouped_matrix_jobs
+        create_index_dependent_ungrouped_matrix_jobs
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: matrix_calculation
+      :nosignatures:
+
+      
+        LabelAndMatrix
+        LabelAndMatrixAndData
+
+  
+
+
+
+
+
+  
+
+
+
+

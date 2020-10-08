@@ -1,0 +1,5 @@
+model
+=====
+
+.. autoattribute:: glotaran.analysis.scheme.Scheme.model
+    :noindex:

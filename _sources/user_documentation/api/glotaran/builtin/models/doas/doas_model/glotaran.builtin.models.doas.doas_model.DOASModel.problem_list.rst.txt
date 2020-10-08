@@ -1,0 +1,5 @@
+problem\_list
+=============
+
+.. automethod:: glotaran.builtin.models.doas.doas_model.DOASModel.problem_list
+    :noindex:

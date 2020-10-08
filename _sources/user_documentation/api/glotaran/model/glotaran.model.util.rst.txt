@@ -1,0 +1,47 @@
+
+util
+====
+
+.. currentmodule:: glotaran.model
+
+.. automodule:: glotaran.model.util
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: util
+      :nosignatures:
+
+      
+        wrap_func_as_method
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

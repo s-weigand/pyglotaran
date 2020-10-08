@@ -1,0 +1,5 @@
+initial\_concentration
+======================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_image.kinetic_image_dataset_descriptor.KineticImageDatasetDescriptor.initial_concentration
+    :noindex:

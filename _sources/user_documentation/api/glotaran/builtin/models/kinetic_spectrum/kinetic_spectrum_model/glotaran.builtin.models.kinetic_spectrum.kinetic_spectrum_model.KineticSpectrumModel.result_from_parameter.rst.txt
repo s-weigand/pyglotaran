@@ -1,0 +1,5 @@
+result\_from\_parameter
+=======================
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model.KineticSpectrumModel.result_from_parameter
+    :noindex:

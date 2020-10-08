@@ -1,0 +1,5 @@
+full\_k\_matrix
+===============
+
+.. automethod:: glotaran.builtin.models.doas.doas_megacomplex.DOASMegacomplex.full_k_matrix
+    :noindex:

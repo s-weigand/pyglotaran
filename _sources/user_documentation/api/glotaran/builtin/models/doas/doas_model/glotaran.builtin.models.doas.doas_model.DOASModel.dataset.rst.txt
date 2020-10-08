@@ -1,0 +1,5 @@
+dataset
+=======
+
+.. autoattribute:: glotaran.builtin.models.doas.doas_model.DOASModel.dataset
+    :noindex:

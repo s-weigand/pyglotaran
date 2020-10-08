@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>model &mdash; pyglotaran 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/glotaran_favicon.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="model_property" href="../glotaran.model.model_property.html" />
+    <link rel="prev" title="model_decorator" href="../glotaran.model.model_decorator.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> pyglotaran
+          
+
+          
+            
+            <img src="../../../../../_static/glotaran.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../quickstart.html">Quickstart/Cheat-Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dataio.html">Data IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modelling.html">Modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../parameter.html">Parameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../optimizing.html">Optimizing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../api_documentation.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../glotaran.html">glotaran</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.analysis.html">analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.builtin.html">builtin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.cli.html">cli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.io.html">io</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../glotaran.model.html">model</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../glotaran.model.dataset_descriptor.html">dataset_descriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../glotaran.model.model.html">model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../glotaran.model.model_attribute.html">model_attribute</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../glotaran.model.model_decorator.html">model_decorator</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="../glotaran.model.model_decorator.html#functions">Functions</a><ul class="current">
+<li class="toctree-l6 current"><a class="current reference internal" href="#">model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../glotaran.model.model_property.html">model_property</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../glotaran.model.util.html">util</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../glotaran.model.weight.html">weight</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.parameter.html">parameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.parse.html">parse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../contributing.html">Contributing</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">pyglotaran</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../../api_documentation.html">API Documentation</a> &raquo;</li>
+        
+          <li><a href="../../../glotaran.html">glotaran</a> &raquo;</li>
+        
+          <li><a href="../../glotaran.model.html">model</a> &raquo;</li>
+        
+          <li><a href="../glotaran.model.model_decorator.html">model_decorator</a> &raquo;</li>
+        
+      <li>model</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../../_sources/user_documentation/api/glotaran/model/model_decorator/glotaran.model.model_decorator.model.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="model">
+<h1>model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="glotaran.model.model_decorator.model">
+<code class="sig-prename descclassname">glotaran.model.model_decorator.</code><code class="sig-name descname">model</code><span class="sig-paren">(</span><em class="sig-param">model_type: str, attributes: Dict[str, Any] = {}, dataset_type: Type[glotaran.model.dataset_descriptor.DatasetDescriptor] = &lt;class 'glotaran.model.dataset_descriptor.DatasetDescriptor'&gt;, megacomplex_type: Any = None, matrix: Union[Callable[[Type[glotaran.model.dataset_descriptor.DatasetDescriptor], xarray.core.dataset.Dataset], Tuple[List[str], numpy.ndarray]], Callable[[Type[glotaran.model.dataset_descriptor.DatasetDescriptor], xarray.core.dataset.Dataset, Any], Tuple[List[str], numpy.ndarray]]] = None, global_matrix: Callable[[Type[glotaran.model.dataset_descriptor.DatasetDescriptor], numpy.ndarray], Tuple[List[str], numpy.ndarray]] = None, model_dimension: str = None, global_dimension: str = None, has_matrix_constraints_function: Callable[[Type[glotaran.model.model.Model]], bool] = None, constrain_matrix_function: Callable[[Type[glotaran.model.model.Model], glotaran.parameter.parameter_group.ParameterGroup, List[str], numpy.ndarray, float], Tuple[List[str], numpy.ndarray]] = None, has_additional_penalty_function: Callable[[Type[glotaran.model.model.Model]], bool] = None, additional_penalty_function: Callable[[Type[glotaran.model.model.Model], glotaran.parameter.parameter_group.ParameterGroup, List[str], numpy.ndarray, any], numpy.ndarray] = None, finalize_data_function: Callable[[Type[glotaran.model.model.Model], glotaran.analysis.result.Result], None] = None, grouped: Union[bool, Callable[[Type[glotaran.model.model.Model]], bool]] = False, index_dependent: Union[bool, Callable[[Type[glotaran.model.model.Model]], bool]] = False</em><span class="sig-paren">)</span> &#x2192; Callable<a class="reference internal" href="../../../../../_modules/glotaran/model/model_decorator.html#model"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#glotaran.model.model_decorator.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <cite>&#64;model</cite> decorator is intended to be used on subclasses of <code class="xref py py-class docutils literal notranslate"><span class="pre">glotaran.model.Model</span></code>.
+It creates properties for the given attributes as well as functions to add access them. Also it
+adds the functions (e.g. for <cite>matrix</cite>) to the model ansures they are added wrapped in a correct
+way.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_type</strong> – Human readable string used by the parser to identify the correct model.</p></li>
+<li><p><strong>attributes</strong> – A dictionary of attribute names and types. All types must be decorated with the
+<a class="reference internal" href="../glotaran.model.model_attribute.html#glotaran.model.model_attribute" title="glotaran.model.model_attribute"><code class="xref py py-func docutils literal notranslate"><span class="pre">glotaran.model.model_attribute()</span></code></a> decorator.</p></li>
+<li><p><strong>dataset_type</strong> – A subclass of <code class="xref py py-class docutils literal notranslate"><span class="pre">DatasetDescriptor</span></code></p></li>
+<li><p><strong>megacomplex_type</strong> – A class for the model megacomplexes. The class must be decorated with the
+<a class="reference internal" href="../glotaran.model.model_attribute.html#glotaran.model.model_attribute" title="glotaran.model.model_attribute"><code class="xref py py-func docutils literal notranslate"><span class="pre">glotaran.model.model_attribute()</span></code></a> decorator.</p></li>
+<li><p><strong>matrix</strong> – A function to calculate the matrix for the model.</p></li>
+<li><p><strong>global_matrix</strong> – A function to calculate the global matrix for the model.</p></li>
+<li><p><strong>model_dimension</strong> – The name of model matrix row dimension.</p></li>
+<li><p><strong>global_dimension</strong> – The name of model global matrix row dimension.</p></li>
+<li><p><strong>constrain_matrix_function</strong> – A function to constrain the global matrix for the model.</p></li>
+<li><p><strong>None</strong> – </p></li>
+<li><p><strong>additional_penalty_function</strong> (<em>PenaltyFunction</em>) – A function to calculate additional penalties when optimizing the model.</p></li>
+<li><p><strong>finalize_data_function</strong> – A function to finalize data after optimization.</p></li>
+<li><p><strong>allow_grouping</strong> – If <cite>True</cite>, datasets can can be grouped along the global dimension.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../glotaran.model.model_property.html" class="btn btn-neutral float-right" title="model_property" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../glotaran.model.model_decorator.html" class="btn btn-neutral float-left" title="model_decorator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, Joern Weissenborn, Joris Snellenburg, Ivo van Stokkum
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

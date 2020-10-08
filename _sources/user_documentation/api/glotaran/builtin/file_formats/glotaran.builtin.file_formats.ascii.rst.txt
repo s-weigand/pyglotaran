@@ -1,0 +1,46 @@
+
+ascii
+=====
+
+.. currentmodule:: glotaran.builtin.file_formats.ascii
+
+.. automodule:: glotaran.builtin.file_formats.ascii
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: ascii
+    :recursive:
+
+    
+      
+        glotaran.builtin.file_formats.ascii.wavelength_time_explicit_file
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

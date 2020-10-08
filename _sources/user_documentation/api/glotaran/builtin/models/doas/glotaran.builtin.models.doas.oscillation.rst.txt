@@ -1,0 +1,47 @@
+
+oscillation
+===========
+
+.. currentmodule:: glotaran.builtin.models.doas
+
+.. automodule:: glotaran.builtin.models.doas.oscillation
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: oscillation
+      :nosignatures:
+
+      
+        Oscillation
+
+  
+
+
+
+
+
+  
+
+
+
+

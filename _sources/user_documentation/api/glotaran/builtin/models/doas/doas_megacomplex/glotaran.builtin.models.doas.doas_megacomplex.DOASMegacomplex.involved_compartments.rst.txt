@@ -1,0 +1,5 @@
+involved\_compartments
+======================
+
+.. autoattribute:: glotaran.builtin.models.doas.doas_megacomplex.DOASMegacomplex.involved_compartments
+    :noindex:

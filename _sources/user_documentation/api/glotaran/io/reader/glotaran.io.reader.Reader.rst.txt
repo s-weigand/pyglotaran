@@ -1,0 +1,39 @@
+Reader
+======
+
+.. currentmodule:: glotaran.io.reader
+
+.. autoclass:: Reader
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

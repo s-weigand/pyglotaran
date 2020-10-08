@@ -1,0 +1,34 @@
+DataFileType
+============
+
+.. currentmodule:: glotaran.builtin.file_formats.ascii.wavelength_time_explicit_file
+
+.. autoclass:: DataFileType
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~DataFileType.time_explicit
+        ~DataFileType.wavelength_explicit
+
+    
+    
+
+
+    
+    
+    
+
+    
+    
+    

@@ -1,0 +1,5 @@
+model\_interval
+===============
+
+.. autoattribute:: glotaran.model.weight.Weight.model_interval
+    :noindex:

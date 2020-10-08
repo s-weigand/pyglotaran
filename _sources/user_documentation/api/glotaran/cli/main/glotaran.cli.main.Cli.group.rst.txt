@@ -1,0 +1,5 @@
+group
+=====
+
+.. automethod:: glotaran.cli.main.Cli.group
+    :noindex:

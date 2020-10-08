@@ -1,0 +1,5 @@
+group\_tolerance
+================
+
+.. autoattribute:: glotaran.analysis.scheme.Scheme.group_tolerance
+    :noindex:

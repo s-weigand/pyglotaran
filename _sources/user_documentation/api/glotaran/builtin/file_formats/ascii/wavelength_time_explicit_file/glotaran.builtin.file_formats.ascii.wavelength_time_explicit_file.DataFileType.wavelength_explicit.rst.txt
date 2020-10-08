@@ -1,0 +1,5 @@
+wavelength\_explicit
+====================
+
+.. autoattribute:: glotaran.builtin.file_formats.ascii.wavelength_time_explicit_file.DataFileType.wavelength_explicit
+    :noindex:

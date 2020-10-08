@@ -1,0 +1,5 @@
+calculate
+=========
+
+.. automethod:: glotaran.builtin.models.kinetic_image.irf.IrfGaussian.calculate
+    :noindex:

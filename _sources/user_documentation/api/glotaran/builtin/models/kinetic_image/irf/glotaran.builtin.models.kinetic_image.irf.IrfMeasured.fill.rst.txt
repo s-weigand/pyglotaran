@@ -1,0 +1,5 @@
+fill
+====
+
+.. automethod:: glotaran.builtin.models.kinetic_image.irf.IrfMeasured.fill
+    :noindex:

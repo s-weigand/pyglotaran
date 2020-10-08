@@ -1,0 +1,4 @@
+apply\_spectral\_relations
+==========================
+
+.. autofunction:: glotaran.builtin.models.kinetic_spectrum.spectral_relations.apply_spectral_relations

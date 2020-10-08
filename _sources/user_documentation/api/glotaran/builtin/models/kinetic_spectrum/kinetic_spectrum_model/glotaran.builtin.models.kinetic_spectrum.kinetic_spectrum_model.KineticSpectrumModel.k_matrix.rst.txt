@@ -1,0 +1,5 @@
+k\_matrix
+=========
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model.KineticSpectrumModel.k_matrix
+    :noindex:

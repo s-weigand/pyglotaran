@@ -1,0 +1,47 @@
+
+result
+======
+
+.. currentmodule:: glotaran.analysis
+
+.. automodule:: glotaran.analysis.result
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: result
+      :nosignatures:
+
+      
+        Result
+
+  
+
+
+
+
+
+  
+
+
+
+

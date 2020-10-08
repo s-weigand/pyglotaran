@@ -1,0 +1,50 @@
+
+kinetic\_image\_result
+======================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_image
+
+.. automodule:: glotaran.builtin.models.kinetic_image.kinetic_image_result
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: kinetic_image_result
+      :nosignatures:
+
+      
+        finalize_kinetic_image_result
+        retrieve_decay_assocatiated_data
+        retrieve_irf
+        retrieve_species_assocatiated_data
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

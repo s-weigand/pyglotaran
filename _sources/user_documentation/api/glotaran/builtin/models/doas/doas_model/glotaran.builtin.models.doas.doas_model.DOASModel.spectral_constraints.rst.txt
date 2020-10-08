@@ -1,0 +1,5 @@
+spectral\_constraints
+=====================
+
+.. autoattribute:: glotaran.builtin.models.doas.doas_model.DOASModel.spectral_constraints
+    :noindex:

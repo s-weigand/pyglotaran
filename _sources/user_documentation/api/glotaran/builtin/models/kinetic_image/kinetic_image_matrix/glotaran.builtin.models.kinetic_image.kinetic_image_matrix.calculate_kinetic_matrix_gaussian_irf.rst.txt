@@ -1,0 +1,4 @@
+calculate\_kinetic\_matrix\_gaussian\_irf
+=========================================
+
+.. autofunction:: glotaran.builtin.models.kinetic_image.kinetic_image_matrix.calculate_kinetic_matrix_gaussian_irf

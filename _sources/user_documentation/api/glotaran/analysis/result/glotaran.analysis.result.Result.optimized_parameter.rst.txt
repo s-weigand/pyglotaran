@@ -1,0 +1,5 @@
+optimized\_parameter
+====================
+
+.. autoattribute:: glotaran.analysis.result.Result.optimized_parameter
+    :noindex:

@@ -1,0 +1,47 @@
+
+kinetic\_image\_dataset\_descriptor
+===================================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_image
+
+.. automodule:: glotaran.builtin.models.kinetic_image.kinetic_image_dataset_descriptor
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: kinetic_image_dataset_descriptor
+      :nosignatures:
+
+      
+        KineticImageDatasetDescriptor
+
+  
+
+
+
+
+
+  
+
+
+
+

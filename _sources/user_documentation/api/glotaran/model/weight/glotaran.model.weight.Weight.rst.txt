@@ -1,0 +1,67 @@
+Weight
+======
+
+.. currentmodule:: glotaran.model.weight
+
+.. autoclass:: Weight
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~Weight.datasets
+        ~Weight.global_interval
+        ~Weight.model_interval
+        ~Weight.value
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~Weight.fill
+      
+      
+        ~Weight.from_dict
+      
+      
+        ~Weight.from_list
+      
+      
+        ~Weight.mprint
+      
+      
+        ~Weight.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

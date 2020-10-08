@@ -1,0 +1,4 @@
+finalize\_doas\_data
+====================
+
+.. autofunction:: glotaran.builtin.models.doas.doas_result.finalize_doas_data

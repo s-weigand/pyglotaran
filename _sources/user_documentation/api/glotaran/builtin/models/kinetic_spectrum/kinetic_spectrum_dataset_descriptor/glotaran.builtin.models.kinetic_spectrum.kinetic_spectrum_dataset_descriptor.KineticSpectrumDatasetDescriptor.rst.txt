@@ -1,0 +1,76 @@
+KineticSpectrumDatasetDescriptor
+================================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_dataset_descriptor
+
+.. autoclass:: KineticSpectrumDatasetDescriptor
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~KineticSpectrumDatasetDescriptor.baseline
+        ~KineticSpectrumDatasetDescriptor.initial_concentration
+        ~KineticSpectrumDatasetDescriptor.irf
+        ~KineticSpectrumDatasetDescriptor.label
+        ~KineticSpectrumDatasetDescriptor.megacomplex
+        ~KineticSpectrumDatasetDescriptor.scale
+        ~KineticSpectrumDatasetDescriptor.shape
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~KineticSpectrumDatasetDescriptor.compartments
+      
+      
+        ~KineticSpectrumDatasetDescriptor.fill
+      
+      
+        ~KineticSpectrumDatasetDescriptor.from_dict
+      
+      
+        ~KineticSpectrumDatasetDescriptor.from_list
+      
+      
+        ~KineticSpectrumDatasetDescriptor.get_k_matrices
+      
+      
+        ~KineticSpectrumDatasetDescriptor.mprint
+      
+      
+        ~KineticSpectrumDatasetDescriptor.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

@@ -1,0 +1,5 @@
+command
+=======
+
+.. automethod:: glotaran.cli.main.Cli.command
+    :noindex:

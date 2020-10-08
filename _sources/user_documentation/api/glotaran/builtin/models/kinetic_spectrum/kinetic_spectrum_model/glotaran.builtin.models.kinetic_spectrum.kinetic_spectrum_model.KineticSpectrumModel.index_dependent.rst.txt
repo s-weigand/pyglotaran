@@ -1,0 +1,5 @@
+index\_dependent
+================
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model.KineticSpectrumModel.index_dependent
+    :noindex:

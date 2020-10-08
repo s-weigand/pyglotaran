@@ -1,0 +1,4 @@
+apply\_spectral\_penalties
+==========================
+
+.. autofunction:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model.apply_spectral_penalties

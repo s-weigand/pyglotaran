@@ -1,0 +1,5 @@
+from\_dict
+==========
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_dataset_descriptor.KineticSpectrumDatasetDescriptor.from_dict
+    :noindex:

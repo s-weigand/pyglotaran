@@ -1,0 +1,50 @@
+
+register
+========
+
+.. currentmodule:: glotaran.parse
+
+.. automodule:: glotaran.parse.register
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: register
+      :nosignatures:
+
+      
+        get_model
+        known_model
+        known_model_names
+        register_model
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

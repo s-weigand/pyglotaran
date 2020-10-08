@@ -1,0 +1,5 @@
+initial\_concentration
+======================
+
+.. autoattribute:: glotaran.builtin.models.doas.doas_model.DOASModel.initial_concentration
+    :noindex:

@@ -1,0 +1,5 @@
+global\_interval
+================
+
+.. autoattribute:: glotaran.model.weight.Weight.global_interval
+    :noindex:

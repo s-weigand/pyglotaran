@@ -1,0 +1,5 @@
+format\_usage
+=============
+
+.. automethod:: glotaran.cli.main.Cli.format_usage
+    :noindex:

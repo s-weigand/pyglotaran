@@ -1,0 +1,5 @@
+add\_type
+=========
+
+.. automethod:: glotaran.builtin.models.kinetic_image.irf.Irf.add_type
+    :noindex:

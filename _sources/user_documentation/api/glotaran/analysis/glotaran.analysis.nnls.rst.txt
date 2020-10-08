@@ -1,0 +1,47 @@
+
+nnls
+====
+
+.. currentmodule:: glotaran.analysis
+
+.. automodule:: glotaran.analysis.nnls
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: nnls
+      :nosignatures:
+
+      
+        residual_nnls
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

@@ -1,0 +1,4 @@
+read\_sdt
+=========
+
+.. autofunction:: glotaran.builtin.file_formats.sdt.sdt_file_reader.read_sdt

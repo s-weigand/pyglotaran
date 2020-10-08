@@ -1,0 +1,47 @@
+
+validate
+========
+
+.. currentmodule:: glotaran.cli.commands
+
+.. automodule:: glotaran.cli.commands.validate
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: validate
+      :nosignatures:
+
+      
+        validate_cmd
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

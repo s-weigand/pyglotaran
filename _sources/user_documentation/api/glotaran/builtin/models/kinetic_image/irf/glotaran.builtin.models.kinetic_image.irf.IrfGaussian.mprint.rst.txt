@@ -1,0 +1,5 @@
+mprint
+======
+
+.. automethod:: glotaran.builtin.models.kinetic_image.irf.IrfGaussian.mprint
+    :noindex:

@@ -1,0 +1,72 @@
+Result
+======
+
+.. currentmodule:: glotaran.analysis.result
+
+.. autoclass:: Result
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~Result.chisqr
+        ~Result.covar
+        ~Result.data
+        ~Result.initial_parameter
+        ~Result.model
+        ~Result.ndata
+        ~Result.nfev
+        ~Result.nfree
+        ~Result.nnls
+        ~Result.nvars
+        ~Result.optimized_parameter
+        ~Result.red_chisqr
+        ~Result.root_mean_square_error
+        ~Result.scheme
+        ~Result.var_names
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~Result.get_dataset
+      
+      
+        ~Result.markdown
+      
+      
+        ~Result.save
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

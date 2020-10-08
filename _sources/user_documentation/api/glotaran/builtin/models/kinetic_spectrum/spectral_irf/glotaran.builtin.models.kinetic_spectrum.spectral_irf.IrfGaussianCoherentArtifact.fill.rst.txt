@@ -1,0 +1,5 @@
+fill
+====
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.spectral_irf.IrfGaussianCoherentArtifact.fill
+    :noindex:

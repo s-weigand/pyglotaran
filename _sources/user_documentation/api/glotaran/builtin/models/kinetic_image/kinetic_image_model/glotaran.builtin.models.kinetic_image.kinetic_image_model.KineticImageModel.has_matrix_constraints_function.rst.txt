@@ -1,0 +1,5 @@
+has\_matrix\_constraints\_function
+==================================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.has_matrix_constraints_function
+    :noindex:

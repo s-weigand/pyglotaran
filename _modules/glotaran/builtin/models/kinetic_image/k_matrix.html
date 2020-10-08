@@ -1,0 +1,538 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>glotaran.builtin.models.kinetic_image.k_matrix &mdash; pyglotaran 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/glotaran_favicon.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> pyglotaran
+          
+
+          
+            
+            <img src="../../../../../_static/glotaran.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../quickstart.html">Quickstart/Cheat-Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_documentation/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_documentation/dataio.html">Data IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_documentation/plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_documentation/modelling.html">Modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_documentation/parameter.html">Parameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_documentation/optimizing.html">Optimizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_documentation/api_documentation.html">API Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../contributing.html">Contributing</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">pyglotaran</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>glotaran.builtin.models.kinetic_image.k_matrix</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for glotaran.builtin.models.kinetic_image.k_matrix</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot; K-Matrix &quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">typing</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy</span>
+
+<span class="kn">from</span> <span class="nn">glotaran.model</span> <span class="kn">import</span> <span class="n">model_attribute</span>
+<span class="kn">from</span> <span class="nn">glotaran.parameter</span> <span class="kn">import</span> <span class="n">Parameter</span>
+
+<span class="kn">from</span> <span class="nn">.initial_concentration</span> <span class="kn">import</span> <span class="n">InitialConcentration</span>
+
+
+<div class="viewcode-block" id="KMatrix"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/k_matrix/glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.html#glotaran.builtin.models.kinetic_image.k_matrix.KMatrix">[docs]</a><span class="nd">@model_attribute</span><span class="p">(</span>
+    <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;matrix&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="n">typing</span><span class="o">.</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">Parameter</span><span class="p">]},</span>
+    <span class="p">},</span>
+<span class="p">)</span>
+<span class="k">class</span> <span class="nc">KMatrix</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; A K-Matrix represents a first order differental system.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="KMatrix.empty"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/k_matrix/glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.empty.html#glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.empty">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">empty</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">compartments</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="s2">&quot;KMatrix&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Creates an empty K-Matrix. Useful for combining.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        label :</span>
+<span class="sd">            Label of the K-Matrix</span>
+
+<span class="sd">        compartments :</span>
+<span class="sd">            A list of all compartments in the model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="KMatrix.involved_compartments"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/k_matrix/glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.involved_compartments.html#glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.involved_compartments">[docs]</a>    <span class="k">def</span> <span class="nf">involved_compartments</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot; A list of all compartments in the Matrix. &quot;&quot;&quot;</span>
+        <span class="n">compartments</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">:</span>
+            <span class="n">compartments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">compartments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="n">compartments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">compartments</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">compartments</span></div>
+
+<div class="viewcode-block" id="KMatrix.combine"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/k_matrix/glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.combine.html#glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.combine">[docs]</a>    <span class="k">def</span> <span class="nf">combine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k_matrix</span><span class="p">:</span> <span class="s2">&quot;KMatrix&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;KMatrix&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Creates a combined matrix.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        k_matrix :</span>
+<span class="sd">            KMatrix to combine with.</span>
+
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        combined :</span>
+<span class="sd">            The combined KMatrix.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">k_matrix</span><span class="p">,</span> <span class="n">KMatrix</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;K-Matrices can only be combined with other K-Matrices.&quot;</span><span class="p">)</span>
+        <span class="n">combined_matrix</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">k_matrix</span><span class="o">.</span><span class="n">matrix</span><span class="p">:</span>
+            <span class="n">combined_matrix</span><span class="p">[</span><span class="n">entry</span><span class="p">]</span> <span class="o">=</span> <span class="n">k_matrix</span><span class="o">.</span><span class="n">matrix</span><span class="p">[</span><span class="n">entry</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">:</span>
+            <span class="n">combined_matrix</span><span class="p">[</span><span class="n">entry</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">[</span><span class="n">entry</span><span class="p">]</span>
+        <span class="n">combined</span> <span class="o">=</span> <span class="n">KMatrix</span><span class="p">()</span>
+        <span class="n">combined</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="si">}</span><span class="s2">+</span><span class="si">{</span><span class="n">k_matrix</span><span class="o">.</span><span class="n">label</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">combined</span><span class="o">.</span><span class="n">matrix</span> <span class="o">=</span> <span class="n">combined_matrix</span>
+        <span class="k">return</span> <span class="n">combined</span></div>
+
+<div class="viewcode-block" id="KMatrix.matrix_as_markdown"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/k_matrix/glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.matrix_as_markdown.html#glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.matrix_as_markdown">[docs]</a>    <span class="k">def</span> <span class="nf">matrix_as_markdown</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">compartments</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">fill_parameter</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Returns the KMatrix as markdown formatted table.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        compartments :</span>
+<span class="sd">            (default = None)</span>
+<span class="sd">            An optional list defining the desired order of compartments.</span>
+<span class="sd">        fill_parameter : bool</span>
+<span class="sd">            (default = False)</span>
+<span class="sd">            If true, the entries will be filled with the actual parameter value</span>
+<span class="sd">            instead of abels.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">compartments</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">compartments</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">involved_compartments</span><span class="p">()]</span>
+            <span class="k">if</span> <span class="n">compartments</span>
+            <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">involved_compartments</span><span class="p">()</span>
+        <span class="p">)</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">compartments</span><span class="p">)</span>
+        <span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">object</span><span class="p">)</span>
+        <span class="c1"># Matrix is a dict</span>
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">compartments</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="n">compartments</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">full_label</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">fill_parameter</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_array_as_markdown</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">compartments</span><span class="p">,</span> <span class="n">compartments</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="KMatrix.a_matrix_as_markdown"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/k_matrix/glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.a_matrix_as_markdown.html#glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.a_matrix_as_markdown">[docs]</a>    <span class="k">def</span> <span class="nf">a_matrix_as_markdown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_concentration</span><span class="p">:</span> <span class="n">InitialConcentration</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Returns the A Matrix as markdown formatted table.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        initial_concentration :</span>
+<span class="sd">            The initial concentration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">compartments</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">initial_concentration</span><span class="o">.</span><span class="n">compartments</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">involved_compartments</span><span class="p">()</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_array_as_markdown</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">a_matrix</span><span class="p">(</span><span class="n">initial_concentration</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
+            <span class="n">compartments</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rates</span><span class="p">(</span><span class="n">initial_concentration</span><span class="p">),</span>
+        <span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_array_as_markdown</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">row_header</span><span class="p">,</span> <span class="n">column_header</span><span class="p">):</span>
+        <span class="n">markdown</span> <span class="o">=</span> <span class="s2">&quot;| compartment | &quot;</span>
+        <span class="n">markdown</span> <span class="o">+=</span> <span class="s2">&quot; | &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">e</span><span class="si">:</span><span class="s2">.4e</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">column_header</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">markdown</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">|&quot;</span>
+        <span class="n">markdown</span> <span class="o">+=</span> <span class="s2">&quot;|&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;---&quot;</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">column_header</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)])</span>
+        <span class="n">markdown</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
+            <span class="n">markdown</span> <span class="o">+=</span> <span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">row_header</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2"> | &quot;</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">row_header</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="nb">str</span><span class="p">)</span>
+                <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">row_header</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">.4e</span><span class="si">}</span><span class="s2"> | &quot;</span>
+            <span class="p">)</span>
+            <span class="n">markdown</span> <span class="o">+=</span> <span class="s2">&quot; | &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">e</span><span class="si">:</span><span class="s2">.4e</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
+            <span class="n">markdown</span> <span class="o">+=</span> <span class="s2">&quot;|</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+        <span class="k">return</span> <span class="n">markdown</span>
+
+<div class="viewcode-block" id="KMatrix.reduced"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/k_matrix/glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.reduced.html#glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.reduced">[docs]</a>    <span class="k">def</span> <span class="nf">reduced</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">compartments</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;The reduced representation of the KMatrix as numpy array.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        compartments :</span>
+<span class="sd">            The compartment order.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">compartments</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">compartments</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">involved_compartments</span><span class="p">()]</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">compartments</span><span class="p">)</span>
+        <span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="c1"># Matrix is a dict</span>
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">compartments</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="n">compartments</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">array</span></div>
+
+<div class="viewcode-block" id="KMatrix.full"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/k_matrix/glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.full.html#glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.full">[docs]</a>    <span class="k">def</span> <span class="nf">full</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">compartments</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;The full representation of the KMatrix as numpy array.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        compartments :</span>
+<span class="sd">            The compartment order.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">compartments</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">compartments</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">involved_compartments</span><span class="p">()]</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">compartments</span><span class="p">)</span>
+        <span class="n">mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">to_comp</span><span class="p">,</span> <span class="n">from_comp</span><span class="p">),</span> <span class="n">param</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">to_idx</span> <span class="o">=</span> <span class="n">compartments</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">to_comp</span><span class="p">)</span>
+            <span class="n">fr_idx</span> <span class="o">=</span> <span class="n">compartments</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">from_comp</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">to_idx</span> <span class="o">==</span> <span class="n">fr_idx</span><span class="p">:</span>
+                <span class="n">mat</span><span class="p">[</span><span class="n">to_idx</span><span class="p">,</span> <span class="n">fr_idx</span><span class="p">]</span> <span class="o">-=</span> <span class="n">param</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">mat</span><span class="p">[</span><span class="n">to_idx</span><span class="p">,</span> <span class="n">fr_idx</span><span class="p">]</span> <span class="o">+=</span> <span class="n">param</span>
+                <span class="n">mat</span><span class="p">[</span><span class="n">fr_idx</span><span class="p">,</span> <span class="n">fr_idx</span><span class="p">]</span> <span class="o">-=</span> <span class="n">param</span>
+        <span class="k">return</span> <span class="n">mat</span></div>
+
+<div class="viewcode-block" id="KMatrix.eigen"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/k_matrix/glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.eigen.html#glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.eigen">[docs]</a>    <span class="k">def</span> <span class="nf">eigen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">compartments</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Returns the eigenvalues and eigenvectors of the k matrix.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        compartments :</span>
+<span class="sd">            The compartment order.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># We take the transpose to be consistent with timp</span>
+        <span class="n">matrix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">compartments</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+        <span class="c1"># get the eigenvectors and values, we take the left ones to have</span>
+        <span class="c1"># computation consistent with TIMP</span>
+        <span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">eigenvalues</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">eigenvectors</span><span class="o">.</span><span class="n">real</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="KMatrix.rates"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/k_matrix/glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.rates.html#glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.rates">[docs]</a>    <span class="k">def</span> <span class="nf">rates</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_concentration</span><span class="p">:</span> <span class="n">InitialConcentration</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;The resulting rates of the matrix.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        initial_concentration :</span>
+<span class="sd">            The initial concentration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_unibranched</span><span class="p">(</span><span class="n">initial_concentration</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">initial_concentration</span><span class="o">.</span><span class="n">compartments</span><span class="p">))</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">rates</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eigen</span><span class="p">(</span><span class="n">initial_concentration</span><span class="o">.</span><span class="n">compartments</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">rates</span></div>
+
+    <span class="k">def</span> <span class="nf">_gamma</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">eigenvectors</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+        <span class="n">initial_concentration</span><span class="p">:</span> <span class="n">InitialConcentration</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="n">compartments</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">initial_concentration</span><span class="o">.</span><span class="n">compartments</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">involved_compartments</span><span class="p">()</span>
+        <span class="p">]</span>
+        <span class="n">initial_concentration</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">initial_concentration</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="n">initial_concentration</span><span class="o">.</span><span class="n">compartments</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">c</span><span class="p">)]</span>
+            <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">compartments</span>
+        <span class="p">]</span>
+
+        <span class="n">gamma</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eigenvectors</span><span class="p">,</span> <span class="n">initial_concentration</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">gamma</span><span class="p">)</span>
+
+<div class="viewcode-block" id="KMatrix.a_matrix"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/k_matrix/glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.a_matrix.html#glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.a_matrix">[docs]</a>    <span class="k">def</span> <span class="nf">a_matrix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_concentration</span><span class="p">:</span> <span class="n">InitialConcentration</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;The resulting A matrix of the KMatrix.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        initial_concentration :</span>
+<span class="sd">            The initial concentration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">a_matrix_unibranch</span><span class="p">(</span><span class="n">initial_concentration</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_unibranched</span><span class="p">(</span><span class="n">initial_concentration</span><span class="p">)</span>
+            <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">a_matrix_non_unibranch</span><span class="p">(</span><span class="n">initial_concentration</span><span class="p">)</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="KMatrix.a_matrix_non_unibranch"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/k_matrix/glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.a_matrix_non_unibranch.html#glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.a_matrix_non_unibranch">[docs]</a>    <span class="k">def</span> <span class="nf">a_matrix_non_unibranch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_concentration</span><span class="p">:</span> <span class="n">InitialConcentration</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;The resulting A matrix of the KMatrix for a non-unibranched model.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        initial_concentration :</span>
+<span class="sd">            The initial concentration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eigen</span><span class="p">(</span><span class="n">initial_concentration</span><span class="o">.</span><span class="n">compartments</span><span class="p">)</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gamma</span><span class="p">(</span><span class="n">eigenvectors</span><span class="p">,</span> <span class="n">initial_concentration</span><span class="p">)</span>
+
+        <span class="n">a_matrix</span> <span class="o">=</span> <span class="n">eigenvectors</span> <span class="o">@</span> <span class="n">gamma</span>
+
+        <span class="k">return</span> <span class="n">a_matrix</span><span class="o">.</span><span class="n">T</span></div>
+
+<div class="viewcode-block" id="KMatrix.a_matrix_unibranch"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/k_matrix/glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.a_matrix_unibranch.html#glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.a_matrix_unibranch">[docs]</a>    <span class="k">def</span> <span class="nf">a_matrix_unibranch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_concentration</span><span class="p">:</span> <span class="n">InitialConcentration</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;The resulting A matrix of the KMatrix for an unibranched model.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        initial_concentration :</span>
+<span class="sd">            The initial concentration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">compartments</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">initial_concentration</span><span class="o">.</span><span class="n">compartments</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">involved_compartments</span><span class="p">()</span>
+        <span class="p">]</span>
+        <span class="n">matrix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">compartments</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">rates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+
+        <span class="n">a_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="n">a_matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">rates</span><span class="o">.</span><span class="n">size</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">rates</span><span class="o">.</span><span class="n">size</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">j</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">a_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">([</span><span class="n">rates</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">)])</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span>
+                <span class="p">[</span><span class="n">rates</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">-</span> <span class="n">rates</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">i</span> <span class="o">==</span> <span class="n">m</span><span class="p">]</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">a_matrix</span></div>
+
+<div class="viewcode-block" id="KMatrix.is_unibranched"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/k_matrix/glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.is_unibranched.html#glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.is_unibranched">[docs]</a>    <span class="k">def</span> <span class="nf">is_unibranched</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_concentration</span><span class="p">:</span> <span class="n">InitialConcentration</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Returns true in the KMatrix represents an unibranched model.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        initial_concentration :</span>
+<span class="sd">            The initial concentration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span>
+                <span class="p">[</span>
+                    <span class="n">initial_concentration</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="n">initial_concentration</span><span class="o">.</span><span class="n">compartments</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">c</span><span class="p">)]</span>
+                    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">involved_compartments</span><span class="p">()</span>
+                <span class="p">]</span>
+            <span class="p">)</span>
+            <span class="o">==</span> <span class="mi">1</span>
+        <span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">matrix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reduced</span><span class="p">(</span><span class="n">initial_concentration</span><span class="o">.</span><span class="n">compartments</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">matrix</span><span class="p">[:,</span> <span class="n">i</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, Joern Weissenborn, Joris Snellenburg, Ivo van Stokkum
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

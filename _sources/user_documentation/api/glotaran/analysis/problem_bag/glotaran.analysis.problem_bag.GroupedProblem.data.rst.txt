@@ -1,0 +1,5 @@
+data
+====
+
+.. autoattribute:: glotaran.analysis.problem_bag.GroupedProblem.data
+    :noindex:

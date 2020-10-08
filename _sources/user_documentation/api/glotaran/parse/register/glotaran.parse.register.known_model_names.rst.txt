@@ -1,0 +1,4 @@
+known\_model\_names
+===================
+
+.. autofunction:: glotaran.parse.register.known_model_names

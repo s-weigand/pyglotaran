@@ -1,0 +1,5 @@
+validate
+========
+
+.. automethod:: glotaran.builtin.models.doas.doas_megacomplex.DOASMegacomplex.validate
+    :noindex:

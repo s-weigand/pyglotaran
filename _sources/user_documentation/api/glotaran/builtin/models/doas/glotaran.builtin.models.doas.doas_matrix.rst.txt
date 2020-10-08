@@ -1,0 +1,48 @@
+
+doas\_matrix
+============
+
+.. currentmodule:: glotaran.builtin.models.doas
+
+.. automodule:: glotaran.builtin.models.doas.doas_matrix
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: doas_matrix
+      :nosignatures:
+
+      
+        calculate_doas_matrix_gaussian_irf
+        calculate_doas_matrix_no_irf
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

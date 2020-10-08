@@ -1,0 +1,4 @@
+calculate\_penalty
+==================
+
+.. autofunction:: glotaran.analysis.optimize.calculate_penalty

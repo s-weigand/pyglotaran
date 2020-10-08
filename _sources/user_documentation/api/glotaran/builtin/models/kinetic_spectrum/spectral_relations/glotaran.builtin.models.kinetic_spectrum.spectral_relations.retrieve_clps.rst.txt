@@ -1,0 +1,4 @@
+retrieve\_clps
+==============
+
+.. autofunction:: glotaran.builtin.models.kinetic_spectrum.spectral_relations.retrieve_clps

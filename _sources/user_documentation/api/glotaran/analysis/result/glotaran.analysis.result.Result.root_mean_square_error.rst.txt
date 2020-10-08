@@ -1,0 +1,5 @@
+root\_mean\_square\_error
+=========================
+
+.. autoattribute:: glotaran.analysis.result.Result.root_mean_square_error
+    :noindex:

@@ -1,0 +1,5 @@
+additional\_penalty\_function
+=============================
+
+.. autoattribute:: glotaran.builtin.models.doas.doas_model.DOASModel.additional_penalty_function
+    :noindex:

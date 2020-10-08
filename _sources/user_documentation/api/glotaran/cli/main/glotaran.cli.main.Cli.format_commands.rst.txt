@@ -1,0 +1,5 @@
+format\_commands
+================
+
+.. automethod:: glotaran.cli.main.Cli.format_commands
+    :noindex:

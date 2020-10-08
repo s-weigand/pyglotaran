@@ -1,0 +1,47 @@
+
+weight
+======
+
+.. currentmodule:: glotaran.model
+
+.. automodule:: glotaran.model.weight
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: weight
+      :nosignatures:
+
+      
+        Weight
+
+  
+
+
+
+
+
+  
+
+
+
+

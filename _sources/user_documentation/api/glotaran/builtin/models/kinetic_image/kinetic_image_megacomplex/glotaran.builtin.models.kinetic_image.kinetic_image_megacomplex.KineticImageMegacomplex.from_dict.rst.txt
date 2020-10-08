@@ -1,0 +1,5 @@
+from\_dict
+==========
+
+.. automethod:: glotaran.builtin.models.kinetic_image.kinetic_image_megacomplex.KineticImageMegacomplex.from_dict
+    :noindex:

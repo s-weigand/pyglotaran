@@ -1,0 +1,5 @@
+fdel
+====
+
+.. autoattribute:: glotaran.model.model_property.ModelProperty.fdel
+    :noindex:

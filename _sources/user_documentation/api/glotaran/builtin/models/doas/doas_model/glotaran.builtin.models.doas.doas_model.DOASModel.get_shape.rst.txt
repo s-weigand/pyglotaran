@@ -1,0 +1,5 @@
+get\_shape
+==========
+
+.. automethod:: glotaran.builtin.models.doas.doas_model.DOASModel.get_shape
+    :noindex:

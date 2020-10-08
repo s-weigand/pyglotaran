@@ -1,0 +1,4 @@
+optimize\_task
+==============
+
+.. autofunction:: glotaran.analysis.optimize.optimize_task

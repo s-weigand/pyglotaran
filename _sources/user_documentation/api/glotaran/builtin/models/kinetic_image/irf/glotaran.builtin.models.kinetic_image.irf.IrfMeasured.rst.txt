@@ -1,0 +1,65 @@
+IrfMeasured
+===========
+
+.. currentmodule:: glotaran.builtin.models.kinetic_image.irf
+
+.. autoclass:: IrfMeasured
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~IrfMeasured.label
+        ~IrfMeasured.type
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~IrfMeasured.fill
+      
+      
+        ~IrfMeasured.from_dict
+      
+      
+        ~IrfMeasured.from_list
+      
+      
+        ~IrfMeasured.mprint
+      
+      
+        ~IrfMeasured.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

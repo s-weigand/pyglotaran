@@ -1,0 +1,71 @@
+
+analysis
+========
+
+.. currentmodule:: glotaran
+
+.. automodule:: glotaran.analysis
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: analysis
+    :recursive:
+
+    
+      
+        glotaran.analysis.matrix_calculation
+      
+      
+        glotaran.analysis.nnls
+      
+      
+        glotaran.analysis.optimize
+      
+      
+        glotaran.analysis.problem_bag
+      
+      
+        glotaran.analysis.residual_calculation
+      
+      
+        glotaran.analysis.result
+      
+      
+        glotaran.analysis.scheme
+      
+      
+        glotaran.analysis.simulation
+      
+      
+      
+        glotaran.analysis.variable_projection
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

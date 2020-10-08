@@ -1,0 +1,4 @@
+has\_kinetic\_model\_constraints
+================================
+
+.. autofunction:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model.has_kinetic_model_constraints

@@ -1,0 +1,47 @@
+
+doas\_megacomplex
+=================
+
+.. currentmodule:: glotaran.builtin.models.doas
+
+.. automodule:: glotaran.builtin.models.doas.doas_megacomplex
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: doas_megacomplex
+      :nosignatures:
+
+      
+        DOASMegacomplex
+
+  
+
+
+
+
+
+  
+
+
+
+

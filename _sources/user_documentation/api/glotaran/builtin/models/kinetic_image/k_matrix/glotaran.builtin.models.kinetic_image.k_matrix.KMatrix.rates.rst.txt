@@ -1,0 +1,5 @@
+rates
+=====
+
+.. automethod:: glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.rates
+    :noindex:

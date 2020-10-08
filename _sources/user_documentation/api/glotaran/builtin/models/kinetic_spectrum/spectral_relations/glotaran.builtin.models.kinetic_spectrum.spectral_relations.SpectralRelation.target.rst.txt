@@ -1,0 +1,5 @@
+target
+======
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.spectral_relations.SpectralRelation.target
+    :noindex:

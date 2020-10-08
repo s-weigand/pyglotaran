@@ -1,0 +1,5 @@
+index
+=====
+
+.. automethod:: glotaran.analysis.problem_bag.GroupedProblem.index
+    :noindex:

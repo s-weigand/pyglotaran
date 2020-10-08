@@ -1,0 +1,5 @@
+has\_additional\_penalty\_function
+==================================
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model.KineticSpectrumModel.has_additional_penalty_function
+    :noindex:

@@ -1,0 +1,4 @@
+file\_reader
+============
+
+.. autofunction:: glotaran.io.reader.file_reader

@@ -1,0 +1,5 @@
+fail
+====
+
+.. automethod:: glotaran.cli.commands.util.ValOrRangeOrList.fail
+    :noindex:

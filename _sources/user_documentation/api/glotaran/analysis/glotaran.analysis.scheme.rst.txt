@@ -1,0 +1,47 @@
+
+scheme
+======
+
+.. currentmodule:: glotaran.analysis
+
+.. automodule:: glotaran.analysis.scheme
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: scheme
+      :nosignatures:
+
+      
+        Scheme
+
+  
+
+
+
+
+
+  
+
+
+
+

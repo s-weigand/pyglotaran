@@ -1,0 +1,5 @@
+from\_file
+==========
+
+.. automethod:: glotaran.parameter.parameter_group.ParameterGroup.from_file
+    :noindex:

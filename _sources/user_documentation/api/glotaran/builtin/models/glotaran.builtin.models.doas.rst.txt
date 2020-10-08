@@ -1,0 +1,61 @@
+
+doas
+====
+
+.. currentmodule:: glotaran.builtin.models.doas
+
+.. automodule:: glotaran.builtin.models.doas
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: doas
+    :recursive:
+
+    
+      
+        glotaran.builtin.models.doas.doas_matrix
+      
+      
+        glotaran.builtin.models.doas.doas_megacomplex
+      
+      
+        glotaran.builtin.models.doas.doas_model
+      
+      
+        glotaran.builtin.models.doas.doas_result
+      
+      
+        glotaran.builtin.models.doas.doas_spectral_matrix
+      
+      
+        glotaran.builtin.models.doas.oscillation
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

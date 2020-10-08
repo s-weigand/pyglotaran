@@ -1,0 +1,4 @@
+load\_dataset\_file
+===================
+
+.. autofunction:: glotaran.cli.commands.util.load_dataset_file

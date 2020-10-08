@@ -1,0 +1,5 @@
+make\_context
+=============
+
+.. automethod:: glotaran.cli.main.Cli.make_context
+    :noindex:

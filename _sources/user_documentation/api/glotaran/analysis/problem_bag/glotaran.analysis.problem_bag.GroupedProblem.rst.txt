@@ -1,0 +1,57 @@
+GroupedProblem
+==============
+
+.. currentmodule:: glotaran.analysis.problem_bag
+
+.. autoclass:: GroupedProblem
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~GroupedProblem.data
+        ~GroupedProblem.descriptor
+        ~GroupedProblem.weight
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~GroupedProblem.count
+      
+      
+        ~GroupedProblem.index
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

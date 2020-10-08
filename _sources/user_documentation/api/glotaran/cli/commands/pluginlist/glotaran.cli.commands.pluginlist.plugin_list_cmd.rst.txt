@@ -1,0 +1,4 @@
+plugin\_list\_cmd
+=================
+
+.. autofunction:: glotaran.cli.commands.pluginlist.plugin_list_cmd

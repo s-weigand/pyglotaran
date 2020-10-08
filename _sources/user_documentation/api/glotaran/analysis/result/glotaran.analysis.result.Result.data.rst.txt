@@ -1,0 +1,5 @@
+data
+====
+
+.. autoattribute:: glotaran.analysis.result.Result.data
+    :noindex:

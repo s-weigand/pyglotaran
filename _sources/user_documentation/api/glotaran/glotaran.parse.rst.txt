@@ -1,0 +1,49 @@
+
+parse
+=====
+
+.. currentmodule:: glotaran
+
+.. automodule:: glotaran.parse
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: parse
+    :recursive:
+
+    
+      
+        glotaran.parse.parser
+      
+      
+        glotaran.parse.register
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

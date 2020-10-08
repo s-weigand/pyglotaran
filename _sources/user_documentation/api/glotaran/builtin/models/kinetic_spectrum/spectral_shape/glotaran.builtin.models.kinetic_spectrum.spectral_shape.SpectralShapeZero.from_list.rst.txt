@@ -1,0 +1,5 @@
+from\_list
+==========
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.spectral_shape.SpectralShapeZero.from_list
+    :noindex:

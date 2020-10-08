@@ -1,0 +1,42 @@
+SpectralShape
+=============
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum.spectral_shape
+
+.. autoclass:: SpectralShape
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~SpectralShape.add_type
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

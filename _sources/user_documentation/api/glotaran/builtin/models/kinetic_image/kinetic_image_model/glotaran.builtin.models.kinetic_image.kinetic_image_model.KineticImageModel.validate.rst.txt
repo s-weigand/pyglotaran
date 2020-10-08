@@ -1,0 +1,5 @@
+validate
+========
+
+.. automethod:: glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.validate
+    :noindex:

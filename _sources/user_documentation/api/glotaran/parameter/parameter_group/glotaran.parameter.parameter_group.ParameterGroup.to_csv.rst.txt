@@ -1,0 +1,5 @@
+to\_csv
+=======
+
+.. automethod:: glotaran.parameter.parameter_group.ParameterGroup.to_csv
+    :noindex:

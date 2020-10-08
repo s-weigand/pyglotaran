@@ -1,0 +1,49 @@
+
+builtin
+=======
+
+.. currentmodule:: glotaran.builtin
+
+.. automodule:: glotaran.builtin
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: builtin
+    :recursive:
+
+    
+      
+        glotaran.builtin.file_formats
+      
+      
+        glotaran.builtin.models
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

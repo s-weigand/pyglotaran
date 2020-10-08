@@ -1,0 +1,5 @@
+width
+=====
+
+.. autoattribute:: glotaran.builtin.models.kinetic_image.irf.IrfGaussian.width
+    :noindex:

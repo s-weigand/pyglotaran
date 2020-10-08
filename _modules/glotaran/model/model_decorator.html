@@ -1,0 +1,537 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>glotaran.model.model_decorator &mdash; pyglotaran 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/glotaran_favicon.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> pyglotaran
+          
+
+          
+            
+            <img src="../../../_static/glotaran.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart/Cheat-Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_documentation/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_documentation/dataio.html">Data IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_documentation/plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_documentation/modelling.html">Modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_documentation/parameter.html">Parameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_documentation/optimizing.html">Optimizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_documentation/api_documentation.html">API Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyglotaran</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>glotaran.model.model_decorator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for glotaran.model.model_decorator</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;The model decorator.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">typing</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+
+<span class="kn">from</span> <span class="nn">glotaran.analysis.result</span> <span class="kn">import</span> <span class="n">Result</span>
+<span class="kn">from</span> <span class="nn">glotaran.parameter</span> <span class="kn">import</span> <span class="n">ParameterGroup</span>
+<span class="kn">from</span> <span class="nn">glotaran.parse.register</span> <span class="kn">import</span> <span class="n">register_model</span>
+
+<span class="kn">from</span> <span class="nn">.dataset_descriptor</span> <span class="kn">import</span> <span class="n">DatasetDescriptor</span>
+<span class="kn">from</span> <span class="nn">.model</span> <span class="kn">import</span> <span class="n">Model</span>
+<span class="kn">from</span> <span class="nn">.util</span> <span class="kn">import</span> <span class="n">wrap_func_as_method</span>
+<span class="kn">from</span> <span class="nn">.weight</span> <span class="kn">import</span> <span class="n">Weight</span>
+
+<span class="n">MatrixFunction</span> <span class="o">=</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[</span>
+    <span class="p">[</span><span class="n">typing</span><span class="o">.</span><span class="n">Type</span><span class="p">[</span><span class="n">DatasetDescriptor</span><span class="p">],</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">],</span> <span class="n">typing</span><span class="o">.</span><span class="n">Tuple</span><span class="p">[</span><span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span>
+<span class="p">]</span>
+<span class="sd">&quot;&quot;&quot;A `MatrixFunction` calculates the matrix for a model.&quot;&quot;&quot;</span>
+
+<span class="n">IndexDependedMatrixFunction</span> <span class="o">=</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[</span>
+    <span class="p">[</span><span class="n">typing</span><span class="o">.</span><span class="n">Type</span><span class="p">[</span><span class="n">DatasetDescriptor</span><span class="p">],</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">],</span>
+    <span class="n">typing</span><span class="o">.</span><span class="n">Tuple</span><span class="p">[</span><span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span>
+<span class="p">]</span>
+<span class="sd">&quot;&quot;&quot;A `MatrixFunction` calculates the matrix for a model.&quot;&quot;&quot;</span>
+
+<span class="n">GlobalMatrixFunction</span> <span class="o">=</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[</span>
+    <span class="p">[</span><span class="n">typing</span><span class="o">.</span><span class="n">Type</span><span class="p">[</span><span class="n">DatasetDescriptor</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="n">typing</span><span class="o">.</span><span class="n">Tuple</span><span class="p">[</span><span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span>
+<span class="p">]</span>
+<span class="sd">&quot;&quot;&quot;A `GlobalMatrixFunction` calculates the global matrix for a model.&quot;&quot;&quot;</span>
+
+<span class="n">ConstrainMatrixFunction</span> <span class="o">=</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[</span>
+    <span class="p">[</span><span class="n">typing</span><span class="o">.</span><span class="n">Type</span><span class="p">[</span><span class="n">Model</span><span class="p">],</span> <span class="n">ParameterGroup</span><span class="p">,</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span>
+    <span class="n">typing</span><span class="o">.</span><span class="n">Tuple</span><span class="p">[</span><span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span>
+<span class="p">]</span>
+<span class="sd">&quot;&quot;&quot;A `ConstrainMatrixFunction` applies constraints on a matrix.&quot;&quot;&quot;</span>
+
+<span class="n">FinalizeFunction</span> <span class="o">=</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[</span><span class="n">typing</span><span class="o">.</span><span class="n">Type</span><span class="p">[</span><span class="n">Model</span><span class="p">],</span> <span class="n">Result</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span>
+<span class="sd">&quot;&quot;&quot;A `FinalizeFunction` gets called after optimization.&quot;&quot;&quot;</span>
+
+<span class="n">PenaltyFunction</span> <span class="o">=</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[</span>
+    <span class="p">[</span><span class="n">typing</span><span class="o">.</span><span class="n">Type</span><span class="p">[</span><span class="n">Model</span><span class="p">],</span> <span class="n">ParameterGroup</span><span class="p">,</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="nb">any</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+<span class="p">]</span>
+<span class="sd">&quot;&quot;&quot;A `PenaltyFunction` calculates additional penalties for the optimization.&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="model"><a class="viewcode-back" href="../../../user_documentation/api/glotaran/model/model_decorator/glotaran.model.model_decorator.model.html#glotaran.builtin.models.kinetic_image.kinetic_image_model.model">[docs]</a><span class="k">def</span> <span class="nf">model</span><span class="p">(</span>
+    <span class="n">model_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">attributes</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{},</span>
+    <span class="n">dataset_type</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Type</span><span class="p">[</span><span class="n">DatasetDescriptor</span><span class="p">]</span> <span class="o">=</span> <span class="n">DatasetDescriptor</span><span class="p">,</span>
+    <span class="n">megacomplex_type</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">matrix</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">MatrixFunction</span><span class="p">,</span> <span class="n">IndexDependedMatrixFunction</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">global_matrix</span><span class="p">:</span> <span class="n">GlobalMatrixFunction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">model_dimension</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">global_dimension</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">has_matrix_constraints_function</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[</span><span class="n">typing</span><span class="o">.</span><span class="n">Type</span><span class="p">[</span><span class="n">Model</span><span class="p">]],</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">constrain_matrix_function</span><span class="p">:</span> <span class="n">ConstrainMatrixFunction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">has_additional_penalty_function</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[</span><span class="n">typing</span><span class="o">.</span><span class="n">Type</span><span class="p">[</span><span class="n">Model</span><span class="p">]],</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">additional_penalty_function</span><span class="p">:</span> <span class="n">PenaltyFunction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">finalize_data_function</span><span class="p">:</span> <span class="n">FinalizeFunction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">grouped</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[</span><span class="n">typing</span><span class="o">.</span><span class="n">Type</span><span class="p">[</span><span class="n">Model</span><span class="p">]],</span> <span class="nb">bool</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">index_dependent</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[</span><span class="n">typing</span><span class="o">.</span><span class="n">Type</span><span class="p">[</span><span class="n">Model</span><span class="p">]],</span> <span class="nb">bool</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;The `@model` decorator is intended to be used on subclasses of :class:`glotaran.model.Model`.</span>
+<span class="sd">    It creates properties for the given attributes as well as functions to add access them. Also it</span>
+<span class="sd">    adds the functions (e.g. for `matrix`) to the model ansures they are added wrapped in a correct</span>
+<span class="sd">    way.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    model_type :</span>
+<span class="sd">        Human readable string used by the parser to identify the correct model.</span>
+<span class="sd">    attributes :</span>
+<span class="sd">        A dictionary of attribute names and types. All types must be decorated with the</span>
+<span class="sd">        :func:`glotaran.model.model_attribute` decorator.</span>
+<span class="sd">    dataset_type :</span>
+<span class="sd">     A subclass of :class:`DatasetDescriptor`</span>
+<span class="sd">    megacomplex_type :</span>
+<span class="sd">        A class for the model megacomplexes. The class must be decorated with the</span>
+<span class="sd">        :func:`glotaran.model.model_attribute` decorator.</span>
+<span class="sd">    matrix :</span>
+<span class="sd">        A function to calculate the matrix for the model.</span>
+<span class="sd">    global_matrix :</span>
+<span class="sd">        A function to calculate the global matrix for the model.</span>
+<span class="sd">    model_dimension :</span>
+<span class="sd">        The name of model matrix row dimension.</span>
+<span class="sd">    global_dimension :</span>
+<span class="sd">        The name of model global matrix row dimension.</span>
+<span class="sd">    constrain_matrix_function :</span>
+<span class="sd">        A function to constrain the global matrix for the model.</span>
+<span class="sd">    None</span>
+<span class="sd">    additional_penalty_function : PenaltyFunction</span>
+<span class="sd">        A function to calculate additional penalties when optimizing the model.</span>
+<span class="sd">    finalize_data_function :</span>
+<span class="sd">        A function to finalize data after optimization.</span>
+<span class="sd">    allow_grouping :</span>
+<span class="sd">        If `True`, datasets can can be grouped along the global dimension.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;_model_type&quot;</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;finalize_data&quot;</span><span class="p">,</span> <span class="n">finalize_data_function</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">has_matrix_constraints_function</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">constrain_matrix_function</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Model implements `has_matrix_constraints_function` &quot;</span>
+                    <span class="s2">&quot;but not `constrain_matrix_function`&quot;</span>
+                <span class="p">)</span>
+            <span class="n">has_c_mat</span> <span class="o">=</span> <span class="n">wrap_func_as_method</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;has_matrix_constraints_function&quot;</span><span class="p">)(</span>
+                <span class="n">has_matrix_constraints_function</span>
+            <span class="p">)</span>
+            <span class="n">c_mat</span> <span class="o">=</span> <span class="n">wrap_func_as_method</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;constrain_matrix_function&quot;</span><span class="p">)(</span>
+                <span class="n">constrain_matrix_function</span>
+            <span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;has_matrix_constraints_function&quot;</span><span class="p">,</span> <span class="n">has_c_mat</span><span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;constrain_matrix_function&quot;</span><span class="p">,</span> <span class="n">c_mat</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;has_matrix_constraints_function&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;constrain_matrix_function&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">has_additional_penalty_function</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">additional_penalty_function</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Model implements `has_additional_penalty_function`&quot;</span>
+                    <span class="s2">&quot;but not `additional_penalty_function`&quot;</span>
+                <span class="p">)</span>
+            <span class="n">has_pen</span> <span class="o">=</span> <span class="n">wrap_func_as_method</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;has_additional_penalty_function&quot;</span><span class="p">)(</span>
+                <span class="n">has_additional_penalty_function</span>
+            <span class="p">)</span>
+            <span class="n">pen</span> <span class="o">=</span> <span class="n">wrap_func_as_method</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;additional_penalty_function&quot;</span><span class="p">)(</span>
+                <span class="n">additional_penalty_function</span>
+            <span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;additional_penalty_function&quot;</span><span class="p">,</span> <span class="n">pen</span><span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;has_additional_penalty_function&quot;</span><span class="p">,</span> <span class="n">has_pen</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;has_additional_penalty_function&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;additional_penalty_function&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="n">grouped</span><span class="p">):</span>
+
+            <span class="k">def</span> <span class="nf">group_fun</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">grouped</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">group_fun</span> <span class="o">=</span> <span class="n">grouped</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;grouped&quot;</span><span class="p">,</span> <span class="n">group_fun</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="n">index_dependent</span><span class="p">):</span>
+
+            <span class="k">def</span> <span class="nf">index_dep_fun</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">index_dependent</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">index_dep_fun</span> <span class="o">=</span> <span class="n">index_dependent</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;index_dependent&quot;</span><span class="p">,</span> <span class="n">index_dep_fun</span><span class="p">)</span>
+
+        <span class="n">mat</span> <span class="o">=</span> <span class="n">wrap_func_as_method</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;matrix&quot;</span><span class="p">)(</span><span class="n">matrix</span><span class="p">)</span>
+        <span class="n">mat</span> <span class="o">=</span> <span class="nb">staticmethod</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;matrix&quot;</span><span class="p">,</span> <span class="n">mat</span><span class="p">)</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;model_dimension&quot;</span><span class="p">,</span> <span class="n">model_dimension</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">global_matrix</span><span class="p">:</span>
+            <span class="n">g_mat</span> <span class="o">=</span> <span class="n">wrap_func_as_method</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;global_matrix&quot;</span><span class="p">)(</span><span class="n">global_matrix</span><span class="p">)</span>
+            <span class="n">g_mat</span> <span class="o">=</span> <span class="nb">staticmethod</span><span class="p">(</span><span class="n">g_mat</span><span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;global_matrix&quot;</span><span class="p">,</span> <span class="n">g_mat</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;global_matrix&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;global_dimension&quot;</span><span class="p">,</span> <span class="n">global_dimension</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;_glotaran_model_attributes&quot;</span><span class="p">):</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;_glotaran_model_attributes&quot;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">setattr</span><span class="p">(</span>
+                <span class="bp">cls</span><span class="p">,</span>
+                <span class="s2">&quot;_glotaran_model_attributes&quot;</span><span class="p">,</span>
+                <span class="nb">getattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;_glotaran_model_attributes&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span>
+            <span class="p">)</span>
+
+        <span class="c1"># We add the standard attributes here.</span>
+        <span class="n">attributes</span><span class="p">[</span><span class="s2">&quot;dataset&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataset_type</span>
+        <span class="n">attributes</span><span class="p">[</span><span class="s2">&quot;megacomplex&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">megacomplex_type</span>
+        <span class="n">attributes</span><span class="p">[</span><span class="s2">&quot;weights&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Weight</span>
+
+        <span class="c1"># Set annotations and methods for attributes</span>
+        <span class="k">for</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">attr_type</span> <span class="ow">in</span> <span class="n">attributes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+            <span class="c1"># store for internal lookups</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;_glotaran_model_attributes&quot;</span><span class="p">)[</span><span class="n">attr_name</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+            <span class="c1"># create and attach the property to class</span>
+            <span class="n">attr_prop</span> <span class="o">=</span> <span class="n">_create_property_for_attribute</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">attr_type</span><span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">attr_prop</span><span class="p">)</span>
+
+            <span class="c1"># properties with labels are implemented as dicts, whereas properties</span>
+            <span class="c1"># without as arrays. Thus the need different setters.</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">attr_type</span><span class="p">,</span> <span class="s2">&quot;_glotaran_has_label&quot;</span><span class="p">):</span>
+                <span class="n">get_item</span> <span class="o">=</span> <span class="n">_create_get_func</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">attr_type</span><span class="p">)</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">get_item</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">get_item</span><span class="p">)</span>
+                <span class="n">set_item</span> <span class="o">=</span> <span class="n">_create_set_func</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">attr_type</span><span class="p">)</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">set_item</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">set_item</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">add_item</span> <span class="o">=</span> <span class="n">_create_add_func</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">attr_type</span><span class="p">)</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">add_item</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">add_item</span><span class="p">)</span>
+
+        <span class="n">init</span> <span class="o">=</span> <span class="n">_create_init_func</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">attributes</span><span class="p">)</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;__init__&quot;</span><span class="p">,</span> <span class="n">init</span><span class="p">)</span>
+
+        <span class="n">register_model</span><span class="p">(</span><span class="n">model_type</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">cls</span>
+
+    <span class="k">return</span> <span class="n">decorator</span></div>
+
+
+<span class="k">def</span> <span class="nf">_create_init_func</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">attributes</span><span class="p">):</span>
+    <span class="nd">@wrap_func_as_method</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">attr_name</span><span class="p">,</span> <span class="n">attr_item</span> <span class="ow">in</span> <span class="n">attributes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">attr_item</span><span class="p">,</span> <span class="s2">&quot;_glotaran_has_label&quot;</span><span class="p">):</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;_</span><span class="si">{</span><span class="n">attr_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">{})</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;_</span><span class="si">{</span><span class="n">attr_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="nb">super</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="fm">__init__</span>
+
+
+<span class="k">def</span> <span class="nf">_create_add_func</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+    <span class="nd">@wrap_func_as_method</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;add_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">add_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="nb">type</span><span class="p">):</span>
+        <span class="sa">f</span><span class="s2">&quot;&quot;&quot;Adds an `</span><span class="si">{</span><span class="nb">type</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">` object.</span>
+
+<span class="s2">        Parameters</span>
+<span class="s2">        ----------</span>
+<span class="s2">        item :</span>
+<span class="s2">            The `</span><span class="si">{</span><span class="nb">type</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">` item.</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span>
+            <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="s2">&quot;_glotaran_model_attribute_typed&quot;</span><span class="p">)</span>
+            <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">type</span><span class="o">.</span><span class="n">_glotaran_model_attribute_types</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+        <span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span>
+        <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">add_item</span>
+
+
+<span class="k">def</span> <span class="nf">_create_get_func</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+    <span class="nd">@wrap_func_as_method</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;get_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">type</span><span class="p">:</span>
+        <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        Returns the `</span><span class="si">{</span><span class="nb">type</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">` object with the given label.</span>
+
+<span class="s2">        Parameters</span>
+<span class="s2">        ----------</span>
+<span class="s2">        label :</span>
+<span class="s2">            The label of the `</span><span class="si">{</span><span class="nb">type</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">` object.</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)[</span><span class="n">label</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">get_item</span>
+
+
+<span class="k">def</span> <span class="nf">_create_set_func</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+    <span class="nd">@wrap_func_as_method</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;set_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">set_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="nb">type</span><span class="p">):</span>
+        <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        Sets the `</span><span class="si">{</span><span class="nb">type</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">` object with the given label with to the item.</span>
+
+<span class="s2">        Parameters</span>
+<span class="s2">        ----------</span>
+<span class="s2">        label :</span>
+<span class="s2">            The label of the `</span><span class="si">{</span><span class="nb">type</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">` object.</span>
+<span class="s2">        item :</span>
+<span class="s2">            The `</span><span class="si">{</span><span class="nb">type</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">` item.</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span>
+            <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="s2">&quot;_glotaran_model_attribute_typed&quot;</span><span class="p">)</span>
+            <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">type</span><span class="o">.</span><span class="n">_glotaran_model_attribute_types</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+        <span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span>
+        <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span>
+
+    <span class="k">return</span> <span class="n">set_item</span>
+
+
+<span class="k">def</span> <span class="nf">_create_property_for_attribute</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+
+    <span class="n">return_type</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">]</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="s2">&quot;_glotaran_has_label&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">type</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="n">doc_type</span> <span class="o">=</span> <span class="s2">&quot;dictionary&quot;</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="s2">&quot;_glotaran_has_label&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;list&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@wrap_func_as_method</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">return_type</span><span class="p">:</span>
+        <span class="sa">f</span><span class="s2">&quot;&quot;&quot;A </span><span class="si">{</span><span class="n">doc_type</span><span class="si">}</span><span class="s2"> containing </span><span class="si">{</span><span class="nb">type</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">attribute</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, Joern Weissenborn, Joris Snellenburg, Ivo van Stokkum
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

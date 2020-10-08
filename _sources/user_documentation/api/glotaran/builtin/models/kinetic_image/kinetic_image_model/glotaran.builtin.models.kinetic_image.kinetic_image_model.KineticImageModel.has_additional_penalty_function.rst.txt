@@ -1,0 +1,5 @@
+has\_additional\_penalty\_function
+==================================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.has_additional_penalty_function
+    :noindex:

@@ -1,0 +1,47 @@
+
+model\_property
+===============
+
+.. currentmodule:: glotaran.model
+
+.. automodule:: glotaran.model.model_property
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: model_property
+      :nosignatures:
+
+      
+        ModelProperty
+
+  
+
+
+
+
+
+  
+
+
+
+

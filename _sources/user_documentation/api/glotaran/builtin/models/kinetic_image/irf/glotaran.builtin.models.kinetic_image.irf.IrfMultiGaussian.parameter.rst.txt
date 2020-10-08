@@ -1,0 +1,5 @@
+parameter
+=========
+
+.. automethod:: glotaran.builtin.models.kinetic_image.irf.IrfMultiGaussian.parameter
+    :noindex:

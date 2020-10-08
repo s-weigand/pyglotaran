@@ -1,0 +1,50 @@
+
+kinetic\_image\_matrix
+======================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_image
+
+.. automodule:: glotaran.builtin.models.kinetic_image.kinetic_image_matrix
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: kinetic_image_matrix
+      :nosignatures:
+
+      
+        calculate_kinetic_matrix_gaussian_irf
+        calculate_kinetic_matrix_no_irf
+        kinetic_image_matrix_implementation
+        kinetic_matrix
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

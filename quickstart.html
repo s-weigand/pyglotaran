@@ -1,0 +1,543 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Quickstart/Cheat-Sheet &mdash; pyglotaran 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/glotaran_favicon.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="History" href="history.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pyglotaran
+          
+
+          
+            
+            <img src="_static/glotaran.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quickstart/Cheat-Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user_documentation/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_documentation/dataio.html">Data IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_documentation/plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_documentation/modelling.html">Modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_documentation/parameter.html">Parameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_documentation/optimizing.html">Optimizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_documentation/api_documentation.html">API Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyglotaran</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Quickstart/Cheat-Sheet</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/quickstart.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="quickstart-cheat-sheet">
+<h1>Quickstart/Cheat-Sheet<a class="headerlink" href="#quickstart-cheat-sheet" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>pyglotaran is in very early stage of development. You should not use it for
+actual science at the moment.</p>
+</div>
+<p>To start using pyglotaran in your project, you have to import it first:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">import</span> <span class="nn">glotaran</span> <span class="k">as</span> <span class="nn">gta</span>
+</pre></div>
+</div>
+<p>Let us get some data to analyze:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [2]: </span><span class="kn">from</span> <span class="nn">glotaran.examples.sequential</span> <span class="kn">import</span> <span class="n">dataset</span>
+
+<span class="gp">In [3]: </span><span class="n">dataset</span>
+<span class="gh">Out[3]: </span><span class="go"></span>
+<span class="go">&lt;xarray.Dataset&gt;</span>
+<span class="go">Dimensions:   (spectral: 72, time: 2100)</span>
+<span class="go">Coordinates:</span>
+<span class="go">  * time      (time) float64 -1.0 -0.99 -0.98 -0.97 ... 19.96 19.97 19.98 19.99</span>
+<span class="go">  * spectral  (spectral) float64 600.0 601.4 602.8 604.2 ... 696.6 698.0 699.4</span>
+<span class="go">Data variables:</span>
+<span class="go">    data      (time, spectral) float64 0.002344 0.01183 0.009517 ... 1.699 1.535</span>
+</pre></div>
+</div>
+<p>Like all data in <code class="docutils literal notranslate"><span class="pre">pyglotaran</span></code>, the dataset is a <a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.16.2.dev3)"><code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code></a>.
+You can find more information about the <code class="docutils literal notranslate"><span class="pre">xarray</span></code> library the <a class="reference external" href="http://xarray.pydata.org/en/stable/">xarray hompage</a>.</p>
+<p>The loaded dataset is a simulated sequential model.</p>
+<p>To plot our data, we must first import matplotlib.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+<p>Now we can plot some time traces.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [5]: </span><span class="n">plot_data</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">spectral</span><span class="o">=</span><span class="p">[</span><span class="mi">620</span><span class="p">,</span> <span class="mi">630</span><span class="p">,</span> <span class="mi">650</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+
+<span class="gp">In [6]: </span><span class="n">plot_data</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/plot_usage_dataset_traces.png"><img alt="_images/plot_usage_dataset_traces.png" src="_images/plot_usage_dataset_traces.png" style="width: 8in;" /></a>
+<p>We can also plot spectra at different times.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="n">plot_data</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+
+<span class="gp">In [8]: </span><span class="n">plot_data</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;spectral&#39;</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/plot_usage_dataset_spectra.png"><img alt="_images/plot_usage_dataset_spectra.png" src="_images/plot_usage_dataset_spectra.png" style="width: 8in;" /></a>
+<p>To get an idea about how to model your data, you should inspect the singular
+value decomposition. Pyglotaran has a function to calculate it (among other
+things).</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [9]: </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">gta</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">prepare_time_trace_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+
+<span class="gp">In [10]: </span><span class="n">dataset</span>
+<span class="gh">Out[10]: </span><span class="go"></span>
+<span class="go">&lt;xarray.Dataset&gt;</span>
+<span class="go">Dimensions:                      (left_singular_value_index: 2100, right_singular_value_index: 72, singular_value_index: 72, spectral: 72, time: 2100)</span>
+<span class="go">Coordinates:</span>
+<span class="go">  * time                         (time) float64 -1.0 -0.99 -0.98 ... 19.98 19.99</span>
+<span class="go">  * spectral                     (spectral) float64 600.0 601.4 ... 698.0 699.4</span>
+<span class="go">Dimensions without coordinates: left_singular_value_index, right_singular_value_index, singular_value_index</span>
+<span class="go">Data variables:</span>
+<span class="go">    data                         (time, spectral) float64 0.002344 ... 1.535</span>
+<span class="go">    data_left_singular_vectors   (time, left_singular_value_index) float64 1....</span>
+<span class="go">    data_singular_values         (singular_value_index) float64 4.62e+03 ... ...</span>
+<span class="go">    data_right_singular_vectors  (right_singular_value_index, spectral) float64 ...</span>
+</pre></div>
+</div>
+<p>First, take a look at the first 10 singular values:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [11]: </span><span class="n">plot_data</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">data_singular_values</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">singular_value_index</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="gp">In [12]: </span><span class="n">plot_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">yscale</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/quickstart_data_singular_values.png"><img alt="_images/quickstart_data_singular_values.png" src="_images/quickstart_data_singular_values.png" style="width: 8in;" /></a>
+<p>To analyze our data, we need to create a model. Create a file called <code class="docutils literal notranslate"><span class="pre">model.py</span></code>
+in your working directory and fill it with the following:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">kinetic-spectrum</span>
+
+<span class="nt">initial_concentration</span><span class="p">:</span>
+  <span class="nt">input</span><span class="p">:</span>
+    <span class="nt">compartments</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">s1</span><span class="p p-Indicator">,</span> <span class="nv">s2</span><span class="p p-Indicator">,</span> <span class="nv">s3</span><span class="p p-Indicator">]</span>
+    <span class="nt">parameters</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">input.1</span><span class="p p-Indicator">,</span> <span class="nv">input.0</span><span class="p p-Indicator">,</span> <span class="nv">input.0</span><span class="p p-Indicator">]</span>
+
+<span class="nt">k_matrix</span><span class="p">:</span>
+  <span class="nt">k1</span><span class="p">:</span>
+    <span class="nt">matrix</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">(s2, s1)</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">kinetic.1</span>
+      <span class="l l-Scalar l-Scalar-Plain">(s3, s2)</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">kinetic.2</span>
+      <span class="l l-Scalar l-Scalar-Plain">(s3, s3)</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">kinetic.3</span>
+
+<span class="nt">megacomplex</span><span class="p">:</span>
+  <span class="nt">m1</span><span class="p">:</span>
+    <span class="nt">k_matrix</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">k1</span><span class="p p-Indicator">]</span>
+
+<span class="nt">irf</span><span class="p">:</span>
+  <span class="nt">irf1</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gaussian</span>
+    <span class="nt">center</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">irf.center</span>
+    <span class="nt">width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">irf.width</span>
+
+<span class="nt">dataset</span><span class="p">:</span>
+  <span class="nt">dataset1</span><span class="p">:</span>
+    <span class="nt">initial_concentration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">input</span>
+    <span class="nt">megacomplex</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">m1</span><span class="p p-Indicator">]</span>
+    <span class="nt">irf</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">irf1</span>
+</pre></div>
+</div>
+<p>Now you can load the model file.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [13]: </span><span class="n">model</span> <span class="o">=</span> <span class="n">gta</span><span class="o">.</span><span class="n">read_model_from_yml_file</span><span class="p">(</span><span class="s1">&#39;model.yml&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can check your model for problems with <code class="docutils literal notranslate"><span class="pre">model.validate</span></code>.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [14]: </span><span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">validate</span><span class="p">())</span>
+<span class="go">Your model is valid.</span>
+</pre></div>
+</div>
+<p>Now define some starting parameters. Create a file called <code class="docutils literal notranslate"><span class="pre">parameter.yml</span></code> with
+the following content.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">[</span><span class="s">&#39;1&#39;</span><span class="p p-Indicator">,</span> <span class="nv">1</span><span class="p p-Indicator">,</span> <span class="p p-Indicator">{</span><span class="s">&#39;vary&#39;</span><span class="p p-Indicator">:</span> <span class="nv">False</span><span class="p p-Indicator">,</span> <span class="s">&#39;non-negative&#39;</span><span class="p p-Indicator">:</span> <span class="nv">False</span><span class="p p-Indicator">}]</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">[</span><span class="s">&#39;0&#39;</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">,</span> <span class="p p-Indicator">{</span><span class="s">&#39;vary&#39;</span><span class="p p-Indicator">:</span> <span class="nv">False</span><span class="p p-Indicator">,</span> <span class="s">&#39;non-negative&#39;</span><span class="p p-Indicator">:</span> <span class="nv">False</span><span class="p p-Indicator">}]</span>
+
+<span class="nt">kinetic</span><span class="p">:</span> <span class="p p-Indicator">[</span>
+     <span class="nv">0.5</span><span class="p p-Indicator">,</span>
+     <span class="nv">0.3</span><span class="p p-Indicator">,</span>
+     <span class="nv">0.1</span><span class="p p-Indicator">,</span>
+<span class="p p-Indicator">]</span>
+
+<span class="nt">irf</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">[</span><span class="s">&#39;center&#39;</span><span class="p p-Indicator">,</span> <span class="nv">0.3</span><span class="p p-Indicator">]</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">[</span><span class="s">&#39;width&#39;</span><span class="p p-Indicator">,</span> <span class="nv">0.1</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [15]: </span><span class="n">parameter</span> <span class="o">=</span> <span class="n">gta</span><span class="o">.</span><span class="n">read_parameter_from_yml_file</span><span class="p">(</span><span class="s1">&#39;parameter.yml&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can <code class="docutils literal notranslate"><span class="pre">model.validate</span></code> also to check for missing parameters.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [16]: </span><span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">parameter</span><span class="o">=</span><span class="n">parameter</span><span class="p">))</span>
+<span class="go">Your model is valid.</span>
+</pre></div>
+</div>
+<p>Since not all problems in the model can be detected automatically it is wise to
+visually inspect the model. For this purpose, you can just print the model.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [17]: </span><span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+<span class="go"># Model</span>
+
+<span class="go">_Type_: kinetic-spectrum</span>
+
+<span class="go">## Initial Concentration</span>
+
+<span class="go">* **input**:</span>
+<span class="go">  * *Label*: input</span>
+<span class="go">  * *Compartments*: [&#39;s1&#39;, &#39;s2&#39;, &#39;s3&#39;]</span>
+<span class="go">  * *Parameters*: [input.1, input.0, input.0]</span>
+<span class="go">  * *Exclude From Normalize*: []</span>
+
+<span class="go">## K Matrix</span>
+
+<span class="go">* **k1**:</span>
+<span class="go">  * *Label*: k1</span>
+<span class="go">  * *Matrix*: </span>
+<span class="go">    * *(&#39;s2&#39;, &#39;s1&#39;)*: kinetic.1</span>
+<span class="go">    * *(&#39;s3&#39;, &#39;s2&#39;)*: kinetic.2</span>
+<span class="go">    * *(&#39;s3&#39;, &#39;s3&#39;)*: kinetic.3</span>
+<span class="go">  </span>
+
+<span class="go">## Irf</span>
+
+<span class="go">* **irf1** (gaussian):</span>
+<span class="go">  * *Label*: irf1</span>
+<span class="go">  * *Type*: gaussian</span>
+<span class="go">  * *Center*: irf.center</span>
+<span class="go">  * *Width*: irf.width</span>
+<span class="go">  * *Normalize*: False</span>
+<span class="go">  * *Backsweep*: False</span>
+
+<span class="go">## Dataset</span>
+
+<span class="go">* **dataset1**:</span>
+<span class="go">  * *Label*: dataset1</span>
+<span class="go">  * *Megacomplex*: [&#39;m1&#39;]</span>
+<span class="go">  * *Initial Concentration*: input</span>
+<span class="go">  * *Irf*: irf1</span>
+
+<span class="go">## Megacomplex</span>
+
+<span class="go">* **m1**:</span>
+<span class="go">  * *Label*: m1</span>
+<span class="go">  * *K Matrix*: [&#39;k1&#39;]</span>
+</pre></div>
+</div>
+<p>The same way you should inspect your parameters.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [18]: </span><span class="nb">print</span><span class="p">(</span><span class="n">parameter</span><span class="p">)</span>
+<span class="go">  * __input__:</span>
+<span class="go">    * __1__: _Value_: 1.0, _StdErr_: None, _Min_: -inf, _Max_: inf, _Vary_: False, _Non-Negative_: False</span>
+<span class="go">    * __0__: _Value_: 0.0, _StdErr_: None, _Min_: -inf, _Max_: inf, _Vary_: False, _Non-Negative_: False</span>
+<span class="go">  * __kinetic__:</span>
+<span class="go">    * __1__: _Value_: 0.5, _StdErr_: None, _Min_: -inf, _Max_: inf, _Vary_: True, _Non-Negative_: False</span>
+<span class="go">    * __2__: _Value_: 0.3, _StdErr_: None, _Min_: -inf, _Max_: inf, _Vary_: True, _Non-Negative_: False</span>
+<span class="go">    * __3__: _Value_: 0.1, _StdErr_: None, _Min_: -inf, _Max_: inf, _Vary_: True, _Non-Negative_: False</span>
+<span class="go">  * __irf__:</span>
+<span class="go">    * __center__: _Value_: 0.3, _StdErr_: None, _Min_: -inf, _Max_: inf, _Vary_: True, _Non-Negative_: False</span>
+<span class="go">    * __width__: _Value_: 0.1, _StdErr_: None, _Min_: -inf, _Max_: inf, _Vary_: True, _Non-Negative_: False</span>
+</pre></div>
+</div>
+<p>Now we have everything together to optimize our parameters.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [19]: </span><span class="n">result</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">parameter</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;dataset1&#39;</span><span class="p">:</span> <span class="n">dataset</span><span class="p">})</span>
+<span class="go">   Iteration     Total nfev        Cost      Cost reduction    Step norm     Optimality   </span>
+<span class="go">       0              1         7.5199e+00                                    1.43e+02    </span>
+<span class="go">       1              2         7.5197e+00      2.45e-04       4.87e-05       4.22e-02    </span>
+<span class="go">       2              3         7.5197e+00      1.58e-11       5.47e-09       1.46e-06    </span>
+<span class="go">Both `ftol` and `xtol` termination conditions are satisfied.</span>
+<span class="go">Function evaluations 3, initial cost 7.5199e+00, final cost 7.5197e+00, first-order optimality 1.46e-06.</span>
+
+<span class="gp">In [20]: </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">Optimization Result            |            |</span>
+<span class="go">-------------------------------|------------|</span>
+<span class="go"> Number of residual evaluation |          3 |</span>
+<span class="go">           Number of variables |          5 |</span>
+<span class="go">          Number of datapoints |  (151200,) |</span>
+<span class="go">            Degrees of freedom |     151195 |</span>
+<span class="go">                    Chi Square |   1.50e+01 |</span>
+<span class="go">            Reduced Chi Square |   9.95e-05 |</span>
+<span class="go">        Root Mean Square Error |   9.97e-03 |</span>
+
+
+<span class="gp">In [21]: </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">optimized_parameter</span><span class="p">)</span>
+<span class="go">* __None__:</span>
+<span class="go">  * __input__:</span>
+<span class="go">    * __1__: _Value_: 1.0, _StdErr_: 0, _Min_: -inf, _Max_: inf, _Vary_: False, _Non-Negative_: False</span>
+<span class="go">    * __0__: _Value_: 0.0, _StdErr_: 0, _Min_: -inf, _Max_: inf, _Vary_: False, _Non-Negative_: False</span>
+<span class="go">  * __kinetic__:</span>
+<span class="go">    * __1__: _Value_: 0.49995831048243755, _StdErr_: 7.240148582162341e-05, _Min_: -inf, _Max_: inf, _Vary_: True, _Non-Negative_: False</span>
+<span class="go">    * __2__: _Value_: 0.30002399643367306, _StdErr_: 4.183117806868049e-05, _Min_: -inf, _Max_: inf, _Vary_: True, _Non-Negative_: False</span>
+<span class="go">    * __3__: _Value_: 0.09999548499904051, _StdErr_: 4.767292839964122e-06, _Min_: -inf, _Max_: inf, _Vary_: True, _Non-Negative_: False</span>
+<span class="go">  * __irf__:</span>
+<span class="go">    * __center__: _Value_: 0.2999941320926043, _StdErr_: 4.997632073811665e-06, _Min_: -inf, _Max_: inf, _Vary_: True, _Non-Negative_: False</span>
+<span class="go">    * __width__: _Value_: 0.09999860289954147, _StdErr_: 6.686140086246906e-06, _Min_: -inf, _Max_: inf, _Vary_: True, _Non-Negative_: False</span>
+</pre></div>
+</div>
+<p>You can get the resulting data for your dataset with <code class="docutils literal notranslate"><span class="pre">result.get_dataset</span></code>.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [22]: </span><span class="n">result_dataset</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">(</span><span class="s1">&#39;dataset1&#39;</span><span class="p">)</span>
+
+<span class="gp">In [23]: </span><span class="n">result_dataset</span>
+<span class="gh">Out[23]: </span><span class="go"></span>
+<span class="go">&lt;xarray.Dataset&gt;</span>
+<span class="go">Dimensions:                          (clp_label: 3, component: 3, from_species: 3, left_singular_value_index: 2100, right_singular_value_index: 72, singular_value_index: 72, species: 3, spectral: 72, time: 2100, to_species: 3)</span>
+<span class="go">Coordinates:</span>
+<span class="go">  * time                             (time) float64 -1.0 -0.99 ... 19.98 19.99</span>
+<span class="go">  * spectral                         (spectral) float64 600.0 601.4 ... 699.4</span>
+<span class="go">  * clp_label                        (clp_label) &lt;U2 &#39;s1&#39; &#39;s2&#39; &#39;s3&#39;</span>
+<span class="go">  * species                          (species) &lt;U2 &#39;s1&#39; &#39;s2&#39; &#39;s3&#39;</span>
+<span class="go">    rate                             (component) float64 -0.5 -0.3 -0.1</span>
+<span class="go">    lifetime                         (component) float64 -2.0 -3.333 -10.0</span>
+<span class="go">  * to_species                       (to_species) &lt;U2 &#39;s1&#39; &#39;s2&#39; &#39;s3&#39;</span>
+<span class="go">  * from_species                     (from_species) &lt;U2 &#39;s1&#39; &#39;s2&#39; &#39;s3&#39;</span>
+<span class="go">Dimensions without coordinates: component, left_singular_value_index, right_singular_value_index, singular_value_index</span>
+<span class="go">Data variables:</span>
+<span class="go">    data                             (time, spectral) float64 0.002344 ... 1.535</span>
+<span class="go">    data_left_singular_vectors       (time, left_singular_value_index) float64 ...</span>
+<span class="go">    data_singular_values             (singular_value_index) float64 4.62e+03 ...</span>
+<span class="go">    data_right_singular_vectors      (spectral, right_singular_value_index) float64 ...</span>
+<span class="go">    matrix                           (time, clp_label) float64 6.084e-39 ... ...</span>
+<span class="go">    clp                              (spectral, clp_label) float64 15.0 ... 6...</span>
+<span class="go">    residual                         (time, spectral) float64 0.002344 ... -0...</span>
+<span class="go">    residual_left_singular_vectors   (time, left_singular_value_index) float64 ...</span>
+<span class="go">    residual_right_singular_vectors  (right_singular_value_index, spectral) float64 ...</span>
+<span class="go">    residual_singular_values         (singular_value_index) float64 0.5441 .....</span>
+<span class="go">    fitted_data                      (time, spectral) float64 -3.161e-14 ... ...</span>
+<span class="go">    species_associated_spectra       (spectral, species) float64 15.0 ... 6.106</span>
+<span class="go">    species_concentration            (time, species) float64 6.084e-39 ... 0....</span>
+<span class="go">    decay_associated_spectra         (spectral, component) float64 25.84 ... ...</span>
+<span class="go">    a_matrix                         (component, species) float64 1.0 ... 1.875</span>
+<span class="go">    k_matrix                         (to_species, from_species) float64 -0.5 ...</span>
+<span class="go">    k_matrix_reduced                 (to_species, from_species) float64 0.0 ....</span>
+<span class="go">    irf_center                       float64 0.3</span>
+<span class="go">    irf_width                        float64 0.1</span>
+<span class="go">    irf                              (time) float64 2.002e-37 7.309e-37 ... 0.0</span>
+<span class="go">Attributes:</span>
+<span class="go">    root_mean_square_error:  0.009973303623949525</span>
+</pre></div>
+</div>
+<p>The resulting data can be visualized the same way as the dataset. To judge the
+quality of the fit, you should look at first left and right singular vectors of
+the residual.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [24]: </span><span class="n">plot_data</span> <span class="o">=</span> <span class="n">result_dataset</span><span class="o">.</span><span class="n">residual_left_singular_vectors</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">left_singular_value_index</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="gp">In [25]: </span><span class="n">plot_data</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/plot_quickstart_lsv.png"><img alt="_images/plot_quickstart_lsv.png" src="_images/plot_quickstart_lsv.png" style="width: 8in;" /></a>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [26]: </span><span class="n">plot_data</span> <span class="o">=</span> <span class="n">result_dataset</span><span class="o">.</span><span class="n">residual_right_singular_vectors</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">right_singular_value_index</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="gp">In [27]: </span><span class="n">plot_data</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;spectral&#39;</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/plot_quickstart_rsv.png"><img alt="_images/plot_quickstart_rsv.png" src="_images/plot_quickstart_rsv.png" style="width: 8in;" /></a>
+<p>Finally, you can save your result.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [28]: </span><span class="n">result_dataset</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;dataset1.nc&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="history.html" class="btn btn-neutral float-right" title="History" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, Joern Weissenborn, Joris Snellenburg, Ivo van Stokkum
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+ZeroConstraint
+==============
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum.spectral_constraints
+
+.. autoclass:: ZeroConstraint
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~ZeroConstraint.compartment
+        ~ZeroConstraint.interval
+        ~ZeroConstraint.type
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~ZeroConstraint.applies
+      
+      
+        ~ZeroConstraint.fill
+      
+      
+        ~ZeroConstraint.from_dict
+      
+      
+        ~ZeroConstraint.from_list
+      
+      
+        ~ZeroConstraint.mprint
+      
+      
+        ~ZeroConstraint.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

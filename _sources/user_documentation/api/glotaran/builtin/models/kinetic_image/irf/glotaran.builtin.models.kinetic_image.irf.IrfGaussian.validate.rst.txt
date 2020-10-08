@@ -1,0 +1,5 @@
+validate
+========
+
+.. automethod:: glotaran.builtin.models.kinetic_image.irf.IrfGaussian.validate
+    :noindex:

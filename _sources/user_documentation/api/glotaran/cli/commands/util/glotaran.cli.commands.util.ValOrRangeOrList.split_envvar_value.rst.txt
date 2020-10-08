@@ -1,0 +1,5 @@
+split\_envvar\_value
+====================
+
+.. automethod:: glotaran.cli.commands.util.ValOrRangeOrList.split_envvar_value
+    :noindex:

@@ -1,0 +1,5 @@
+ignore\_unknown\_options
+========================
+
+.. autoattribute:: glotaran.cli.main.Cli.ignore_unknown_options
+    :noindex:

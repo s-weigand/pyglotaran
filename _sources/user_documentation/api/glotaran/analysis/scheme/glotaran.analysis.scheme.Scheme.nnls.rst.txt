@@ -1,0 +1,5 @@
+nnls
+====
+
+.. autoattribute:: glotaran.analysis.scheme.Scheme.nnls
+    :noindex:

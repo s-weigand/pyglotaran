@@ -1,0 +1,5 @@
+k\_matrix
+=========
+
+.. autoattribute:: glotaran.builtin.models.doas.doas_megacomplex.DOASMegacomplex.k_matrix
+    :noindex:

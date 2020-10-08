@@ -1,0 +1,5 @@
+allow\_extra\_args
+==================
+
+.. autoattribute:: glotaran.cli.main.Cli.allow_extra_args
+    :noindex:

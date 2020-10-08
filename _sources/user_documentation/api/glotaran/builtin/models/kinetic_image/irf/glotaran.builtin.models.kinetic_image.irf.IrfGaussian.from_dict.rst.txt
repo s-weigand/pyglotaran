@@ -1,0 +1,5 @@
+from\_dict
+==========
+
+.. automethod:: glotaran.builtin.models.kinetic_image.irf.IrfGaussian.from_dict
+    :noindex:

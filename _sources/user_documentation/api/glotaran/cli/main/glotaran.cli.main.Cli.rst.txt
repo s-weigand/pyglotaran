@@ -1,0 +1,129 @@
+Cli
+===
+
+.. currentmodule:: glotaran.cli.main
+
+.. autoclass:: Cli
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~Cli.allow_extra_args
+        ~Cli.allow_interspersed_args
+        ~Cli.ignore_unknown_options
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~Cli.add_command
+      
+      
+        ~Cli.collect_usage_pieces
+      
+      
+        ~Cli.command
+      
+      
+        ~Cli.format_commands
+      
+      
+        ~Cli.format_epilog
+      
+      
+        ~Cli.format_help
+      
+      
+        ~Cli.format_help_text
+      
+      
+        ~Cli.format_options
+      
+      
+        ~Cli.format_usage
+      
+      
+        ~Cli.get_command
+      
+      
+        ~Cli.get_help
+      
+      
+        ~Cli.get_help_option
+      
+      
+        ~Cli.get_help_option_names
+      
+      
+        ~Cli.get_params
+      
+      
+        ~Cli.get_short_help_str
+      
+      
+        ~Cli.get_usage
+      
+      
+        ~Cli.group
+      
+      
+        ~Cli.invoke
+      
+      
+        ~Cli.list_commands
+      
+      
+        ~Cli.list_commands_for_help
+      
+      
+        ~Cli.main
+      
+      
+        ~Cli.make_context
+      
+      
+        ~Cli.make_parser
+      
+      
+        ~Cli.parse_args
+      
+      
+        ~Cli.resolve_command
+      
+      
+        ~Cli.resultcallback
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

@@ -1,0 +1,4 @@
+write\_data
+===========
+
+.. autofunction:: glotaran.cli.commands.util.write_data

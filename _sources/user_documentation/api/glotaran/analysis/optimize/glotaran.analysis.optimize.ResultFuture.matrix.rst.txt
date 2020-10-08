@@ -1,0 +1,5 @@
+matrix
+======
+
+.. autoattribute:: glotaran.analysis.optimize.ResultFuture.matrix
+    :noindex:

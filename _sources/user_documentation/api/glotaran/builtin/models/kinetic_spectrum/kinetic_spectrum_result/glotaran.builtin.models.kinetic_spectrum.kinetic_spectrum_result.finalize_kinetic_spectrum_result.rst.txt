@@ -1,0 +1,4 @@
+finalize\_kinetic\_spectrum\_result
+===================================
+
+.. autofunction:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_result.finalize_kinetic_spectrum_result

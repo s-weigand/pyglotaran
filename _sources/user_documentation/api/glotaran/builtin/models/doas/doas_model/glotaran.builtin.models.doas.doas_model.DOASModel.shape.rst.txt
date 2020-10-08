@@ -1,0 +1,5 @@
+shape
+=====
+
+.. autoattribute:: glotaran.builtin.models.doas.doas_model.DOASModel.shape
+    :noindex:

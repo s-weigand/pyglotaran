@@ -1,0 +1,50 @@
+
+spectral\_shape
+===============
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum
+
+.. automodule:: glotaran.builtin.models.kinetic_spectrum.spectral_shape
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: spectral_shape
+      :nosignatures:
+
+      
+        SpectralShape
+        SpectralShapeGaussian
+        SpectralShapeOne
+        SpectralShapeZero
+
+  
+
+
+
+
+
+  
+
+
+
+

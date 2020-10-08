@@ -1,0 +1,5 @@
+matrix
+======
+
+.. autoattribute:: glotaran.analysis.matrix_calculation.LabelAndMatrix.matrix
+    :noindex:

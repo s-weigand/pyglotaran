@@ -1,0 +1,5 @@
+save
+====
+
+.. automethod:: glotaran.analysis.result.Result.save
+    :noindex:

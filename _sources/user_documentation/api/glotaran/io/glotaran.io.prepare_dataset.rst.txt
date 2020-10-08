@@ -1,0 +1,47 @@
+
+prepare\_dataset
+================
+
+.. currentmodule:: glotaran.io
+
+.. automodule:: glotaran.io.prepare_dataset
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: prepare_dataset
+      :nosignatures:
+
+      
+        prepare_time_trace_dataset
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

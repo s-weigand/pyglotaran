@@ -1,0 +1,5 @@
+from\_list
+==========
+
+.. automethod:: glotaran.model.weight.Weight.from_list
+    :noindex:

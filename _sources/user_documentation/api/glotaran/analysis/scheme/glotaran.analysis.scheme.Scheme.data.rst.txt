@@ -1,0 +1,5 @@
+data
+====
+
+.. autoattribute:: glotaran.analysis.scheme.Scheme.data
+    :noindex:

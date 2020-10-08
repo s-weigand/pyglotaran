@@ -1,0 +1,63 @@
+
+optimize
+========
+
+.. currentmodule:: glotaran.analysis
+
+.. automodule:: glotaran.analysis.optimize
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: optimize
+      :nosignatures:
+
+      
+        calculate_penalty
+        optimize
+        optimize_task
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: optimize
+      :nosignatures:
+
+      
+        ResultFuture
+
+  
+
+
+
+
+
+  
+
+
+
+

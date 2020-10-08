@@ -1,0 +1,5 @@
+mprint
+======
+
+.. automethod:: glotaran.builtin.models.kinetic_image.kinetic_image_megacomplex.KineticImageMegacomplex.mprint
+    :noindex:

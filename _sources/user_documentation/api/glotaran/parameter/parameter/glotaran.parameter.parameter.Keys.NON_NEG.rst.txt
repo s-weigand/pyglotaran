@@ -1,0 +1,5 @@
+NON\_NEG
+========
+
+.. autoattribute:: glotaran.parameter.parameter.Keys.NON_NEG
+    :noindex:

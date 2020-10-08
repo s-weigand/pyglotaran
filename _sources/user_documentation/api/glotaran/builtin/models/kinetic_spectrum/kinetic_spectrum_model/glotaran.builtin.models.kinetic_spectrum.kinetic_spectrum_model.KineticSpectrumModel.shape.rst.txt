@@ -1,0 +1,5 @@
+shape
+=====
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model.KineticSpectrumModel.shape
+    :noindex:

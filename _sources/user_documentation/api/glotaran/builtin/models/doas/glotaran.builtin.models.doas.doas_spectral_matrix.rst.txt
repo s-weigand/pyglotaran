@@ -1,0 +1,33 @@
+
+doas\_spectral\_matrix
+======================
+
+.. currentmodule:: glotaran.builtin.models.doas
+
+.. automodule:: glotaran.builtin.models.doas.doas_spectral_matrix
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

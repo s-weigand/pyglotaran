@@ -1,0 +1,5 @@
+residual
+========
+
+.. autoattribute:: glotaran.analysis.optimize.ResultFuture.residual
+    :noindex:

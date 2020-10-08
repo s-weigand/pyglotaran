@@ -1,0 +1,56 @@
+LabelAndMatrix
+==============
+
+.. currentmodule:: glotaran.analysis.matrix_calculation
+
+.. autoclass:: LabelAndMatrix
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~LabelAndMatrix.clp_label
+        ~LabelAndMatrix.matrix
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~LabelAndMatrix.count
+      
+      
+        ~LabelAndMatrix.index
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

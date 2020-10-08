@@ -1,0 +1,47 @@
+
+variable\_projection
+====================
+
+.. currentmodule:: glotaran.analysis
+
+.. automodule:: glotaran.analysis.variable_projection
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: variable_projection
+      :nosignatures:
+
+      
+        residual_variable_projection
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

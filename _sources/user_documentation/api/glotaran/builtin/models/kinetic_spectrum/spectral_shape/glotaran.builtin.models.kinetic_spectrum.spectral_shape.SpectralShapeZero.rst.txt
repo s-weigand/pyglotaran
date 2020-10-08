@@ -1,0 +1,68 @@
+SpectralShapeZero
+=================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum.spectral_shape
+
+.. autoclass:: SpectralShapeZero
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~SpectralShapeZero.label
+        ~SpectralShapeZero.type
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~SpectralShapeZero.calculate
+      
+      
+        ~SpectralShapeZero.fill
+      
+      
+        ~SpectralShapeZero.from_dict
+      
+      
+        ~SpectralShapeZero.from_list
+      
+      
+        ~SpectralShapeZero.mprint
+      
+      
+        ~SpectralShapeZero.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

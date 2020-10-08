@@ -1,0 +1,49 @@
+
+cli
+===
+
+.. currentmodule:: glotaran.cli
+
+.. automodule:: glotaran.cli
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: cli
+    :recursive:
+
+    
+      
+        glotaran.cli.commands
+      
+      
+        glotaran.cli.main
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

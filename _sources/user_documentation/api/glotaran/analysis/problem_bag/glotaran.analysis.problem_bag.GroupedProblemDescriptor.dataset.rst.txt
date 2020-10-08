@@ -1,0 +1,5 @@
+dataset
+=======
+
+.. autoattribute:: glotaran.analysis.problem_bag.GroupedProblemDescriptor.dataset
+    :noindex:

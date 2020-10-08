@@ -1,0 +1,5 @@
+model\_dimension
+================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model.KineticSpectrumModel.model_dimension
+    :noindex:

@@ -1,0 +1,5 @@
+get\_usage
+==========
+
+.. automethod:: glotaran.cli.main.Cli.get_usage
+    :noindex:

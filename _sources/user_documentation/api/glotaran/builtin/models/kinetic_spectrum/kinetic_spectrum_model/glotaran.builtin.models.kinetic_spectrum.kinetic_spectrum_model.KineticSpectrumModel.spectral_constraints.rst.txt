@@ -1,0 +1,5 @@
+spectral\_constraints
+=====================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model.KineticSpectrumModel.spectral_constraints
+    :noindex:

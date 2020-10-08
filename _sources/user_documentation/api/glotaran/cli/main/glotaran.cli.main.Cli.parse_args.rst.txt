@@ -1,0 +1,5 @@
+parse\_args
+===========
+
+.. automethod:: glotaran.cli.main.Cli.parse_args
+    :noindex:

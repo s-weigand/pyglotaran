@@ -1,0 +1,4 @@
+create\_spectral\_relation\_matrix
+==================================
+
+.. autofunction:: glotaran.builtin.models.kinetic_spectrum.spectral_relations.create_spectral_relation_matrix

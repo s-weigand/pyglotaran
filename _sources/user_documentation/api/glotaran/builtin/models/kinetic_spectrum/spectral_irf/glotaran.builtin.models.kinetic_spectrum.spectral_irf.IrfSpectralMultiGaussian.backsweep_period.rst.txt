@@ -1,0 +1,5 @@
+backsweep\_period
+=================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.spectral_irf.IrfSpectralMultiGaussian.backsweep_period
+    :noindex:

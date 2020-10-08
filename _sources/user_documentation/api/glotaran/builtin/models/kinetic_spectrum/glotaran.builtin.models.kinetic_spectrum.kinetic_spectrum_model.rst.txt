@@ -1,0 +1,68 @@
+
+kinetic\_spectrum\_model
+========================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum
+
+.. automodule:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: kinetic_spectrum_model
+      :nosignatures:
+
+      
+        apply_kinetic_model_constraints
+        apply_spectral_penalties
+        grouped
+        has_kinetic_model_constraints
+        has_spectral_penalties
+        index_dependent
+        kinetic_spectrum_matrix
+        spectral_matrix
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: kinetic_spectrum_model
+      :nosignatures:
+
+      
+        KineticSpectrumModel
+
+  
+
+
+
+
+
+  
+
+
+
+

@@ -1,0 +1,5 @@
+global\_matrix
+==============
+
+.. autoattribute:: glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.global_matrix
+    :noindex:

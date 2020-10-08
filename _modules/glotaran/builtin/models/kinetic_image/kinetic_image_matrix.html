@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>glotaran.builtin.models.kinetic_image.kinetic_image_matrix &mdash; pyglotaran 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/glotaran_favicon.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> pyglotaran
+          
+
+          
+            
+            <img src="../../../../../_static/glotaran.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../quickstart.html">Quickstart/Cheat-Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_documentation/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_documentation/dataio.html">Data IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_documentation/plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_documentation/modelling.html">Modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_documentation/parameter.html">Parameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_documentation/optimizing.html">Optimizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_documentation/api_documentation.html">API Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../contributing.html">Contributing</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">pyglotaran</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>glotaran.builtin.models.kinetic_image.kinetic_image_matrix</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for glotaran.builtin.models.kinetic_image.kinetic_image_matrix</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot; Glotaran Kinetic Matrix &quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numba</span> <span class="k">as</span> <span class="nn">nb</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">.irf</span> <span class="kn">import</span> <span class="n">IrfMultiGaussian</span>
+
+<span class="n">sqrt2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">kinetic_image_matrix</span><span class="p">(</span><span class="n">dataset_descriptor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">irf</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">kinetic_matrix</span><span class="p">(</span>
+        <span class="n">dataset_descriptor</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">irf</span><span class="p">,</span> <span class="n">kinetic_image_matrix_implementation</span>
+    <span class="p">)</span>
+
+
+<div class="viewcode-block" id="kinetic_matrix"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/kinetic_image_matrix/glotaran.builtin.models.kinetic_image.kinetic_image_matrix.kinetic_matrix.html#glotaran.builtin.models.kinetic_image.kinetic_image_matrix.kinetic_matrix">[docs]</a><span class="k">def</span> <span class="nf">kinetic_matrix</span><span class="p">(</span>
+    <span class="n">dataset_descriptor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">irf</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">matrix_implementation</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">):</span>
+
+    <span class="n">compartments</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">k_matrices</span> <span class="o">=</span> <span class="n">dataset_descriptor</span><span class="o">.</span><span class="n">get_k_matrices</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">k_matrices</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">dataset_descriptor</span><span class="o">.</span><span class="n">initial_concentration</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s1">&#39;No initial concentration specified in dataset &quot;</span><span class="si">{</span><span class="n">dataset_descriptor</span><span class="o">.</span><span class="n">label</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
+        <span class="p">)</span>
+    <span class="n">initial_concentration</span> <span class="o">=</span> <span class="n">dataset_descriptor</span><span class="o">.</span><span class="n">initial_concentration</span><span class="o">.</span><span class="n">normalized</span><span class="p">(</span><span class="n">dataset_descriptor</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">k_matrix</span> <span class="ow">in</span> <span class="n">k_matrices</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">k_matrix</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="p">(</span><span class="n">this_compartments</span><span class="p">,</span> <span class="n">this_matrix</span><span class="p">)</span> <span class="o">=</span> <span class="n">_calculate_for_k_matrix</span><span class="p">(</span>
+            <span class="n">dataset_descriptor</span><span class="p">,</span>
+            <span class="n">axis</span><span class="p">,</span>
+            <span class="n">index</span><span class="p">,</span>
+            <span class="n">k_matrix</span><span class="p">,</span>
+            <span class="n">initial_concentration</span><span class="p">,</span>
+            <span class="n">irf</span><span class="p">,</span>
+            <span class="n">matrix_implementation</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">matrix</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">compartments</span> <span class="o">=</span> <span class="n">this_compartments</span>
+            <span class="n">matrix</span> <span class="o">=</span> <span class="n">this_matrix</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_compartments</span> <span class="o">=</span> <span class="n">compartments</span> <span class="o">+</span> <span class="p">[</span>
+                <span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">this_compartments</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">compartments</span>
+            <span class="p">]</span>
+            <span class="n">new_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_compartments</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">comp</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">new_compartments</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">compartments</span><span class="p">:</span>
+                    <span class="n">new_matrix</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">matrix</span><span class="p">[:,</span> <span class="n">compartments</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">comp</span><span class="p">)]</span>
+                <span class="k">if</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">this_compartments</span><span class="p">:</span>
+                    <span class="n">new_matrix</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">this_matrix</span><span class="p">[:,</span> <span class="n">this_compartments</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">comp</span><span class="p">)]</span>
+            <span class="n">compartments</span> <span class="o">=</span> <span class="n">new_compartments</span>
+            <span class="n">matrix</span> <span class="o">=</span> <span class="n">new_matrix</span>
+
+    <span class="k">if</span> <span class="n">dataset_descriptor</span><span class="o">.</span><span class="n">baseline</span><span class="p">:</span>
+        <span class="n">baseline_compartment</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dataset_descriptor</span><span class="o">.</span><span class="n">label</span><span class="si">}</span><span class="s2">_baseline&quot;</span>
+        <span class="n">baseline</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">axis</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">matrix</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">compartments</span> <span class="o">=</span> <span class="p">[</span><span class="n">baseline_compartment</span><span class="p">]</span>
+            <span class="n">matrix</span> <span class="o">=</span> <span class="n">baseline</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">compartments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">baseline_compartment</span><span class="p">)</span>
+            <span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">matrix</span><span class="p">,</span> <span class="n">baseline</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="n">compartments</span><span class="p">,</span> <span class="n">matrix</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_calculate_for_k_matrix</span><span class="p">(</span>
+    <span class="n">dataset_descriptor</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">k_matrix</span><span class="p">,</span> <span class="n">initial_concentration</span><span class="p">,</span> <span class="n">irf</span><span class="p">,</span> <span class="n">matrix_implementation</span>
+<span class="p">):</span>
+
+    <span class="c1"># we might have more compartments in the model then in the k matrix</span>
+    <span class="n">compartments</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">comp</span>
+        <span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">initial_concentration</span><span class="o">.</span><span class="n">compartments</span>
+        <span class="k">if</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">k_matrix</span><span class="o">.</span><span class="n">involved_compartments</span><span class="p">()</span>
+    <span class="p">]</span>
+
+    <span class="c1"># the rates are the eigenvalues of the k matrix</span>
+    <span class="n">rates</span> <span class="o">=</span> <span class="n">k_matrix</span><span class="o">.</span><span class="n">rates</span><span class="p">(</span><span class="n">initial_concentration</span><span class="p">)</span>
+
+    <span class="c1"># init the matrix</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="n">axis</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">rates</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+
+    <span class="n">matrix_implementation</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">rates</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">dataset_descriptor</span><span class="p">,</span> <span class="n">irf</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">matrix</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Non-finite concentrations for K-Matrix &#39;</span><span class="si">{</span><span class="n">k_matrix</span><span class="o">.</span><span class="n">label</span><span class="si">}</span><span class="s2">&#39;:</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;</span><span class="si">{k_matrix.matrix_as_markdown}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+
+    <span class="c1"># apply A matrix</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="n">matrix</span> <span class="o">@</span> <span class="n">k_matrix</span><span class="o">.</span><span class="n">a_matrix</span><span class="p">(</span><span class="n">initial_concentration</span><span class="p">)</span>
+
+    <span class="c1"># done</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">compartments</span><span class="p">,</span> <span class="n">matrix</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="kinetic_image_matrix_implementation"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/kinetic_image_matrix/glotaran.builtin.models.kinetic_image.kinetic_image_matrix.kinetic_image_matrix_implementation.html#glotaran.builtin.models.kinetic_image.kinetic_image_matrix.kinetic_image_matrix_implementation">[docs]</a><span class="k">def</span> <span class="nf">kinetic_image_matrix_implementation</span><span class="p">(</span>
+    <span class="n">matrix</span><span class="p">,</span> <span class="n">rates</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">dataset_descriptor</span><span class="p">,</span> <span class="n">measured_irf</span>
+<span class="p">):</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dataset_descriptor</span><span class="o">.</span><span class="n">irf</span><span class="p">,</span> <span class="n">IrfMultiGaussian</span><span class="p">):</span>
+
+        <span class="n">center</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">irf_scale</span><span class="p">,</span> <span class="n">backsweep</span><span class="p">,</span> <span class="n">backsweep_period</span> <span class="o">=</span> <span class="n">dataset_descriptor</span><span class="o">.</span><span class="n">irf</span><span class="o">.</span><span class="n">parameter</span><span class="p">(</span>
+            <span class="n">index</span>
+        <span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">center</span><span class="p">)):</span>
+            <span class="n">calculate_kinetic_matrix_gaussian_irf</span><span class="p">(</span>
+                <span class="n">matrix</span><span class="p">,</span>
+                <span class="n">rates</span><span class="p">,</span>
+                <span class="n">axis</span><span class="p">,</span>
+                <span class="n">center</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                <span class="n">width</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                <span class="n">irf_scale</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                <span class="n">backsweep</span><span class="p">,</span>
+                <span class="n">backsweep_period</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="n">matrix</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">irf_scale</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">calculate_kinetic_matrix_no_irf</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">rates</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="calculate_kinetic_matrix_no_irf"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/kinetic_image_matrix/glotaran.builtin.models.kinetic_image.kinetic_image_matrix.calculate_kinetic_matrix_no_irf.html#glotaran.builtin.models.kinetic_image.kinetic_image_matrix.calculate_kinetic_matrix_no_irf">[docs]</a><span class="nd">@nb</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">calculate_kinetic_matrix_no_irf</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">rates</span><span class="p">,</span> <span class="n">times</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">n_r</span> <span class="ow">in</span> <span class="n">nb</span><span class="o">.</span><span class="n">prange</span><span class="p">(</span><span class="n">rates</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+        <span class="n">r_n</span> <span class="o">=</span> <span class="n">rates</span><span class="p">[</span><span class="n">n_r</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">n_t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">times</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+            <span class="n">t_n</span> <span class="o">=</span> <span class="n">times</span><span class="p">[</span><span class="n">n_t</span><span class="p">]</span>
+            <span class="n">matrix</span><span class="p">[</span><span class="n">n_t</span><span class="p">,</span> <span class="n">n_r</span><span class="p">]</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r_n</span> <span class="o">*</span> <span class="n">t_n</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="calculate_kinetic_matrix_gaussian_irf"><a class="viewcode-back" href="../../../../../user_documentation/api/glotaran/builtin/models/kinetic_image/kinetic_image_matrix/glotaran.builtin.models.kinetic_image.kinetic_image_matrix.calculate_kinetic_matrix_gaussian_irf.html#glotaran.builtin.models.kinetic_image.kinetic_image_matrix.calculate_kinetic_matrix_gaussian_irf">[docs]</a><span class="nd">@nb</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">calculate_kinetic_matrix_gaussian_irf</span><span class="p">(</span>
+    <span class="n">matrix</span><span class="p">,</span> <span class="n">rates</span><span class="p">,</span> <span class="n">times</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">backsweep</span><span class="p">,</span> <span class="n">backsweep_period</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculates a kinetic matrix with a gaussian irf.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">n_r</span> <span class="ow">in</span> <span class="n">nb</span><span class="o">.</span><span class="n">prange</span><span class="p">(</span><span class="n">rates</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+        <span class="n">r_n</span> <span class="o">=</span> <span class="o">-</span><span class="n">rates</span><span class="p">[</span><span class="n">n_r</span><span class="p">]</span>
+        <span class="n">alpha</span> <span class="o">=</span> <span class="p">(</span><span class="n">r_n</span> <span class="o">*</span> <span class="n">width</span><span class="p">)</span> <span class="o">/</span> <span class="n">sqrt2</span>
+        <span class="k">for</span> <span class="n">n_t</span> <span class="ow">in</span> <span class="n">nb</span><span class="o">.</span><span class="n">prange</span><span class="p">(</span><span class="n">times</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+            <span class="n">t_n</span> <span class="o">=</span> <span class="n">times</span><span class="p">[</span><span class="n">n_t</span><span class="p">]</span>
+            <span class="n">beta</span> <span class="o">=</span> <span class="p">(</span><span class="n">t_n</span> <span class="o">-</span> <span class="n">center</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">width</span> <span class="o">*</span> <span class="n">sqrt2</span><span class="p">)</span>
+            <span class="n">thresh</span> <span class="o">=</span> <span class="n">beta</span> <span class="o">-</span> <span class="n">alpha</span>
+            <span class="k">if</span> <span class="n">thresh</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                <span class="n">matrix</span><span class="p">[</span><span class="n">n_t</span><span class="p">,</span> <span class="n">n_r</span><span class="p">]</span> <span class="o">+=</span> <span class="n">scale</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">erfcx</span><span class="p">(</span><span class="o">-</span><span class="n">thresh</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">beta</span> <span class="o">*</span> <span class="n">beta</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">matrix</span><span class="p">[</span><span class="n">n_t</span><span class="p">,</span> <span class="n">n_r</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span>
+                    <span class="n">scale</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">erf</span><span class="p">(</span><span class="n">thresh</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">alpha</span> <span class="o">*</span> <span class="p">(</span><span class="n">alpha</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">beta</span><span class="p">))</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="n">backsweep</span><span class="p">:</span>
+                <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r_n</span> <span class="o">*</span> <span class="p">(</span><span class="n">t_n</span> <span class="o">-</span> <span class="n">center</span> <span class="o">+</span> <span class="n">backsweep_period</span><span class="p">))</span>
+                <span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r_n</span> <span class="o">*</span> <span class="p">((</span><span class="n">backsweep_period</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">t_n</span> <span class="o">-</span> <span class="n">center</span><span class="p">)))</span>
+                <span class="n">x3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r_n</span> <span class="o">*</span> <span class="n">backsweep_period</span><span class="p">)</span>
+                <span class="n">matrix</span><span class="p">[</span><span class="n">n_t</span><span class="p">,</span> <span class="n">n_r</span><span class="p">]</span> <span class="o">+=</span> <span class="n">scale</span> <span class="o">*</span> <span class="p">(</span><span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x3</span><span class="p">)</span></div>
+
+
+<span class="kn">import</span> <span class="nn">ctypes</span>  <span class="c1"># noqa: E402</span>
+
+<span class="c1"># This is a work around to use scipy.special function with numba</span>
+<span class="kn">from</span> <span class="nn">numba.extending</span> <span class="kn">import</span> <span class="n">get_cython_function_address</span>  <span class="c1"># noqa: E402</span>
+
+<span class="n">_dble</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_double</span>
+
+<span class="n">functype</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">CFUNCTYPE</span><span class="p">(</span><span class="n">_dble</span><span class="p">,</span> <span class="n">_dble</span><span class="p">)</span>
+
+<span class="n">erf_addr</span> <span class="o">=</span> <span class="n">get_cython_function_address</span><span class="p">(</span><span class="s2">&quot;scipy.special.cython_special&quot;</span><span class="p">,</span> <span class="s2">&quot;__pyx_fuse_1erf&quot;</span><span class="p">)</span>
+<span class="n">erfcx_addr</span> <span class="o">=</span> <span class="n">get_cython_function_address</span><span class="p">(</span><span class="s2">&quot;scipy.special.cython_special&quot;</span><span class="p">,</span> <span class="s2">&quot;__pyx_fuse_1erfcx&quot;</span><span class="p">)</span>
+
+<span class="n">erf</span> <span class="o">=</span> <span class="n">functype</span><span class="p">(</span><span class="n">erf_addr</span><span class="p">)</span>
+<span class="n">erfcx</span> <span class="o">=</span> <span class="n">functype</span><span class="p">(</span><span class="n">erfcx_addr</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, Joern Weissenborn, Joris Snellenburg, Ivo van Stokkum
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

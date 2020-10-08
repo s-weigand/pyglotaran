@@ -1,0 +1,5 @@
+center
+======
+
+.. autoattribute:: glotaran.builtin.models.kinetic_image.irf.IrfGaussian.center
+    :noindex:

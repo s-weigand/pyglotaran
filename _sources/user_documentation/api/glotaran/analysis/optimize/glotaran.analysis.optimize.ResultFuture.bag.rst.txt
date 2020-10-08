@@ -1,0 +1,5 @@
+bag
+===
+
+.. autoattribute:: glotaran.analysis.optimize.ResultFuture.bag
+    :noindex:

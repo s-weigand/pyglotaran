@@ -1,0 +1,5 @@
+calculate
+=========
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.spectral_irf.IrfSpectralGaussian.calculate
+    :noindex:

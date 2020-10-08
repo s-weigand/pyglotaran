@@ -1,0 +1,47 @@
+
+dataset\_descriptor
+===================
+
+.. currentmodule:: glotaran.model
+
+.. automodule:: glotaran.model.dataset_descriptor
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: dataset_descriptor
+      :nosignatures:
+
+      
+        DatasetDescriptor
+
+  
+
+
+
+
+
+  
+
+
+
+

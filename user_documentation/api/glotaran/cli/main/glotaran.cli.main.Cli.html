@@ -1,0 +1,688 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Cli &mdash; pyglotaran 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/glotaran_favicon.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="allow_extra_args" href="glotaran.cli.main.Cli.allow_extra_args.html" />
+    <link rel="prev" title="main" href="../glotaran.cli.main.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> pyglotaran
+          
+
+          
+            
+            <img src="../../../../../_static/glotaran.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../quickstart.html">Quickstart/Cheat-Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dataio.html">Data IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modelling.html">Modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../parameter.html">Parameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../optimizing.html">Optimizing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../api_documentation.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../glotaran.html">glotaran</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.analysis.html">analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.builtin.html">builtin</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../glotaran.cli.html">cli</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../glotaran.cli.commands.html">commands</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../glotaran.cli.main.html">main</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="../glotaran.cli.main.html#classes">Classes</a><ul class="current">
+<li class="toctree-l6 current"><a class="current reference internal" href="#">Cli</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.allow_extra_args.html">allow_extra_args</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.allow_interspersed_args.html">allow_interspersed_args</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.ignore_unknown_options.html">ignore_unknown_options</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.add_command.html">add_command</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.collect_usage_pieces.html">collect_usage_pieces</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.command.html">command</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.format_commands.html">format_commands</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.format_epilog.html">format_epilog</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.format_help.html">format_help</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.format_help_text.html">format_help_text</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.format_options.html">format_options</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.format_usage.html">format_usage</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.get_command.html">get_command</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.get_help.html">get_help</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.get_help_option.html">get_help_option</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.get_help_option_names.html">get_help_option_names</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.get_params.html">get_params</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.get_short_help_str.html">get_short_help_str</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.get_usage.html">get_usage</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.group.html">group</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.invoke.html">invoke</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.list_commands.html">list_commands</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.list_commands_for_help.html">list_commands_for_help</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.main.html">main</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.make_context.html">make_context</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.make_parser.html">make_parser</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.parse_args.html">parse_args</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.resolve_command.html">resolve_command</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.cli.main.Cli.resultcallback.html">resultcallback</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.io.html">io</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.model.html">model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.parameter.html">parameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.parse.html">parse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../contributing.html">Contributing</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">pyglotaran</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../../api_documentation.html">API Documentation</a> &raquo;</li>
+        
+          <li><a href="../../../glotaran.html">glotaran</a> &raquo;</li>
+        
+          <li><a href="../../glotaran.cli.html">cli</a> &raquo;</li>
+        
+          <li><a href="../glotaran.cli.main.html">main</a> &raquo;</li>
+        
+      <li>Cli</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../../_sources/user_documentation/api/glotaran/cli/main/glotaran.cli.main.Cli.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cli">
+<h1>Cli<a class="headerlink" href="#cli" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="glotaran.cli.main.Cli">
+<em class="property">class </em><code class="sig-prename descclassname">glotaran.cli.main.</code><code class="sig-name descname">Cli</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/glotaran/cli/main.html#Cli"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#glotaran.cli.main.Cli" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">click.core.Group</span></code></p>
+<p class="rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.allow_extra_args" title="glotaran.cli.main.Cli.allow_extra_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">allow_extra_args</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.allow_interspersed_args" title="glotaran.cli.main.Cli.allow_interspersed_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">allow_interspersed_args</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.ignore_unknown_options" title="glotaran.cli.main.Cli.ignore_unknown_options"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ignore_unknown_options</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.add_command" title="glotaran.cli.main.Cli.add_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_command</span></code></a></p></td>
+<td><p>Registers another <code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code> with this group.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.collect_usage_pieces" title="glotaran.cli.main.Cli.collect_usage_pieces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collect_usage_pieces</span></code></a></p></td>
+<td><p>Returns all the pieces that go into the usage line and returns it as a list of strings.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.command" title="glotaran.cli.main.Cli.command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">command</span></code></a></p></td>
+<td><p>Behaves the same as <cite>click.Group.command()</cite> except capture a priority for listing command names in help.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.format_commands" title="glotaran.cli.main.Cli.format_commands"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_commands</span></code></a></p></td>
+<td><p>Extra format methods for multi methods that adds all the commands after the options.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.format_epilog" title="glotaran.cli.main.Cli.format_epilog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_epilog</span></code></a></p></td>
+<td><p>Writes the epilog into the formatter if it exists.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.format_help" title="glotaran.cli.main.Cli.format_help"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_help</span></code></a></p></td>
+<td><p>Writes the help into the formatter if it exists.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.format_help_text" title="glotaran.cli.main.Cli.format_help_text"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_help_text</span></code></a></p></td>
+<td><p>Writes the help text to the formatter if it exists.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.format_options" title="glotaran.cli.main.Cli.format_options"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_options</span></code></a></p></td>
+<td><p>Writes all the options into the formatter if they exist.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.format_usage" title="glotaran.cli.main.Cli.format_usage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_usage</span></code></a></p></td>
+<td><p>Writes the usage line into the formatter.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.get_command" title="glotaran.cli.main.Cli.get_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_command</span></code></a></p></td>
+<td><p>Given a context and a command name, this returns a <code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code> object if it exists or returns <cite>None</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.get_help" title="glotaran.cli.main.Cli.get_help"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_help</span></code></a></p></td>
+<td><p>Formats the help into a string and returns it.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.get_help_option" title="glotaran.cli.main.Cli.get_help_option"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_help_option</span></code></a></p></td>
+<td><p>Returns the help option object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.get_help_option_names" title="glotaran.cli.main.Cli.get_help_option_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_help_option_names</span></code></a></p></td>
+<td><p>Returns the names for the help option.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.get_params" title="glotaran.cli.main.Cli.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.get_short_help_str" title="glotaran.cli.main.Cli.get_short_help_str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_short_help_str</span></code></a></p></td>
+<td><p>Gets short help for the command or makes it by shortening the long help string.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.get_usage" title="glotaran.cli.main.Cli.get_usage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_usage</span></code></a></p></td>
+<td><p>Formats the usage line into a string and returns it.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.group" title="glotaran.cli.main.Cli.group"><code class="xref py py-obj docutils literal notranslate"><span class="pre">group</span></code></a></p></td>
+<td><p>A shortcut decorator for declaring and attaching a group to the group.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.invoke" title="glotaran.cli.main.Cli.invoke"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invoke</span></code></a></p></td>
+<td><p>Given a context, this invokes the attached callback (if it exists) in the right way.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.list_commands" title="glotaran.cli.main.Cli.list_commands"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_commands</span></code></a></p></td>
+<td><p>Returns a list of subcommand names in the order they should appear.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.list_commands_for_help" title="glotaran.cli.main.Cli.list_commands_for_help"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_commands_for_help</span></code></a></p></td>
+<td><p>reorder the list of commands when listing the help</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.main" title="glotaran.cli.main.Cli.main"><code class="xref py py-obj docutils literal notranslate"><span class="pre">main</span></code></a></p></td>
+<td><p>This is the way to invoke a script with all the bells and whistles as a command line application.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.make_context" title="glotaran.cli.main.Cli.make_context"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_context</span></code></a></p></td>
+<td><p>This function when given an info name and arguments will kick off the parsing and create a new <code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.make_parser" title="glotaran.cli.main.Cli.make_parser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_parser</span></code></a></p></td>
+<td><p>Creates the underlying option parser for this command.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.parse_args" title="glotaran.cli.main.Cli.parse_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_args</span></code></a></p></td>
+<td><p>Given a context and a list of arguments this creates the parser and parses the arguments, then modifies the context as necessary.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.resolve_command" title="glotaran.cli.main.Cli.resolve_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_command</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.cli.main.Cli.resultcallback" title="glotaran.cli.main.Cli.resultcallback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resultcallback</span></code></a></p></td>
+<td><p>Adds a result callback to the chain command.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.add_command">
+<code class="sig-name descname">add_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.add_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers another <code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code> with this group.  If the name
+is not provided, the name of the command is used.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="glotaran.cli.main.Cli.allow_extra_args">
+<code class="sig-name descname">allow_extra_args</code><em class="property"> = True</em><a class="headerlink" href="#glotaran.cli.main.Cli.allow_extra_args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="glotaran.cli.main.Cli.allow_interspersed_args">
+<code class="sig-name descname">allow_interspersed_args</code><em class="property"> = False</em><a class="headerlink" href="#glotaran.cli.main.Cli.allow_interspersed_args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.collect_usage_pieces">
+<code class="sig-name descname">collect_usage_pieces</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.collect_usage_pieces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all the pieces that go into the usage line and returns
+it as a list of strings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.command">
+<code class="sig-name descname">command</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/glotaran/cli/main.html#Cli.command"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#glotaran.cli.main.Cli.command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Behaves the same as <cite>click.Group.command()</cite> except capture
+a priority for listing command names in help.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.format_commands">
+<code class="sig-name descname">format_commands</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em>, <em class="sig-param"><span class="n">formatter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.format_commands" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extra format methods for multi methods that adds all the commands
+after the options.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.format_epilog">
+<code class="sig-name descname">format_epilog</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em>, <em class="sig-param"><span class="n">formatter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.format_epilog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the epilog into the formatter if it exists.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.format_help">
+<code class="sig-name descname">format_help</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em>, <em class="sig-param"><span class="n">formatter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.format_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the help into the formatter if it exists.</p>
+<p>This is a low-level method called by <a class="reference internal" href="#glotaran.cli.main.Cli.get_help" title="glotaran.cli.main.Cli.get_help"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_help()</span></code></a>.</p>
+<p>This calls the following methods:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#glotaran.cli.main.Cli.format_usage" title="glotaran.cli.main.Cli.format_usage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format_usage()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#glotaran.cli.main.Cli.format_help_text" title="glotaran.cli.main.Cli.format_help_text"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format_help_text()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#glotaran.cli.main.Cli.format_options" title="glotaran.cli.main.Cli.format_options"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format_options()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#glotaran.cli.main.Cli.format_epilog" title="glotaran.cli.main.Cli.format_epilog"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format_epilog()</span></code></a></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.format_help_text">
+<code class="sig-name descname">format_help_text</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em>, <em class="sig-param"><span class="n">formatter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.format_help_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the help text to the formatter if it exists.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.format_options">
+<code class="sig-name descname">format_options</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em>, <em class="sig-param"><span class="n">formatter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.format_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes all the options into the formatter if they exist.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.format_usage">
+<code class="sig-name descname">format_usage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em>, <em class="sig-param"><span class="n">formatter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.format_usage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the usage line into the formatter.</p>
+<p>This is a low-level method called by <a class="reference internal" href="#glotaran.cli.main.Cli.get_usage" title="glotaran.cli.main.Cli.get_usage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_usage()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.get_command">
+<code class="sig-name descname">get_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em>, <em class="sig-param"><span class="n">cmd_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.get_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a context and a command name, this returns a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code> object if it exists or returns <cite>None</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.get_help">
+<code class="sig-name descname">get_help</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/glotaran/cli/main.html#Cli.get_help"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#glotaran.cli.main.Cli.get_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Formats the help into a string and returns it.</p>
+<p>Calls <a class="reference internal" href="#glotaran.cli.main.Cli.format_help" title="glotaran.cli.main.Cli.format_help"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format_help()</span></code></a> internally.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.get_help_option">
+<code class="sig-name descname">get_help_option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.get_help_option" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the help option object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.get_help_option_names">
+<code class="sig-name descname">get_help_option_names</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.get_help_option_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the names for the help option.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.get_params">
+<code class="sig-name descname">get_params</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.get_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.get_short_help_str">
+<code class="sig-name descname">get_short_help_str</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">limit</span><span class="o">=</span><span class="default_value">45</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.get_short_help_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets short help for the command or makes it by shortening the
+long help string.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.get_usage">
+<code class="sig-name descname">get_usage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.get_usage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Formats the usage line into a string and returns it.</p>
+<p>Calls <a class="reference internal" href="#glotaran.cli.main.Cli.format_usage" title="glotaran.cli.main.Cli.format_usage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format_usage()</span></code></a> internally.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.group">
+<code class="sig-name descname">group</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.group" title="Permalink to this definition">¶</a></dt>
+<dd><p>A shortcut decorator for declaring and attaching a group to
+the group.  This takes the same arguments as <a class="reference internal" href="#glotaran.cli.main.Cli.group" title="glotaran.cli.main.Cli.group"><code class="xref py py-func docutils literal notranslate"><span class="pre">group()</span></code></a> but
+immediately registers the created command with this instance by
+calling into <a class="reference internal" href="#glotaran.cli.main.Cli.add_command" title="glotaran.cli.main.Cli.add_command"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_command()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="glotaran.cli.main.Cli.ignore_unknown_options">
+<code class="sig-name descname">ignore_unknown_options</code><em class="property"> = False</em><a class="headerlink" href="#glotaran.cli.main.Cli.ignore_unknown_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.invoke">
+<code class="sig-name descname">invoke</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.invoke" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a context, this invokes the attached callback (if it exists)
+in the right way.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.list_commands">
+<code class="sig-name descname">list_commands</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.list_commands" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of subcommand names in the order they should
+appear.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.list_commands_for_help">
+<code class="sig-name descname">list_commands_for_help</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/glotaran/cli/main.html#Cli.list_commands_for_help"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#glotaran.cli.main.Cli.list_commands_for_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>reorder the list of commands when listing the help</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.main">
+<code class="sig-name descname">main</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prog_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">complete_var</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standalone_mode</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">extra</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the way to invoke a script with all the bells and
+whistles as a command line application.  This will always terminate
+the application after a call.  If this is not wanted, <code class="docutils literal notranslate"><span class="pre">SystemExit</span></code>
+needs to be caught.</p>
+<p>This method is also available by directly calling the instance of
+a <code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 3.0: </span>Added the <cite>standalone_mode</cite> flag to control the standalone mode.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – the arguments that should be used for parsing.  If not
+provided, <code class="docutils literal notranslate"><span class="pre">sys.argv[1:]</span></code> is used.</p></li>
+<li><p><strong>prog_name</strong> – the program name that should be used.  By default
+the program name is constructed by taking the file
+name from <code class="docutils literal notranslate"><span class="pre">sys.argv[0]</span></code>.</p></li>
+<li><p><strong>complete_var</strong> – the environment variable that controls the
+bash completion support.  The default is
+<code class="docutils literal notranslate"><span class="pre">&quot;_&lt;prog_name&gt;_COMPLETE&quot;</span></code> with prog_name in
+uppercase.</p></li>
+<li><p><strong>standalone_mode</strong> – the default behavior is to invoke the script
+in standalone mode.  Click will then
+handle exceptions and convert them into
+error messages and the function will never
+return but shut down the interpreter.  If
+this is set to <cite>False</cite> they will be
+propagated to the caller and the return
+value of this function is the return value
+of <a class="reference internal" href="#glotaran.cli.main.Cli.invoke" title="glotaran.cli.main.Cli.invoke"><code class="xref py py-meth docutils literal notranslate"><span class="pre">invoke()</span></code></a>.</p></li>
+<li><p><strong>extra</strong> – extra keyword arguments are forwarded to the context
+constructor.  See <code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code> for more information.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.make_context">
+<code class="sig-name descname">make_context</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">info_name</span></em>, <em class="sig-param"><span class="n">args</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">extra</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.make_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function when given an info name and arguments will kick
+off the parsing and create a new <code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code>.  It does not
+invoke the actual command callback though.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>info_name</strong> – the info name for this invokation.  Generally this
+is the most descriptive name for the script or
+command.  For the toplevel script it’s usually
+the name of the script, for commands below it it’s
+the name of the script.</p></li>
+<li><p><strong>args</strong> – the arguments to parse as list of strings.</p></li>
+<li><p><strong>parent</strong> – the parent context if available.</p></li>
+<li><p><strong>extra</strong> – extra keyword arguments forwarded to the context
+constructor.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.make_parser">
+<code class="sig-name descname">make_parser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.make_parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the underlying option parser for this command.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.parse_args">
+<code class="sig-name descname">parse_args</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em>, <em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.parse_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a context and a list of arguments this creates the parser
+and parses the arguments, then modifies the context as necessary.
+This is automatically invoked by <a class="reference internal" href="#glotaran.cli.main.Cli.make_context" title="glotaran.cli.main.Cli.make_context"><code class="xref py py-meth docutils literal notranslate"><span class="pre">make_context()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.resolve_command">
+<code class="sig-name descname">resolve_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em>, <em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.resolve_command" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.cli.main.Cli.resultcallback">
+<code class="sig-name descname">resultcallback</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">replace</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#glotaran.cli.main.Cli.resultcallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a result callback to the chain command.  By default if a
+result callback is already registered this will chain them but
+this can be disabled with the <cite>replace</cite> parameter.  The result
+callback is invoked with the return value of the subcommand
+(or the list of return values from all subcommands if chaining
+is enabled) as well as the parameters as they would be passed
+to the main callback.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@click</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
+<span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s1">&#39;-i&#39;</span><span class="p">,</span> <span class="s1">&#39;--input&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">23</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">cli</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">42</span>
+
+<span class="nd">@cli</span><span class="o">.</span><span class="n">resultcallback</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">process_result</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">result</span> <span class="o">+</span> <span class="nb">input</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 3.0.</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>replace</strong> – if set to <cite>True</cite> an already existing result
+callback will be removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="glotaran.cli.main.Cli.allow_extra_args.html" class="btn btn-neutral float-right" title="allow_extra_args" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../glotaran.cli.main.html" class="btn btn-neutral float-left" title="main" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, Joern Weissenborn, Joris Snellenburg, Ivo van Stokkum
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

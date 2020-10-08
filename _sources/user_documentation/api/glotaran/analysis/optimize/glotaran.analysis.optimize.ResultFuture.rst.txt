@@ -1,0 +1,60 @@
+ResultFuture
+============
+
+.. currentmodule:: glotaran.analysis.optimize
+
+.. autoclass:: ResultFuture
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~ResultFuture.bag
+        ~ResultFuture.clp
+        ~ResultFuture.clp_label
+        ~ResultFuture.full_clp_label
+        ~ResultFuture.matrix
+        ~ResultFuture.residual
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~ResultFuture.count
+      
+      
+        ~ResultFuture.index
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

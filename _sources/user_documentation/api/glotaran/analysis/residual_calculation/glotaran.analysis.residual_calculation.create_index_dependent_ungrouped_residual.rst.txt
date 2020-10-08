@@ -1,0 +1,4 @@
+create\_index\_dependent\_ungrouped\_residual
+=============================================
+
+.. autofunction:: glotaran.analysis.residual_calculation.create_index_dependent_ungrouped_residual

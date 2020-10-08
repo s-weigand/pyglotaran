@@ -1,0 +1,5 @@
+global\_dimension
+=================
+
+.. autoattribute:: glotaran.builtin.models.doas.doas_model.DOASModel.global_dimension
+    :noindex:

@@ -1,0 +1,5 @@
+from\_dict
+==========
+
+.. automethod:: glotaran.builtin.models.doas.doas_megacomplex.DOASMegacomplex.from_dict
+    :noindex:

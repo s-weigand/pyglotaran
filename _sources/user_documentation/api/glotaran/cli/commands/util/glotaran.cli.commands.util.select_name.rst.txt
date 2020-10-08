@@ -1,0 +1,4 @@
+select\_name
+============
+
+.. autofunction:: glotaran.cli.commands.util.select_name

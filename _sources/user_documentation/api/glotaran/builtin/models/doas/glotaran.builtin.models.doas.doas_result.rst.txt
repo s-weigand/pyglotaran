@@ -1,0 +1,47 @@
+
+doas\_result
+============
+
+.. currentmodule:: glotaran.builtin.models.doas
+
+.. automodule:: glotaran.builtin.models.doas.doas_result
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: doas_result
+      :nosignatures:
+
+      
+        finalize_doas_data
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

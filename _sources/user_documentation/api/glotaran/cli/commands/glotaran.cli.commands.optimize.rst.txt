@@ -1,0 +1,47 @@
+
+optimize
+========
+
+.. currentmodule:: glotaran.cli.commands
+
+.. automodule:: glotaran.cli.commands.optimize
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: optimize
+      :nosignatures:
+
+      
+        optimize_cmd
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

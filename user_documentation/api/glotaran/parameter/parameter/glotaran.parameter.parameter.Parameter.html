@@ -1,0 +1,526 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Parameter &mdash; pyglotaran 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/copybutton.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/glotaran_favicon.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/language_data.js"></script>
+        <script src="../../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="expr" href="glotaran.parameter.parameter.Parameter.expr.html" />
+    <link rel="prev" title="VARY" href="glotaran.parameter.parameter.Keys.VARY.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> pyglotaran
+          
+
+          
+            
+            <img src="../../../../../_static/glotaran.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../quickstart.html">Quickstart/Cheat-Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dataio.html">Data IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modelling.html">Modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../parameter.html">Parameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../optimizing.html">Optimizing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../api_documentation.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../glotaran.html">glotaran</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.analysis.html">analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.builtin.html">builtin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.cli.html">cli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.io.html">io</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.model.html">model</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../glotaran.parameter.html">parameter</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../glotaran.parameter.parameter.html">parameter</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="../glotaran.parameter.parameter.html#classes">Classes</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="glotaran.parameter.parameter.Keys.html">Keys</a></li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">Parameter</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.parameter.parameter.Parameter.expr.html">expr</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.parameter.parameter.Parameter.full_label.html">full_label</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.parameter.parameter.Parameter.label.html">label</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.parameter.parameter.Parameter.non_neg.html">non_neg</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.parameter.parameter.Parameter.value.html">value</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.parameter.parameter.Parameter.from_list_or_value.html">from_list_or_value</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.parameter.parameter.Parameter.from_parameter.html">from_parameter</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.parameter.parameter.Parameter.scale_gradient.html">scale_gradient</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.parameter.parameter.Parameter.set.html">set</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.parameter.parameter.Parameter.set_expr_eval.html">set_expr_eval</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.parameter.parameter.Parameter.set_from_group.html">set_from_group</a></li>
+<li class="toctree-l7"><a class="reference internal" href="glotaran.parameter.parameter.Parameter.setup_bounds.html">setup_bounds</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../glotaran.parameter.parameter_group.html">parameter_group</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../glotaran.parse.html">parse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../contributing.html">Contributing</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">pyglotaran</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../../api_documentation.html">API Documentation</a> &raquo;</li>
+        
+          <li><a href="../../../glotaran.html">glotaran</a> &raquo;</li>
+        
+          <li><a href="../../glotaran.parameter.html">parameter</a> &raquo;</li>
+        
+          <li><a href="../glotaran.parameter.parameter.html">parameter</a> &raquo;</li>
+        
+      <li>Parameter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../../_sources/user_documentation/api/glotaran/parameter/parameter/glotaran.parameter.parameter.Parameter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="parameter">
+<h1>Parameter<a class="headerlink" href="#parameter" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="glotaran.parameter.parameter.Parameter">
+<em class="property">class </em><code class="sig-prename descclassname">glotaran.parameter.parameter.</code><code class="sig-name descname">Parameter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">label</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_label</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/glotaran/parameter/parameter.html#Parameter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#glotaran.parameter.parameter.Parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">lmfit.parameter.Parameter</span></code></p>
+<p>A parameter for optimization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label</strong> – The label of the parameter.</p></li>
+<li><p><strong>full_label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The label of the parameter with its path in a parameter group prepended.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.parameter.parameter.Parameter.expr" title="glotaran.parameter.parameter.Parameter.expr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expr</span></code></a></p></td>
+<td><p>Return the mathematical expression used to constrain the value during the fit.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.parameter.parameter.Parameter.full_label" title="glotaran.parameter.parameter.Parameter.full_label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">full_label</span></code></a></p></td>
+<td><p>The label of the parameter with its path in a parameter group prepended.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.parameter.parameter.Parameter.label" title="glotaran.parameter.parameter.Parameter.label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">label</span></code></a></p></td>
+<td><p>Label of the parameter</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.parameter.parameter.Parameter.non_neg" title="glotaran.parameter.parameter.Parameter.non_neg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">non_neg</span></code></a></p></td>
+<td><p>Indicates if the parameter is non-negativ.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.parameter.parameter.Parameter.value" title="glotaran.parameter.parameter.Parameter.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code></a></p></td>
+<td><p>Return the numerical value of the Parameter, with bounds applied.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.parameter.parameter.Parameter.from_list_or_value" title="glotaran.parameter.parameter.Parameter.from_list_or_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_list_or_value</span></code></a></p></td>
+<td><p>Creates a parameter from a list or numeric value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.parameter.parameter.Parameter.from_parameter" title="glotaran.parameter.parameter.Parameter.from_parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_parameter</span></code></a></p></td>
+<td><p>Creates a <a class="reference internal" href="#glotaran.parameter.parameter.Parameter" title="glotaran.parameter.parameter.Parameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Parameter</span></code></a> from a <cite>lmfit.Parameter</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.parameter.parameter.Parameter.scale_gradient" title="glotaran.parameter.parameter.Parameter.scale_gradient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale_gradient</span></code></a></p></td>
+<td><p>Return scaling factor for gradient.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.parameter.parameter.Parameter.set" title="glotaran.parameter.parameter.Parameter.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a></p></td>
+<td><p>Set or update Parameter attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.parameter.parameter.Parameter.set_expr_eval" title="glotaran.parameter.parameter.Parameter.set_expr_eval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_expr_eval</span></code></a></p></td>
+<td><p>Set expression evaluator instance.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#glotaran.parameter.parameter.Parameter.set_from_group" title="glotaran.parameter.parameter.Parameter.set_from_group"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_from_group</span></code></a></p></td>
+<td><p>Sets all values of the parameter to the values of the conrresoping parameter in the group.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#glotaran.parameter.parameter.Parameter.setup_bounds" title="glotaran.parameter.parameter.Parameter.setup_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup_bounds</span></code></a></p></td>
+<td><p>Set up Minuit-style internal/external parameter transformation of min/max bounds.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="py method">
+<dt id="glotaran.parameter.parameter.Parameter.expr">
+<em class="property">property </em><code class="sig-name descname">expr</code><a class="headerlink" href="#glotaran.parameter.parameter.Parameter.expr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the mathematical expression used to constrain the value
+during the fit.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.parameter.parameter.Parameter.from_list_or_value">
+<em class="property">classmethod </em><code class="sig-name descname">from_list_or_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Union<span class="p">[</span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a><span class="p">, </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a><span class="p">, </span>List<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">default_options</span><span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#glotaran.parameter.parameter.Parameter" title="glotaran.parameter.parameter.Parameter">glotaran.parameter.parameter.Parameter</a><a class="reference internal" href="../../../../../_modules/glotaran/parameter/parameter.html#Parameter.from_list_or_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#glotaran.parameter.parameter.Parameter.from_list_or_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a parameter from a list or numeric value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The list or numeric value.</p></li>
+<li><p><strong>default_options</strong> – A dictionary of default options.</p></li>
+<li><p><strong>label</strong> – The label of the parameter.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.parameter.parameter.Parameter.from_parameter">
+<em class="property">classmethod </em><code class="sig-name descname">from_parameter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">label</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></span></em>, <em class="sig-param"><span class="n">parameter</span><span class="p">:</span> <span class="n">lmfit.parameter.Parameter</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#glotaran.parameter.parameter.Parameter" title="glotaran.parameter.parameter.Parameter">glotaran.parameter.parameter.Parameter</a><a class="reference internal" href="../../../../../_modules/glotaran/parameter/parameter.html#Parameter.from_parameter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#glotaran.parameter.parameter.Parameter.from_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a <a class="reference internal" href="#glotaran.parameter.parameter.Parameter" title="glotaran.parameter.parameter.Parameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Parameter</span></code></a> from a <cite>lmfit.Parameter</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The label of the parameter.</p></li>
+<li><p><strong>parameter</strong> (<em>lmfit.Parameter</em>) – The <cite>lmfit.Parameter</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.parameter.parameter.Parameter.full_label">
+<em class="property">property </em><code class="sig-name descname">full_label</code><a class="headerlink" href="#glotaran.parameter.parameter.Parameter.full_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>The label of the parameter with its path in a parameter group prepended.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.parameter.parameter.Parameter.label">
+<em class="property">property </em><code class="sig-name descname">label</code><a class="headerlink" href="#glotaran.parameter.parameter.Parameter.label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Label of the parameter</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.parameter.parameter.Parameter.non_neg">
+<em class="property">property </em><code class="sig-name descname">non_neg</code><a class="headerlink" href="#glotaran.parameter.parameter.Parameter.non_neg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the parameter is non-negativ.</p>
+<p>If true, the parameter will be transformed with <img class="math" src="../../../../../_images/math/6b985ac756becc58206f1a630847535e76800a33.svg" alt="p' = \log{p}"/> and
+<img class="math" src="../../../../../_images/math/df8e98252a3b33255892fa243ab1e56d0881c133.svg" alt="p = \exp{p'}"/>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.parameter.parameter.Parameter.scale_gradient">
+<code class="sig-name descname">scale_gradient</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/lmfit/parameter.html#Parameter.scale_gradient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#glotaran.parameter.parameter.Parameter.scale_gradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return scaling factor for gradient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – Numerical Parameter value.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Scaling factor for gradient the according to Minuit-style
+transformation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.parameter.parameter.Parameter.set">
+<code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vary</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">brute_step</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/lmfit/parameter.html#Parameter.set"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#glotaran.parameter.parameter.Parameter.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set or update Parameter attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Numerical Parameter value.</p></li>
+<li><p><strong>vary</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether the Parameter is varied during a fit.</p></li>
+<li><p><strong>min</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Lower bound for value. To remove a lower bound you must use
+<cite>-numpy.inf</cite>.</p></li>
+<li><p><strong>max</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Upper bound for value. To remove an upper bound you must use
+<cite>numpy.inf</cite>.</p></li>
+<li><p><strong>expr</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – Mathematical expression used to constrain the value during the fit.
+To remove a constraint you must supply an empty string.</p></li>
+<li><p><strong>brute_step</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Step size for grid points in the <cite>brute</cite> method. To remove the
+step size you must use <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Each argument to <cite>set()</cite> has a default value of <cite>None</cite>, which will
+leave the current value for the attribute unchanged.  Thus, to lift a
+lower or upper bound, passing in <cite>None</cite> will not work.  Instead,
+you must set these to <cite>-numpy.inf</cite> or <cite>numpy.inf</cite>, as with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">par</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>        <span class="c1"># leaves lower bound unchanged</span>
+<span class="n">par</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="nb">min</span><span class="o">=-</span><span class="n">numpy</span><span class="o">.</span><span class="n">inf</span><span class="p">)</span>  <span class="c1"># removes lower bound</span>
+</pre></div>
+</div>
+<p>Similarly, to clear an expression, pass a blank string, (not
+<code class="docutils literal notranslate"><span class="pre">None</span></code>!) as with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">par</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">expr</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># leaves expression unchanged</span>
+<span class="n">par</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">expr</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>    <span class="c1"># removes expression</span>
+</pre></div>
+</div>
+<p>Explicitly setting a value or setting <cite>vary=True</cite> will also
+clear the expression.</p>
+<p>Finally, to clear the brute_step size, pass <code class="docutils literal notranslate"><span class="pre">0</span></code>, not <code class="docutils literal notranslate"><span class="pre">None</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">par</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">brute_step</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># leaves brute_step unchanged</span>
+<span class="n">par</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">brute_step</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>     <span class="c1"># removes brute_step</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.parameter.parameter.Parameter.set_expr_eval">
+<code class="sig-name descname">set_expr_eval</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">evaluator</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/lmfit/parameter.html#Parameter.set_expr_eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#glotaran.parameter.parameter.Parameter.set_expr_eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set expression evaluator instance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.parameter.parameter.Parameter.set_from_group">
+<code class="sig-name descname">set_from_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group</span><span class="p">:</span> <span class="n"><a class="reference internal" href="../parameter_group/glotaran.parameter.parameter_group.ParameterGroup.html#glotaran.parameter.parameter_group.ParameterGroup" title="glotaran.parameter.parameter_group.ParameterGroup">glotaran.parameter.parameter_group.ParameterGroup</a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/glotaran/parameter/parameter.html#Parameter.set_from_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#glotaran.parameter.parameter.Parameter.set_from_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets all values of the parameter to the values of the conrresoping parameter in the group.</p>
+<p class="rubric">Notes</p>
+<p>For internal use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>group</strong> – The <code class="xref py py-class docutils literal notranslate"><span class="pre">glotaran.parameter.ParameterGroup</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.parameter.parameter.Parameter.setup_bounds">
+<code class="sig-name descname">setup_bounds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/lmfit/parameter.html#Parameter.setup_bounds"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#glotaran.parameter.parameter.Parameter.setup_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up Minuit-style internal/external parameter transformation of
+min/max bounds.</p>
+<p>As a side-effect, this also defines the self.from_internal method
+used to re-calculate self.value from the internal value, applying
+the inverse Minuit-style transformation. This method should be
+called prior to passing a Parameter to the user-defined objective
+function.</p>
+<p>This code borrows heavily from JJ Helmus’ leastsqbound.py</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>_val</strong> – The internal value for parameter from self.value (which holds
+the external, user-expected value). This internal value should
+actually be used in a fit.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="glotaran.parameter.parameter.Parameter.value">
+<em class="property">property </em><code class="sig-name descname">value</code><a class="headerlink" href="#glotaran.parameter.parameter.Parameter.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the numerical value of the Parameter, with bounds applied.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="glotaran.parameter.parameter.Parameter.expr.html" class="btn btn-neutral float-right" title="expr" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="glotaran.parameter.parameter.Keys.VARY.html" class="btn btn-neutral float-left" title="VARY" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, Joern Weissenborn, Joris Snellenburg, Ivo van Stokkum
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

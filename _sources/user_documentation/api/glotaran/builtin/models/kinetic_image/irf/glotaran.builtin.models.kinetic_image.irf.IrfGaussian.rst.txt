@@ -1,0 +1,77 @@
+IrfGaussian
+===========
+
+.. currentmodule:: glotaran.builtin.models.kinetic_image.irf
+
+.. autoclass:: IrfGaussian
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~IrfGaussian.backsweep
+        ~IrfGaussian.backsweep_period
+        ~IrfGaussian.center
+        ~IrfGaussian.label
+        ~IrfGaussian.normalize
+        ~IrfGaussian.scale
+        ~IrfGaussian.type
+        ~IrfGaussian.width
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~IrfGaussian.calculate
+      
+      
+        ~IrfGaussian.fill
+      
+      
+        ~IrfGaussian.from_dict
+      
+      
+        ~IrfGaussian.from_list
+      
+      
+        ~IrfGaussian.mprint
+      
+      
+        ~IrfGaussian.parameter
+      
+      
+        ~IrfGaussian.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

@@ -1,0 +1,4 @@
+signature\_analysis
+===================
+
+.. autofunction:: glotaran.cli.commands.util.signature_analysis

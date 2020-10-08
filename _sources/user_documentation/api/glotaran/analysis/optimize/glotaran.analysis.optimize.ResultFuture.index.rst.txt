@@ -1,0 +1,5 @@
+index
+=====
+
+.. automethod:: glotaran.analysis.optimize.ResultFuture.index
+    :noindex:

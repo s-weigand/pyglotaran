@@ -1,0 +1,5 @@
+has\_matrix\_constraints\_function
+==================================
+
+.. autoattribute:: glotaran.builtin.models.doas.doas_model.DOASModel.has_matrix_constraints_function
+    :noindex:

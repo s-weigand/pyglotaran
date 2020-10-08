@@ -1,0 +1,5 @@
+axis
+====
+
+.. autoattribute:: glotaran.analysis.problem_bag.GroupedProblemDescriptor.axis
+    :noindex:

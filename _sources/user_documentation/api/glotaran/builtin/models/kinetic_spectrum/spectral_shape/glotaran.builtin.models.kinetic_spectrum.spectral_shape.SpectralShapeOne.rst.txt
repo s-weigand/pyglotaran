@@ -1,0 +1,68 @@
+SpectralShapeOne
+================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum.spectral_shape
+
+.. autoclass:: SpectralShapeOne
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~SpectralShapeOne.label
+        ~SpectralShapeOne.type
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~SpectralShapeOne.calculate
+      
+      
+        ~SpectralShapeOne.fill
+      
+      
+        ~SpectralShapeOne.from_dict
+      
+      
+        ~SpectralShapeOne.from_list
+      
+      
+        ~SpectralShapeOne.mprint
+      
+      
+        ~SpectralShapeOne.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

@@ -1,0 +1,5 @@
+convert
+=======
+
+.. automethod:: glotaran.cli.commands.util.ValOrRangeOrList.convert
+    :noindex:

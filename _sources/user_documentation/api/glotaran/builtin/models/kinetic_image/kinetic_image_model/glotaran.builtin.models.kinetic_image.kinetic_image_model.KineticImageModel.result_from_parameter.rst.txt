@@ -1,0 +1,5 @@
+result\_from\_parameter
+=======================
+
+.. automethod:: glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.result_from_parameter
+    :noindex:

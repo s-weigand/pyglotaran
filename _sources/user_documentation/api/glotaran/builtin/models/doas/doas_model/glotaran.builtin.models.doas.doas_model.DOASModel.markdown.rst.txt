@@ -1,0 +1,5 @@
+markdown
+========
+
+.. automethod:: glotaran.builtin.models.doas.doas_model.DOASModel.markdown
+    :noindex:

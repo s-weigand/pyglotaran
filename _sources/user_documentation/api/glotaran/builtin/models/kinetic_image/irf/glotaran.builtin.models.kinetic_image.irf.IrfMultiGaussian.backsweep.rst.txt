@@ -1,0 +1,5 @@
+backsweep
+=========
+
+.. autoattribute:: glotaran.builtin.models.kinetic_image.irf.IrfMultiGaussian.backsweep
+    :noindex:

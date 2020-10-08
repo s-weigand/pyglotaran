@@ -1,0 +1,4 @@
+create\_ungrouped\_bag
+======================
+
+.. autofunction:: glotaran.analysis.problem_bag.create_ungrouped_bag

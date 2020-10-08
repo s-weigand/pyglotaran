@@ -1,0 +1,136 @@
+ParameterGroup
+==============
+
+.. currentmodule:: glotaran.parameter.parameter_group
+
+.. autoclass:: ParameterGroup
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~ParameterGroup.label
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~ParameterGroup.add_group
+      
+      
+        ~ParameterGroup.add_parameter
+      
+      
+        ~ParameterGroup.all
+      
+      
+        ~ParameterGroup.as_parameter_dict
+      
+      
+        ~ParameterGroup.clear
+      
+      
+        ~ParameterGroup.copy
+      
+      
+        ~ParameterGroup.from_csv
+      
+      
+        ~ParameterGroup.from_dict
+      
+      
+        ~ParameterGroup.from_file
+      
+      
+        ~ParameterGroup.from_list
+      
+      
+        ~ParameterGroup.from_parameter_dict
+      
+      
+        ~ParameterGroup.from_yaml
+      
+      
+        ~ParameterGroup.from_yaml_file
+      
+      
+        ~ParameterGroup.fromkeys
+      
+      
+        ~ParameterGroup.get
+      
+      
+        ~ParameterGroup.get_nr_roots
+      
+      
+        ~ParameterGroup.groups
+      
+      
+        ~ParameterGroup.has
+      
+      
+        ~ParameterGroup.items
+      
+      
+        ~ParameterGroup.keys
+      
+      
+        ~ParameterGroup.known_formats
+      
+      
+        ~ParameterGroup.markdown
+      
+      
+        ~ParameterGroup.pop
+      
+      
+        ~ParameterGroup.popitem
+      
+      
+        ~ParameterGroup.set_root
+      
+      
+        ~ParameterGroup.setdefault
+      
+      
+        ~ParameterGroup.to_csv
+      
+      
+        ~ParameterGroup.update
+      
+      
+        ~ParameterGroup.values
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

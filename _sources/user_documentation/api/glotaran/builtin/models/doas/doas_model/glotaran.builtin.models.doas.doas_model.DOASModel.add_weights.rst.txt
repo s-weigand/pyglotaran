@@ -1,0 +1,5 @@
+add\_weights
+============
+
+.. automethod:: glotaran.builtin.models.doas.doas_model.DOASModel.add_weights
+    :noindex:

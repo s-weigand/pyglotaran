@@ -1,0 +1,75 @@
+KineticImageDatasetDescriptor
+=============================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_image.kinetic_image_dataset_descriptor
+
+.. autoclass:: KineticImageDatasetDescriptor
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~KineticImageDatasetDescriptor.baseline
+        ~KineticImageDatasetDescriptor.initial_concentration
+        ~KineticImageDatasetDescriptor.irf
+        ~KineticImageDatasetDescriptor.label
+        ~KineticImageDatasetDescriptor.megacomplex
+        ~KineticImageDatasetDescriptor.scale
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~KineticImageDatasetDescriptor.compartments
+      
+      
+        ~KineticImageDatasetDescriptor.fill
+      
+      
+        ~KineticImageDatasetDescriptor.from_dict
+      
+      
+        ~KineticImageDatasetDescriptor.from_list
+      
+      
+        ~KineticImageDatasetDescriptor.get_k_matrices
+      
+      
+        ~KineticImageDatasetDescriptor.mprint
+      
+      
+        ~KineticImageDatasetDescriptor.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

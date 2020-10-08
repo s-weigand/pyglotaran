@@ -1,0 +1,4 @@
+print\_cmd
+==========
+
+.. autofunction:: glotaran.cli.commands.print.print_cmd

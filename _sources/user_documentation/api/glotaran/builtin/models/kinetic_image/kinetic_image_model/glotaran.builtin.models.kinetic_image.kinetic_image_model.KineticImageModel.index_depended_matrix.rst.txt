@@ -1,0 +1,5 @@
+index\_depended\_matrix
+=======================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.index_depended_matrix
+    :noindex:

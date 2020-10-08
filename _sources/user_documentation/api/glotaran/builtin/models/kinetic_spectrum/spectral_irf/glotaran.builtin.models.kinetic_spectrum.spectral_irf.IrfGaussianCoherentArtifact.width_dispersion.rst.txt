@@ -1,0 +1,5 @@
+width\_dispersion
+=================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.spectral_irf.IrfGaussianCoherentArtifact.width_dispersion
+    :noindex:

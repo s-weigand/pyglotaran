@@ -1,0 +1,70 @@
+KineticImageMegacomplex
+=======================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_image.kinetic_image_megacomplex
+
+.. autoclass:: KineticImageMegacomplex
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~KineticImageMegacomplex.involved_compartments
+        ~KineticImageMegacomplex.k_matrix
+        ~KineticImageMegacomplex.label
+        ~KineticImageMegacomplex.scale
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~KineticImageMegacomplex.fill
+      
+      
+        ~KineticImageMegacomplex.from_dict
+      
+      
+        ~KineticImageMegacomplex.from_list
+      
+      
+        ~KineticImageMegacomplex.full_k_matrix
+      
+      
+        ~KineticImageMegacomplex.mprint
+      
+      
+        ~KineticImageMegacomplex.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

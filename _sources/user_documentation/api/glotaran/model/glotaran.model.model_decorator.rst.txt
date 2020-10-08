@@ -1,0 +1,47 @@
+
+model\_decorator
+================
+
+.. currentmodule:: glotaran.model
+
+.. automodule:: glotaran.model.model_decorator
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: model_decorator
+      :nosignatures:
+
+      
+        model
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

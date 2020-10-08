@@ -1,0 +1,74 @@
+
+kinetic\_spectrum
+=================
+
+.. currentmodule:: glotaran.builtin.models
+
+.. automodule:: glotaran.builtin.models.kinetic_spectrum
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: kinetic_spectrum
+    :recursive:
+
+    
+      
+        glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_dataset_descriptor
+      
+      
+        glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_matrix
+      
+      
+        glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model
+      
+      
+        glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_result
+      
+      
+        glotaran.builtin.models.kinetic_spectrum.spectral_constraints
+      
+      
+        glotaran.builtin.models.kinetic_spectrum.spectral_irf
+      
+      
+        glotaran.builtin.models.kinetic_spectrum.spectral_matrix
+      
+      
+        glotaran.builtin.models.kinetic_spectrum.spectral_penalties
+      
+      
+        glotaran.builtin.models.kinetic_spectrum.spectral_relations
+      
+      
+        glotaran.builtin.models.kinetic_spectrum.spectral_shape
+      
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

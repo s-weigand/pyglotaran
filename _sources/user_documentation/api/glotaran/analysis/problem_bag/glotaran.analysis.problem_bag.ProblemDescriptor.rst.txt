@@ -1,0 +1,59 @@
+ProblemDescriptor
+=================
+
+.. currentmodule:: glotaran.analysis.problem_bag
+
+.. autoclass:: ProblemDescriptor
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~ProblemDescriptor.data
+        ~ProblemDescriptor.dataset
+        ~ProblemDescriptor.global_axis
+        ~ProblemDescriptor.model_axis
+        ~ProblemDescriptor.weight
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~ProblemDescriptor.count
+      
+      
+        ~ProblemDescriptor.index
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

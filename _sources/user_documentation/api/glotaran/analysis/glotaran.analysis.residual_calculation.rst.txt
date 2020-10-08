@@ -1,0 +1,50 @@
+
+residual\_calculation
+=====================
+
+.. currentmodule:: glotaran.analysis
+
+.. automodule:: glotaran.analysis.residual_calculation
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: residual_calculation
+      :nosignatures:
+
+      
+        create_index_dependent_grouped_residual
+        create_index_dependent_ungrouped_residual
+        create_index_independent_grouped_residual
+        create_index_independent_ungrouped_residual
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

@@ -1,0 +1,5 @@
+known\_formats
+==============
+
+.. automethod:: glotaran.parameter.parameter_group.ParameterGroup.known_formats
+    :noindex:

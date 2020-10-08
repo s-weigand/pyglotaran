@@ -1,0 +1,5 @@
+initial\_concentration
+======================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_dataset_descriptor.KineticSpectrumDatasetDescriptor.initial_concentration
+    :noindex:

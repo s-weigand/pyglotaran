@@ -1,0 +1,47 @@
+
+sdt
+===
+
+.. currentmodule:: glotaran.builtin.file_formats.sdt
+
+.. automodule:: glotaran.builtin.file_formats.sdt
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: sdt
+    :recursive:
+
+    
+      
+        glotaran.builtin.file_formats.sdt.sdt_file_reader
+      
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

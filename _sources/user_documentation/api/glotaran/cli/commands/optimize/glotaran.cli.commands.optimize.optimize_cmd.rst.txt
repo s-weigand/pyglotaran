@@ -1,0 +1,4 @@
+optimize\_cmd
+=============
+
+.. autofunction:: glotaran.cli.commands.optimize.optimize_cmd

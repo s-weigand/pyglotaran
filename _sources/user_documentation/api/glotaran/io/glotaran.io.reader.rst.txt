@@ -1,0 +1,62 @@
+
+reader
+======
+
+.. currentmodule:: glotaran.io
+
+.. automodule:: glotaran.io.reader
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: reader
+      :nosignatures:
+
+      
+        file_reader
+        read_data_file
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: reader
+      :nosignatures:
+
+      
+        Reader
+
+  
+
+
+
+
+
+  
+
+
+
+

@@ -1,0 +1,5 @@
+spectral\_relations
+===================
+
+.. autoattribute:: glotaran.builtin.models.doas.doas_model.DOASModel.spectral_relations
+    :noindex:

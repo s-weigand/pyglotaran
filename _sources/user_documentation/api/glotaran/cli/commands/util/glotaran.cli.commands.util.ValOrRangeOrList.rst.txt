@@ -1,0 +1,66 @@
+ValOrRangeOrList
+================
+
+.. currentmodule:: glotaran.cli.commands.util
+
+.. autoclass:: ValOrRangeOrList
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~ValOrRangeOrList.envvar_list_splitter
+        ~ValOrRangeOrList.is_composite
+        ~ValOrRangeOrList.name
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~ValOrRangeOrList.convert
+      
+      
+        ~ValOrRangeOrList.fail
+      
+      
+        ~ValOrRangeOrList.get_metavar
+      
+      
+        ~ValOrRangeOrList.get_missing_message
+      
+      
+        ~ValOrRangeOrList.split_envvar_value
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

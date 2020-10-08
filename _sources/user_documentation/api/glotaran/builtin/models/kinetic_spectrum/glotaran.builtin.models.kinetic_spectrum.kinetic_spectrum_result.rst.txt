@@ -1,0 +1,47 @@
+
+kinetic\_spectrum\_result
+=========================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum
+
+.. automodule:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_result
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: kinetic_spectrum_result
+      :nosignatures:
+
+      
+        finalize_kinetic_spectrum_result
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

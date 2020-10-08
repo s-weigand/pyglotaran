@@ -1,0 +1,5 @@
+fill
+====
+
+.. automethod:: glotaran.model.weight.Weight.fill
+    :noindex:

@@ -1,0 +1,5 @@
+type
+====
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.spectral_constraints.OnlyConstraint.type
+    :noindex:

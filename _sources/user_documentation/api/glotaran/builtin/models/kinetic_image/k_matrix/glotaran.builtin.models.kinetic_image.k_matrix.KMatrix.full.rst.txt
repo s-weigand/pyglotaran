@@ -1,0 +1,5 @@
+full
+====
+
+.. automethod:: glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.full
+    :noindex:

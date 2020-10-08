@@ -1,0 +1,5 @@
+get\_metavar
+============
+
+.. automethod:: glotaran.cli.commands.util.ValOrRangeOrList.get_metavar
+    :noindex:

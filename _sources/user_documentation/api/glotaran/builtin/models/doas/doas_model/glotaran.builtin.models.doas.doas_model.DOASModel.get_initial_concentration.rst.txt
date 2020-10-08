@@ -1,0 +1,5 @@
+get\_initial\_concentration
+===========================
+
+.. automethod:: glotaran.builtin.models.doas.doas_model.DOASModel.get_initial_concentration
+    :noindex:

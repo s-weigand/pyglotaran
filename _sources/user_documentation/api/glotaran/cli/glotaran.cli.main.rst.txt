@@ -1,0 +1,47 @@
+
+main
+====
+
+.. currentmodule:: glotaran.cli.main
+
+.. automodule:: glotaran.cli.main
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: main
+      :nosignatures:
+
+      
+        Cli
+
+  
+
+
+
+
+
+  
+
+
+
+

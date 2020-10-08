@@ -1,0 +1,5 @@
+from\_list
+==========
+
+.. automethod:: glotaran.builtin.models.kinetic_image.irf.IrfMultiGaussian.from_list
+    :noindex:

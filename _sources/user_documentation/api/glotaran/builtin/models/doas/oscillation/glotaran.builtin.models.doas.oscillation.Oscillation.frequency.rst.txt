@@ -1,0 +1,5 @@
+frequency
+=========
+
+.. autoattribute:: glotaran.builtin.models.doas.oscillation.Oscillation.frequency
+    :noindex:

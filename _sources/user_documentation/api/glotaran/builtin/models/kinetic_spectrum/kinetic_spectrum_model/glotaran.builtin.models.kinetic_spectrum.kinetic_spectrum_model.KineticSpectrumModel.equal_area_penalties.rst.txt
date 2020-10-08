@@ -1,0 +1,5 @@
+equal\_area\_penalties
+======================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model.KineticSpectrumModel.equal_area_penalties
+    :noindex:

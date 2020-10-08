@@ -1,0 +1,5 @@
+from\_dict
+==========
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.spectral_penalties.EqualAreaPenalty.from_dict
+    :noindex:

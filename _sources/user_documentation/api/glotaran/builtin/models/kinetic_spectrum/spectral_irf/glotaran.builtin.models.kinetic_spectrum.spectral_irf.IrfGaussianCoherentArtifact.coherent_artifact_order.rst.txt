@@ -1,0 +1,5 @@
+coherent\_artifact\_order
+=========================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.spectral_irf.IrfGaussianCoherentArtifact.coherent_artifact_order
+    :noindex:

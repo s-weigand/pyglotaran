@@ -1,0 +1,4 @@
+retrieve\_decay\_assocatiated\_data
+===================================
+
+.. autofunction:: glotaran.builtin.models.kinetic_image.kinetic_image_result.retrieve_decay_assocatiated_data

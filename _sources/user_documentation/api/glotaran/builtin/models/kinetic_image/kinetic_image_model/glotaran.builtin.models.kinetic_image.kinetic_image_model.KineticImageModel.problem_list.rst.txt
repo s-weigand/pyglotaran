@@ -1,0 +1,5 @@
+problem\_list
+=============
+
+.. automethod:: glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.problem_list
+    :noindex:

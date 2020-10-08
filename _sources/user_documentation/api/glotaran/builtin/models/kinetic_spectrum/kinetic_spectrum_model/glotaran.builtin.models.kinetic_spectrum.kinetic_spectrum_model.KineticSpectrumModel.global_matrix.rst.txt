@@ -1,0 +1,5 @@
+global\_matrix
+==============
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model.KineticSpectrumModel.global_matrix
+    :noindex:

@@ -1,0 +1,5 @@
+initial\_concentration
+======================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.initial_concentration
+    :noindex:

@@ -1,0 +1,5 @@
+width
+=====
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.spectral_shape.SpectralShapeGaussian.width
+    :noindex:

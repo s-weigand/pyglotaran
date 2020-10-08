@@ -1,0 +1,5 @@
+clp
+===
+
+.. autoattribute:: glotaran.analysis.optimize.ResultFuture.clp
+    :noindex:

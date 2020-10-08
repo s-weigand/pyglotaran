@@ -1,0 +1,5 @@
+resultcallback
+==============
+
+.. automethod:: glotaran.cli.main.Cli.resultcallback
+    :noindex:

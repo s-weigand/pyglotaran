@@ -1,0 +1,5 @@
+red\_chisqr
+===========
+
+.. autoattribute:: glotaran.analysis.result.Result.red_chisqr
+    :noindex:

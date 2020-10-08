@@ -1,0 +1,5 @@
+from\_dict
+==========
+
+.. automethod:: glotaran.builtin.models.kinetic_image.initial_concentration.InitialConcentration.from_dict
+    :noindex:

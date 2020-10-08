@@ -1,0 +1,5 @@
+fget
+====
+
+.. autoattribute:: glotaran.model.model_property.ModelProperty.fget
+    :noindex:

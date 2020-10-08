@@ -1,0 +1,68 @@
+
+util
+====
+
+.. currentmodule:: glotaran.cli.commands
+
+.. automodule:: glotaran.cli.commands.util
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: util
+      :nosignatures:
+
+      
+        load_dataset_file
+        load_model_file
+        load_parameter_file
+        load_scheme_file
+        select_data
+        select_name
+        signature_analysis
+        write_data
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: util
+      :nosignatures:
+
+      
+        ValOrRangeOrList
+
+  
+
+
+
+
+
+  
+
+
+
+

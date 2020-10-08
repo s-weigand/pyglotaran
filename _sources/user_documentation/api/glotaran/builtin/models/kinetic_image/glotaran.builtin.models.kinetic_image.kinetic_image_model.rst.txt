@@ -1,0 +1,61 @@
+
+kinetic\_image\_model
+=====================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_image
+
+.. automodule:: glotaran.builtin.models.kinetic_image.kinetic_image_model
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: kinetic_image_model
+      :nosignatures:
+
+      
+        kinetic_image_matrix
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: kinetic_image_model
+      :nosignatures:
+
+      
+        KineticImageModel
+
+  
+
+
+
+
+
+  
+
+
+
+

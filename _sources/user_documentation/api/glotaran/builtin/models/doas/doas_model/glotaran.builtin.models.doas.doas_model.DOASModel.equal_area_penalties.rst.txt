@@ -1,0 +1,5 @@
+equal\_area\_penalties
+======================
+
+.. autoattribute:: glotaran.builtin.models.doas.doas_model.DOASModel.equal_area_penalties
+    :noindex:

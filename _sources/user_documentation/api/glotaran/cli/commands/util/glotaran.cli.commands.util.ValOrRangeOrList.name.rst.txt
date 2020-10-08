@@ -1,0 +1,5 @@
+name
+====
+
+.. autoattribute:: glotaran.cli.commands.util.ValOrRangeOrList.name
+    :noindex:

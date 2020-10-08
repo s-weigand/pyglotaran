@@ -1,0 +1,5 @@
+global\_axis
+============
+
+.. autoattribute:: glotaran.analysis.problem_bag.ProblemDescriptor.global_axis
+    :noindex:

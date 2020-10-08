@@ -1,0 +1,5 @@
+value
+=====
+
+.. autoattribute:: glotaran.model.weight.Weight.value
+    :noindex:

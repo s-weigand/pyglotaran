@@ -1,0 +1,47 @@
+
+initial\_concentration
+======================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_image
+
+.. automodule:: glotaran.builtin.models.kinetic_image.initial_concentration
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: initial_concentration
+      :nosignatures:
+
+      
+        InitialConcentration
+
+  
+
+
+
+
+
+  
+
+
+
+

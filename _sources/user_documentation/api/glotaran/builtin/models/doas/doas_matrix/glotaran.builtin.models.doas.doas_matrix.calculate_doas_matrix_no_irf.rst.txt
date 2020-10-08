@@ -1,0 +1,4 @@
+calculate\_doas\_matrix\_no\_irf
+================================
+
+.. autofunction:: glotaran.builtin.models.doas.doas_matrix.calculate_doas_matrix_no_irf

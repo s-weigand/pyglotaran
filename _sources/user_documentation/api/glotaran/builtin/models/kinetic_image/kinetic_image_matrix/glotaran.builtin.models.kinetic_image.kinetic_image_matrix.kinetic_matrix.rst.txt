@@ -1,0 +1,4 @@
+kinetic\_matrix
+===============
+
+.. autofunction:: glotaran.builtin.models.kinetic_image.kinetic_image_matrix.kinetic_matrix

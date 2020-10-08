@@ -1,0 +1,5 @@
+normalized
+==========
+
+.. automethod:: glotaran.builtin.models.kinetic_image.initial_concentration.InitialConcentration.normalized
+    :noindex:

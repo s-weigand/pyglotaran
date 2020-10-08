@@ -1,0 +1,61 @@
+
+parameter\_group
+================
+
+.. currentmodule:: glotaran.parameter
+
+.. automodule:: glotaran.parameter.parameter_group
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: parameter_group
+      :nosignatures:
+
+      
+        ParameterGroup
+
+  
+
+
+
+
+
+  
+
+Exceptions
+----------
+
+  .. rubric:: Exception Summary
+
+  .. autosummary::
+      :toctree: parameter_group
+      :nosignatures:
+
+      
+        ParameterNotFoundException
+
+  
+
+
+
+

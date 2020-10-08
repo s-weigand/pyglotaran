@@ -1,0 +1,5 @@
+invoke
+======
+
+.. automethod:: glotaran.cli.main.Cli.invoke
+    :noindex:

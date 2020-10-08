@@ -1,0 +1,4 @@
+finalize\_kinetic\_image\_result
+================================
+
+.. autofunction:: glotaran.builtin.models.kinetic_image.kinetic_image_result.finalize_kinetic_image_result

@@ -1,0 +1,5 @@
+coherent\_artifact\_width
+=========================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.spectral_irf.IrfGaussianCoherentArtifact.coherent_artifact_width
+    :noindex:

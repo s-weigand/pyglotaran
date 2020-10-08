@@ -1,0 +1,4 @@
+load\_model\_file
+=================
+
+.. autofunction:: glotaran.cli.commands.util.load_model_file

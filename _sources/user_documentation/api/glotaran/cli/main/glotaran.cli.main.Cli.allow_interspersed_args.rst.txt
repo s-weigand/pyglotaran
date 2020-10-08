@@ -1,0 +1,5 @@
+allow\_interspersed\_args
+=========================
+
+.. autoattribute:: glotaran.cli.main.Cli.allow_interspersed_args
+    :noindex:

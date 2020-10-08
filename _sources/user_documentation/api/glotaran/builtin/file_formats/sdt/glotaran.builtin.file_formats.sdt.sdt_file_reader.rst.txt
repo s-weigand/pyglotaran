@@ -1,0 +1,47 @@
+
+sdt\_file\_reader
+=================
+
+.. currentmodule:: glotaran.builtin.file_formats.sdt
+
+.. automodule:: glotaran.builtin.file_formats.sdt.sdt_file_reader
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: sdt_file_reader
+      :nosignatures:
+
+      
+        read_sdt
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

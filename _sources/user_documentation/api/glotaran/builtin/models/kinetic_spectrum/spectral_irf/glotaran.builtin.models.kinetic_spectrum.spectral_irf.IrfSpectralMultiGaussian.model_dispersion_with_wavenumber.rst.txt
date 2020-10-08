@@ -1,0 +1,5 @@
+model\_dispersion\_with\_wavenumber
+===================================
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.spectral_irf.IrfSpectralMultiGaussian.model_dispersion_with_wavenumber
+    :noindex:

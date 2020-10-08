@@ -1,0 +1,47 @@
+
+pluginlist
+==========
+
+.. currentmodule:: glotaran.cli.commands
+
+.. automodule:: glotaran.cli.commands.pluginlist
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: pluginlist
+      :nosignatures:
+
+      
+        plugin_list_cmd
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

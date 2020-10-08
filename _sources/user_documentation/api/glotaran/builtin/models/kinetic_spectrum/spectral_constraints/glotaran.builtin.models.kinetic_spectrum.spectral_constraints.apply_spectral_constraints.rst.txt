@@ -1,0 +1,4 @@
+apply\_spectral\_constraints
+============================
+
+.. autofunction:: glotaran.builtin.models.kinetic_spectrum.spectral_constraints.apply_spectral_constraints

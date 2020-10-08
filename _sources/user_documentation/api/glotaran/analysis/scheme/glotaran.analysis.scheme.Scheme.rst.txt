@@ -1,0 +1,72 @@
+Scheme
+======
+
+.. currentmodule:: glotaran.analysis.scheme
+
+.. autoclass:: Scheme
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~Scheme.data
+        ~Scheme.group_tolerance
+        ~Scheme.model
+        ~Scheme.nfev
+        ~Scheme.nnls
+        ~Scheme.parameter
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~Scheme.from_yml_file
+      
+      
+        ~Scheme.markdown
+      
+      
+        ~Scheme.prepare_data
+      
+      
+        ~Scheme.problem_list
+      
+      
+        ~Scheme.valid
+      
+      
+        ~Scheme.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

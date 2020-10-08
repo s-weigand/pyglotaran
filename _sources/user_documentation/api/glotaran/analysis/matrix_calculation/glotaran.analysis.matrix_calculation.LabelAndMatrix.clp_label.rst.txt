@@ -1,0 +1,5 @@
+clp\_label
+==========
+
+.. autoattribute:: glotaran.analysis.matrix_calculation.LabelAndMatrix.clp_label
+    :noindex:

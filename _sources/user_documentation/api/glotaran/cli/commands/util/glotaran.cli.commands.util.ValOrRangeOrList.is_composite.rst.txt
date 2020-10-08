@@ -1,0 +1,5 @@
+is\_composite
+=============
+
+.. autoattribute:: glotaran.cli.commands.util.ValOrRangeOrList.is_composite
+    :noindex:

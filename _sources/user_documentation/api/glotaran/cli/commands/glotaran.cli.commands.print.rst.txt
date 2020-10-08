@@ -1,0 +1,47 @@
+
+print
+=====
+
+.. currentmodule:: glotaran.cli.commands
+
+.. automodule:: glotaran.cli.commands.print
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: print
+      :nosignatures:
+
+      
+        print_cmd
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

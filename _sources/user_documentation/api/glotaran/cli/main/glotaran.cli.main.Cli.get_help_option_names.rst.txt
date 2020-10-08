@@ -1,0 +1,5 @@
+get\_help\_option\_names
+========================
+
+.. automethod:: glotaran.cli.main.Cli.get_help_option_names
+    :noindex:

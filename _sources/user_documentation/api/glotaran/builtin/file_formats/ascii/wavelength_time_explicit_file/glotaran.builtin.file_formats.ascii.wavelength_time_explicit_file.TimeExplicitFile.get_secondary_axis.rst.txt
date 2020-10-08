@@ -1,0 +1,5 @@
+get\_secondary\_axis
+====================
+
+.. automethod:: glotaran.builtin.file_formats.ascii.wavelength_time_explicit_file.TimeExplicitFile.get_secondary_axis
+    :noindex:

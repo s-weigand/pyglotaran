@@ -1,0 +1,68 @@
+
+kinetic\_image
+==============
+
+.. currentmodule:: glotaran.builtin.models
+
+.. automodule:: glotaran.builtin.models.kinetic_image
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: kinetic_image
+    :recursive:
+
+    
+      
+        glotaran.builtin.models.kinetic_image.initial_concentration
+      
+      
+        glotaran.builtin.models.kinetic_image.irf
+      
+      
+        glotaran.builtin.models.kinetic_image.k_matrix
+      
+      
+        glotaran.builtin.models.kinetic_image.kinetic_image_dataset_descriptor
+      
+      
+        glotaran.builtin.models.kinetic_image.kinetic_image_matrix
+      
+      
+        glotaran.builtin.models.kinetic_image.kinetic_image_megacomplex
+      
+      
+        glotaran.builtin.models.kinetic_image.kinetic_image_model
+      
+      
+        glotaran.builtin.models.kinetic_image.kinetic_image_result
+      
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

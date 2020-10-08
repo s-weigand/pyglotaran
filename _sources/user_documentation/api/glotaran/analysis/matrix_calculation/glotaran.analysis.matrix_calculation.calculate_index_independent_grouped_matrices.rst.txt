@@ -1,0 +1,4 @@
+calculate\_index\_independent\_grouped\_matrices
+================================================
+
+.. autofunction:: glotaran.analysis.matrix_calculation.calculate_index_independent_grouped_matrices

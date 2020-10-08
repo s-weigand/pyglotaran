@@ -1,0 +1,52 @@
+
+models
+======
+
+.. currentmodule:: glotaran.builtin.models
+
+.. automodule:: glotaran.builtin.models
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: models
+    :recursive:
+
+    
+      
+        glotaran.builtin.models.doas
+      
+      
+        glotaran.builtin.models.kinetic_image
+      
+      
+        glotaran.builtin.models.kinetic_spectrum
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

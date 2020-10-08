@@ -1,0 +1,4 @@
+validate\_cmd
+=============
+
+.. autofunction:: glotaran.cli.commands.validate.validate_cmd

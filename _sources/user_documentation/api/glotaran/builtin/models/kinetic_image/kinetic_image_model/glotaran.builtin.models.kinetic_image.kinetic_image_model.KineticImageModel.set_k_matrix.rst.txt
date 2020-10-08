@@ -1,0 +1,5 @@
+set\_k\_matrix
+==============
+
+.. automethod:: glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.set_k_matrix
+    :noindex:

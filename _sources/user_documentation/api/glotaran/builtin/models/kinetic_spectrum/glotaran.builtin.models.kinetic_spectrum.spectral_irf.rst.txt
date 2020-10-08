@@ -1,0 +1,49 @@
+
+spectral\_irf
+=============
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum
+
+.. automodule:: glotaran.builtin.models.kinetic_spectrum.spectral_irf
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: spectral_irf
+      :nosignatures:
+
+      
+        IrfGaussianCoherentArtifact
+        IrfSpectralGaussian
+        IrfSpectralMultiGaussian
+
+  
+
+
+
+
+
+  
+
+
+
+

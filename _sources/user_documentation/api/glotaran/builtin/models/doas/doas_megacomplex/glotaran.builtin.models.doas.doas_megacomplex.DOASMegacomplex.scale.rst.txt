@@ -1,0 +1,5 @@
+scale
+=====
+
+.. autoattribute:: glotaran.builtin.models.doas.doas_megacomplex.DOASMegacomplex.scale
+    :noindex:

@@ -1,0 +1,5 @@
+involved\_compartments
+======================
+
+.. automethod:: glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.involved_compartments
+    :noindex:

@@ -1,0 +1,48 @@
+
+parameter
+=========
+
+.. currentmodule:: glotaran.parameter
+
+.. automodule:: glotaran.parameter.parameter
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: parameter
+      :nosignatures:
+
+      
+        Keys
+        Parameter
+
+  
+
+
+
+
+
+  
+
+
+
+

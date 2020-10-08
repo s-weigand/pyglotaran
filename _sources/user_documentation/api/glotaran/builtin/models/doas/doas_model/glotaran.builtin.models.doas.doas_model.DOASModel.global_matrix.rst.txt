@@ -1,0 +1,5 @@
+global\_matrix
+==============
+
+.. automethod:: glotaran.builtin.models.doas.doas_model.DOASModel.global_matrix
+    :noindex:

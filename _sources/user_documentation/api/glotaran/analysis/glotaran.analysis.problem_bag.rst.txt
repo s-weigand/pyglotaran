@@ -1,0 +1,64 @@
+
+problem\_bag
+============
+
+.. currentmodule:: glotaran.analysis
+
+.. automodule:: glotaran.analysis.problem_bag
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: problem_bag
+      :nosignatures:
+
+      
+        create_grouped_bag
+        create_ungrouped_bag
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: problem_bag
+      :nosignatures:
+
+      
+        GroupedProblem
+        GroupedProblemDescriptor
+        ProblemDescriptor
+
+  
+
+
+
+
+
+  
+
+
+
+

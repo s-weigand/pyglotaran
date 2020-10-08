@@ -1,0 +1,5 @@
+markdown
+========
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_model.KineticSpectrumModel.markdown
+    :noindex:

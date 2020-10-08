@@ -1,0 +1,47 @@
+
+spectral\_penalties
+===================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum
+
+.. automodule:: glotaran.builtin.models.kinetic_spectrum.spectral_penalties
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: spectral_penalties
+      :nosignatures:
+
+      
+        EqualAreaPenalty
+
+  
+
+
+
+
+
+  
+
+
+
+

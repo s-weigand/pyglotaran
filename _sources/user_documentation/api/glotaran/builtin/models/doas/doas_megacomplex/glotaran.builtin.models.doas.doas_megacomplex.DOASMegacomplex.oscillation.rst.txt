@@ -1,0 +1,5 @@
+oscillation
+===========
+
+.. autoattribute:: glotaran.builtin.models.doas.doas_megacomplex.DOASMegacomplex.oscillation
+    :noindex:

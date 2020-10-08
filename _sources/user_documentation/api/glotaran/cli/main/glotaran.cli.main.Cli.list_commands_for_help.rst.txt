@@ -1,0 +1,5 @@
+list\_commands\_for\_help
+=========================
+
+.. automethod:: glotaran.cli.main.Cli.list_commands_for_help
+    :noindex:

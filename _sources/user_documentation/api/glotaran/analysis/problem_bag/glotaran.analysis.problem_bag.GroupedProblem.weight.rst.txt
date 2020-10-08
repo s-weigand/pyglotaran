@@ -1,0 +1,5 @@
+weight
+======
+
+.. autoattribute:: glotaran.analysis.problem_bag.GroupedProblem.weight
+    :noindex:

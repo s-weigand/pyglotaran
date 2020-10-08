@@ -1,0 +1,47 @@
+
+k\_matrix
+=========
+
+.. currentmodule:: glotaran.builtin.models.kinetic_image
+
+.. automodule:: glotaran.builtin.models.kinetic_image.k_matrix
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: k_matrix
+      :nosignatures:
+
+      
+        KMatrix
+
+  
+
+
+
+
+
+  
+
+
+
+

@@ -1,0 +1,5 @@
+prepare\_data
+=============
+
+.. automethod:: glotaran.analysis.scheme.Scheme.prepare_data
+    :noindex:

@@ -1,0 +1,5 @@
+label
+=====
+
+.. autoattribute:: glotaran.builtin.models.kinetic_image.irf.IrfGaussian.label
+    :noindex:

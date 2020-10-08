@@ -1,0 +1,47 @@
+
+simulation
+==========
+
+.. currentmodule:: glotaran.analysis
+
+.. automodule:: glotaran.analysis.simulation
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: simulation
+      :nosignatures:
+
+      
+        simulate
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

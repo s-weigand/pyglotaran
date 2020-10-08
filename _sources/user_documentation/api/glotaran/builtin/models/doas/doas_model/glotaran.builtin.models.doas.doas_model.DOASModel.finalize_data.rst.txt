@@ -1,0 +1,5 @@
+finalize\_data
+==============
+
+.. automethod:: glotaran.builtin.models.doas.doas_model.DOASModel.finalize_data
+    :noindex:

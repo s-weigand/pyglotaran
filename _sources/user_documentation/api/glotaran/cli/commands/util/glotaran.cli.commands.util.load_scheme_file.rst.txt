@@ -1,0 +1,4 @@
+load\_scheme\_file
+==================
+
+.. autofunction:: glotaran.cli.commands.util.load_scheme_file

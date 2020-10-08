@@ -1,0 +1,5 @@
+backsweep
+=========
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.spectral_irf.IrfSpectralGaussian.backsweep
+    :noindex:

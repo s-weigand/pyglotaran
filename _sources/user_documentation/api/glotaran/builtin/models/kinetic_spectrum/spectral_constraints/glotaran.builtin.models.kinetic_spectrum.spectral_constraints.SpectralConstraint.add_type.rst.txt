@@ -1,0 +1,5 @@
+add\_type
+=========
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.spectral_constraints.SpectralConstraint.add_type
+    :noindex:

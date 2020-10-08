@@ -1,0 +1,5 @@
+calculate\_coherent\_artifact
+=============================
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.spectral_irf.IrfGaussianCoherentArtifact.calculate_coherent_artifact
+    :noindex:

@@ -1,0 +1,5 @@
+valid
+=====
+
+.. automethod:: glotaran.analysis.scheme.Scheme.valid
+    :noindex:

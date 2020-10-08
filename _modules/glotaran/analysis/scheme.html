@@ -1,0 +1,502 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>glotaran.analysis.scheme &mdash; pyglotaran 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/glotaran_favicon.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> pyglotaran
+          
+
+          
+            
+            <img src="../../../_static/glotaran.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart/Cheat-Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_documentation/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_documentation/dataio.html">Data IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_documentation/plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_documentation/modelling.html">Modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_documentation/parameter.html">Parameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_documentation/optimizing.html">Optimizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_documentation/api_documentation.html">API Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyglotaran</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>glotaran.analysis.scheme</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for glotaran.analysis.scheme</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="kn">import</span> <span class="nn">typing</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">yaml</span>
+
+<span class="kn">import</span> <span class="nn">glotaran</span>
+<span class="kn">from</span> <span class="nn">glotaran.parameter</span> <span class="kn">import</span> <span class="n">ParameterGroup</span>
+
+
+<span class="k">def</span> <span class="nf">_not_none</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">f</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2"> cannot be None&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Scheme"><a class="viewcode-back" href="../../../user_documentation/api/glotaran/analysis/scheme/glotaran.analysis.scheme.Scheme.html#glotaran.analysis.scheme.Scheme">[docs]</a><span class="k">class</span> <span class="nc">Scheme</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">model</span><span class="p">:</span> <span class="s2">&quot;glotaran.model.Model&quot;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">parameter</span><span class="p">:</span> <span class="n">ParameterGroup</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">group_tolerance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">nnls</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">nfev</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameter</span> <span class="o">=</span> <span class="n">parameter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">group_tolerance</span> <span class="o">=</span> <span class="n">group_tolerance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nnls</span> <span class="o">=</span> <span class="n">nnls</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nfev</span> <span class="o">=</span> <span class="n">nfev</span>
+
+<div class="viewcode-block" id="Scheme.from_yml_file"><a class="viewcode-back" href="../../../user_documentation/api/glotaran/analysis/scheme/glotaran.analysis.scheme.Scheme.from_yml_file.html#glotaran.analysis.scheme.Scheme.from_yml_file">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_yml_file</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Scheme&quot;</span><span class="p">:</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">scheme</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">FullLoader</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error parsing scheme: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error opening scheme: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">&quot;model&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">scheme</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Model file not specified.&quot;</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">model</span> <span class="o">=</span> <span class="n">glotaran</span><span class="o">.</span><span class="n">read_model_from_yml_file</span><span class="p">(</span><span class="n">scheme</span><span class="p">[</span><span class="s2">&quot;model&quot;</span><span class="p">])</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error loading model: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">&quot;parameter&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">scheme</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Parameter file not specified.&quot;</span><span class="p">)</span>
+
+        <span class="n">path</span> <span class="o">=</span> <span class="n">scheme</span><span class="p">[</span><span class="s2">&quot;parameter&quot;</span><span class="p">]</span>
+        <span class="n">fmt</span> <span class="o">=</span> <span class="n">scheme</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;parameter_format&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">parameter</span> <span class="o">=</span> <span class="n">glotaran</span><span class="o">.</span><span class="n">parameter</span><span class="o">.</span><span class="n">ParameterGroup</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">fmt</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error loading parameter: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">&quot;data&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">scheme</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No data specified.&quot;</span><span class="p">)</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">scheme</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+            <span class="n">fmt</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">suffix</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">suffix</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span> <span class="k">else</span> <span class="s2">&quot;nc&quot;</span>
+            <span class="k">if</span> <span class="s2">&quot;data_format&quot;</span> <span class="ow">in</span> <span class="n">scheme</span><span class="p">:</span>
+                <span class="n">fmt</span> <span class="o">=</span> <span class="n">scheme</span><span class="p">[</span><span class="s2">&quot;data_format&quot;</span><span class="p">]</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">data</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">glotaran</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">read_data_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="n">fmt</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error loading dataset &#39;</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">&#39;: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">nnls</span> <span class="o">=</span> <span class="n">scheme</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;nnls&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">nfev</span> <span class="o">=</span> <span class="n">scheme</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;nfev&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">group_tolerance</span> <span class="o">=</span> <span class="n">scheme</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;group_tolerance&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+            <span class="n">parameter</span><span class="o">=</span><span class="n">parameter</span><span class="p">,</span>
+            <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+            <span class="n">nnls</span><span class="o">=</span><span class="n">nnls</span><span class="p">,</span>
+            <span class="n">nfev</span><span class="o">=</span><span class="n">nfev</span><span class="p">,</span>
+            <span class="n">group_tolerance</span><span class="o">=</span><span class="n">group_tolerance</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;glotaran.model.Model&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span>
+
+    <span class="nd">@_not_none</span>
+    <span class="nd">@model</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="s2">&quot;glotaran.model.Model&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">parameter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ParameterGroup</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parameter</span>
+
+    <span class="nd">@_not_none</span>
+    <span class="nd">@parameter</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">parameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameter</span><span class="p">:</span> <span class="n">ParameterGroup</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_parameter</span> <span class="o">=</span> <span class="n">parameter</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">]]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span>
+
+    <span class="nd">@_not_none</span>
+    <span class="nd">@data</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">]]):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_data</span> <span class="o">=</span> <span class="n">data</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nnls</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nnls</span>
+
+    <span class="nd">@_not_none</span>
+    <span class="nd">@nnls</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">nnls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nnls</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nnls</span> <span class="o">=</span> <span class="n">nnls</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nfev</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nfev</span>
+
+    <span class="nd">@nfev</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">nfev</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nfev</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nfev</span> <span class="o">=</span> <span class="n">nfev</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">group_tolerance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_group_tolerance</span>
+
+    <span class="nd">@group_tolerance</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">group_tolerance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_tolerance</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_group_tolerance</span> <span class="o">=</span> <span class="n">group_tolerance</span>
+
+<div class="viewcode-block" id="Scheme.problem_list"><a class="viewcode-back" href="../../../user_documentation/api/glotaran/analysis/scheme/glotaran.analysis.scheme.Scheme.problem_list.html#glotaran.analysis.scheme.Scheme.problem_list">[docs]</a>    <span class="k">def</span> <span class="nf">problem_list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Returns a list with all problems in the model and missing parameters.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">problem_list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameter</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Scheme.validate"><a class="viewcode-back" href="../../../user_documentation/api/glotaran/analysis/scheme/glotaran.analysis.scheme.Scheme.validate.html#glotaran.analysis.scheme.Scheme.validate">[docs]</a>    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Returns a string listing all problems in the model and missing parameters.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameter</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Scheme.valid"><a class="viewcode-back" href="../../../user_documentation/api/glotaran/analysis/scheme/glotaran.analysis.scheme.Scheme.valid.html#glotaran.analysis.scheme.Scheme.valid">[docs]</a>    <span class="k">def</span> <span class="nf">valid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameter</span><span class="p">:</span> <span class="n">ParameterGroup</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Returns `True` if there are no problems with the model or the parameters,</span>
+<span class="sd">        else `False`.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">valid</span><span class="p">(</span><span class="n">parameter</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_transpose_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+        <span class="n">new_dims</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">model_dimension</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">global_dimension</span><span class="p">]</span>
+        <span class="n">new_dims</span> <span class="o">+=</span> <span class="p">[</span>
+            <span class="n">dim</span>
+            <span class="k">for</span> <span class="n">dim</span> <span class="ow">in</span> <span class="n">dataset</span><span class="o">.</span><span class="n">dims</span>
+            <span class="k">if</span> <span class="n">dim</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">model_dimension</span> <span class="ow">and</span> <span class="n">dim</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">global_dimension</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="n">dataset</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="o">*</span><span class="n">new_dims</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Scheme.prepare_data"><a class="viewcode-back" href="../../../user_documentation/api/glotaran/analysis/scheme/glotaran.analysis.scheme.Scheme.prepare_data.html#glotaran.analysis.scheme.Scheme.prepare_data">[docs]</a>    <span class="k">def</span> <span class="nf">prepare_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span> <span class="k">if</span> <span class="n">copy</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">model_dimension</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dataset</span><span class="o">.</span><span class="n">dims</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Missing coordinates for dimension &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">model_dimension</span><span class="si">}</span><span class="s2">&#39; in data for dataset &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">global_dimension</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dataset</span><span class="o">.</span><span class="n">dims</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Missing coordinates for dimension &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">global_dimension</span><span class="si">}</span><span class="s2">&#39; in data for dataset &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">):</span>
+                <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">to_dataset</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;data&quot;</span><span class="p">)</span>
+
+            <span class="n">dataset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transpose_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_add_weight</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span>
+
+            <span class="c1"># This protects transposing when getting data with svd in it</span>
+            <span class="k">if</span> <span class="s2">&quot;data_singular_values&quot;</span> <span class="ow">in</span> <span class="n">dataset</span> <span class="ow">and</span> <span class="p">(</span>
+                <span class="n">dataset</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s2">&quot;right_singular_value_index&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
+                <span class="o">!=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">global_dimension</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
+            <span class="p">):</span>
+                <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+                    <span class="n">right_singular_value_index</span><span class="o">=</span><span class="s2">&quot;right_singular_value_indexTMP&quot;</span>
+                <span class="p">)</span>
+                <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">left_singular_value_index</span><span class="o">=</span><span class="s2">&quot;right_singular_value_index&quot;</span><span class="p">)</span>
+                <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">right_singular_value_indexTMP</span><span class="o">=</span><span class="s2">&quot;left_singular_value_index&quot;</span><span class="p">)</span>
+                <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">right_singular_vectors</span><span class="o">=</span><span class="s2">&quot;right_singular_value_vectorsTMP&quot;</span><span class="p">)</span>
+                <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+                    <span class="n">left_singular_value_vectors</span><span class="o">=</span><span class="s2">&quot;right_singular_value_vectors&quot;</span>
+                <span class="p">)</span>
+                <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+                    <span class="n">right_singular_value_vectorsTMP</span><span class="o">=</span><span class="s2">&quot;left_singular_value_vectors&quot;</span>
+                <span class="p">)</span>
+            <span class="n">new_dims</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">model_dimension</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">global_dimension</span><span class="p">]</span>
+            <span class="n">new_dims</span> <span class="o">+=</span> <span class="p">[</span>
+                <span class="n">dim</span>
+                <span class="k">for</span> <span class="n">dim</span> <span class="ow">in</span> <span class="n">dataset</span><span class="o">.</span><span class="n">dims</span>
+                <span class="k">if</span> <span class="n">dim</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">model_dimension</span> <span class="ow">and</span> <span class="n">dim</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">global_dimension</span>
+            <span class="p">]</span>
+            <span class="k">if</span> <span class="n">copy</span><span class="p">:</span>
+                <span class="n">data</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataset</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataset</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
+<div class="viewcode-block" id="Scheme.markdown"><a class="viewcode-back" href="../../../user_documentation/api/glotaran/analysis/scheme/glotaran.analysis.scheme.Scheme.markdown.html#glotaran.analysis.scheme.Scheme.markdown">[docs]</a>    <span class="k">def</span> <span class="nf">markdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="n">parameter</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parameter</span><span class="p">)</span>
+
+        <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;__Scheme__</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+
+        <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;* *nnls*: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nnls</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;* *nfev*: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nfev</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;* *group_tolerance*: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">group_tolerance</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+        <span class="k">return</span> <span class="n">s</span></div>
+
+    <span class="k">def</span> <span class="nf">_add_weight</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+
+        <span class="c1"># if the user supplies a weight we ignore modeled weights</span>
+        <span class="k">if</span> <span class="s2">&quot;weight&quot;</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">any</span><span class="p">([</span><span class="n">label</span> <span class="ow">in</span> <span class="n">weight</span><span class="o">.</span><span class="n">datasets</span> <span class="k">for</span> <span class="n">weight</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">weights</span><span class="p">]):</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Ignoring model weight for dataset &#39;</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+                    <span class="s2">&quot; because weight is already supplied by dataset.&quot;</span>
+                <span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">global_axis</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">global_dimension</span><span class="p">]</span>
+        <span class="n">model_axis</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">model_dimension</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">weight</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">weights</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">weight</span><span class="o">.</span><span class="n">datasets</span><span class="p">:</span>
+                <span class="k">if</span> <span class="s2">&quot;weight&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">:</span>
+                    <span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="n">coords</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">coords</span>
+                    <span class="p">)</span>
+
+                <span class="n">idx</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="k">if</span> <span class="n">weight</span><span class="o">.</span><span class="n">global_interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">idx</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">global_dimension</span><span class="p">]</span> <span class="o">=</span> <span class="n">_get_min_max_from_interval</span><span class="p">(</span>
+                        <span class="n">weight</span><span class="o">.</span><span class="n">global_interval</span><span class="p">,</span> <span class="n">global_axis</span>
+                    <span class="p">)</span>
+                <span class="k">if</span> <span class="n">weight</span><span class="o">.</span><span class="n">model_interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">idx</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">model_dimension</span><span class="p">]</span> <span class="o">=</span> <span class="n">_get_min_max_from_interval</span><span class="p">(</span>
+                        <span class="n">weight</span><span class="o">.</span><span class="n">model_interval</span><span class="p">,</span> <span class="n">model_axis</span>
+                    <span class="p">)</span>
+                <span class="n">dataset</span><span class="o">.</span><span class="n">weight</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">*=</span> <span class="n">weight</span><span class="o">.</span><span class="n">value</span></div>
+
+
+<span class="k">def</span> <span class="nf">_get_min_max_from_interval</span><span class="p">(</span><span class="n">interval</span><span class="p">,</span> <span class="n">axis</span><span class="p">):</span>
+    <span class="n">minimum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">axis</span><span class="o">.</span><span class="n">values</span> <span class="o">-</span> <span class="n">interval</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isinf</span><span class="p">(</span><span class="n">interval</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">else</span> <span class="mi">0</span>
+    <span class="n">maximum</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">axis</span><span class="o">.</span><span class="n">values</span> <span class="o">-</span> <span class="n">interval</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isinf</span><span class="p">(</span><span class="n">interval</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">else</span> <span class="n">axis</span><span class="o">.</span><span class="n">size</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="nb">slice</span><span class="p">(</span><span class="n">minimum</span><span class="p">,</span> <span class="n">maximum</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, Joern Weissenborn, Joris Snellenburg, Ivo van Stokkum
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+commands
+========
+
+.. currentmodule:: glotaran.cli.commands
+
+.. automodule:: glotaran.cli.commands
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: commands
+    :recursive:
+
+    
+      
+        glotaran.cli.commands.explore
+      
+      
+        glotaran.cli.commands.export
+      
+      
+        glotaran.cli.commands.optimize
+      
+      
+        glotaran.cli.commands.pluginlist
+      
+      
+        glotaran.cli.commands.print
+      
+      
+        glotaran.cli.commands.util
+      
+      
+        glotaran.cli.commands.validate
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

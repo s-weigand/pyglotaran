@@ -1,0 +1,5 @@
+applies
+=======
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.spectral_constraints.ZeroConstraint.applies
+    :noindex:

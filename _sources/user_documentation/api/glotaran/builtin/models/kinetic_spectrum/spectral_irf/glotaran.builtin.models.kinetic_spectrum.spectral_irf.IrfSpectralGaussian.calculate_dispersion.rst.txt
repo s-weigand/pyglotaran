@@ -1,0 +1,5 @@
+calculate\_dispersion
+=====================
+
+.. automethod:: glotaran.builtin.models.kinetic_spectrum.spectral_irf.IrfSpectralGaussian.calculate_dispersion
+    :noindex:

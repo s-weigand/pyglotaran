@@ -1,0 +1,5 @@
+allow\_none
+===========
+
+.. autoattribute:: glotaran.model.model_property.ModelProperty.allow_none
+    :noindex:

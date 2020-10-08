@@ -1,0 +1,71 @@
+EqualAreaPenalty
+================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum.spectral_penalties
+
+.. autoclass:: EqualAreaPenalty
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~EqualAreaPenalty.compartment
+        ~EqualAreaPenalty.interval
+        ~EqualAreaPenalty.parameter
+        ~EqualAreaPenalty.target
+        ~EqualAreaPenalty.weight
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~EqualAreaPenalty.applies
+      
+      
+        ~EqualAreaPenalty.fill
+      
+      
+        ~EqualAreaPenalty.from_dict
+      
+      
+        ~EqualAreaPenalty.from_list
+      
+      
+        ~EqualAreaPenalty.mprint
+      
+      
+        ~EqualAreaPenalty.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

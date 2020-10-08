@@ -1,0 +1,5 @@
+from\_list
+==========
+
+.. automethod:: glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.from_list
+    :noindex:

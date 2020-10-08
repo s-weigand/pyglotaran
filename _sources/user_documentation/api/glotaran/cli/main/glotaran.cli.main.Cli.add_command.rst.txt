@@ -1,0 +1,5 @@
+add\_command
+============
+
+.. automethod:: glotaran.cli.main.Cli.add_command
+    :noindex:

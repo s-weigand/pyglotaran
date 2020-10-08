@@ -1,0 +1,67 @@
+﻿
+glotaran
+========
+
+.. currentmodule:: glotaran
+
+.. automodule:: glotaran
+
+
+
+
+  
+
+  .. rubric:: Modules
+
+  .. autosummary::
+    :toctree: glotaran
+    :recursive:
+
+    
+      
+        glotaran.analysis
+      
+      
+        glotaran.builtin
+      
+      
+        glotaran.cli
+      
+      
+        glotaran.examples
+      
+      
+        glotaran.io
+      
+      
+        glotaran.model
+      
+      
+        glotaran.parameter
+      
+      
+        glotaran.parse
+      
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

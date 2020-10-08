@@ -1,0 +1,63 @@
+
+spectral\_constraints
+=====================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum
+
+.. automodule:: glotaran.builtin.models.kinetic_spectrum.spectral_constraints
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: spectral_constraints
+      :nosignatures:
+
+      
+        apply_spectral_constraints
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: spectral_constraints
+      :nosignatures:
+
+      
+        OnlyConstraint
+        SpectralConstraint
+        ZeroConstraint
+
+  
+
+
+
+
+
+  
+
+
+
+

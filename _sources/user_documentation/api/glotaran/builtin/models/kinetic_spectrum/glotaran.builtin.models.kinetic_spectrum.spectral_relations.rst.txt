@@ -1,0 +1,63 @@
+
+spectral\_relations
+===================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum
+
+.. automodule:: glotaran.builtin.models.kinetic_spectrum.spectral_relations
+
+
+
+
+  
+
+
+
+
+
+  
+
+Functions
+---------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: spectral_relations
+      :nosignatures:
+
+      
+        apply_spectral_relations
+        create_spectral_relation_matrix
+        retrieve_clps
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: spectral_relations
+      :nosignatures:
+
+      
+        SpectralRelation
+
+  
+
+
+
+
+
+  
+
+
+
+

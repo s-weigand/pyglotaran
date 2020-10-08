@@ -1,0 +1,84 @@
+IrfSpectralMultiGaussian
+========================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum.spectral_irf
+
+.. autoclass:: IrfSpectralMultiGaussian
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+
+    .. rubric:: Attributes Summary
+
+    .. autosummary::
+       :toctree:
+       :template: autosummary/attribute.rst
+    
+        ~IrfSpectralMultiGaussian.backsweep
+        ~IrfSpectralMultiGaussian.backsweep_period
+        ~IrfSpectralMultiGaussian.center
+        ~IrfSpectralMultiGaussian.center_dispersion
+        ~IrfSpectralMultiGaussian.dispersion_center
+        ~IrfSpectralMultiGaussian.label
+        ~IrfSpectralMultiGaussian.model_dispersion_with_wavenumber
+        ~IrfSpectralMultiGaussian.normalize
+        ~IrfSpectralMultiGaussian.scale
+        ~IrfSpectralMultiGaussian.type
+        ~IrfSpectralMultiGaussian.width
+        ~IrfSpectralMultiGaussian.width_dispersion
+
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~IrfSpectralMultiGaussian.calculate
+      
+      
+        ~IrfSpectralMultiGaussian.calculate_dispersion
+      
+      
+        ~IrfSpectralMultiGaussian.fill
+      
+      
+        ~IrfSpectralMultiGaussian.from_dict
+      
+      
+        ~IrfSpectralMultiGaussian.from_list
+      
+      
+        ~IrfSpectralMultiGaussian.mprint
+      
+      
+        ~IrfSpectralMultiGaussian.parameter
+      
+      
+        ~IrfSpectralMultiGaussian.validate
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

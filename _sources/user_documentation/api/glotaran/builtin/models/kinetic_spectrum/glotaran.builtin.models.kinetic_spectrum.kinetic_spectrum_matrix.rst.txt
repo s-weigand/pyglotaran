@@ -1,0 +1,33 @@
+
+kinetic\_spectrum\_matrix
+=========================
+
+.. currentmodule:: glotaran.builtin.models.kinetic_spectrum
+
+.. automodule:: glotaran.builtin.models.kinetic_spectrum.kinetic_spectrum_matrix
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+

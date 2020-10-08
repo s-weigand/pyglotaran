@@ -1,0 +1,42 @@
+Irf
+===
+
+.. currentmodule:: glotaran.builtin.models.kinetic_image.irf
+
+.. autoclass:: Irf
+    :show-inheritance:
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+    
+    
+    
+
+
+    
+    
+
+    .. rubric:: Methods Summary
+
+    .. autosummary::
+        :toctree:
+        :nosignatures:
+
+    
+      
+      
+        ~Irf.add_type
+      
+
+
+    
+    
+
+    
+    
+
+    .. rubric:: Methods Documentation
+
+    
+    

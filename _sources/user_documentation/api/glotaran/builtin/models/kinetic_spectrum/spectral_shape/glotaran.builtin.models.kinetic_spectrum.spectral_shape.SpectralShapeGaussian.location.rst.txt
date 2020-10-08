@@ -1,0 +1,5 @@
+location
+========
+
+.. autoattribute:: glotaran.builtin.models.kinetic_spectrum.spectral_shape.SpectralShapeGaussian.location
+    :noindex:

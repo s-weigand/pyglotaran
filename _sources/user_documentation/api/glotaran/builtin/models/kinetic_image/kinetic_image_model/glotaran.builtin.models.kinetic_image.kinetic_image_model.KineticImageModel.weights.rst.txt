@@ -1,0 +1,5 @@
+weights
+=======
+
+.. autoattribute:: glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.weights
+    :noindex:

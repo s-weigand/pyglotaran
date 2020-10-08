@@ -1,0 +1,50 @@
+
+irf
+===
+
+.. currentmodule:: glotaran.builtin.models.kinetic_image
+
+.. automodule:: glotaran.builtin.models.kinetic_image.irf
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+Classes
+-------
+
+  .. rubric:: Summary
+
+  .. autosummary::
+      :toctree: irf
+      :nosignatures:
+
+      
+        Irf
+        IrfGaussian
+        IrfMeasured
+        IrfMultiGaussian
+
+  
+
+
+
+
+
+  
+
+
+
+

@@ -1,0 +1,5 @@
+matrix
+======
+
+.. autoattribute:: glotaran.builtin.models.kinetic_image.k_matrix.KMatrix.matrix
+    :noindex:

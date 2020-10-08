@@ -1,0 +1,5 @@
+index
+=====
+
+.. autoattribute:: glotaran.analysis.problem_bag.GroupedProblemDescriptor.index
+    :noindex:

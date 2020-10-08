@@ -1,0 +1,5 @@
+index\_dependent
+================
+
+.. automethod:: glotaran.builtin.models.kinetic_image.kinetic_image_model.KineticImageModel.index_dependent
+    :noindex:
