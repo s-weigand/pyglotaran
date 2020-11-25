@@ -1,6 +1,7 @@
 import collections
 import itertools
 import typing
+from collections import defaultdict
 
 import numpy as np
 import xarray as xr
@@ -420,15 +421,12 @@ class Problem:
         if self._parameter is None:
             raise ParameterError
 
-        self._clp_labels = {}
-        self._matrices = {}
-        self._reduced_clp_labels = {}
-        self._reduced_matrices = {}
+        self._clp_labels = defaultdict(list)
+        self._matrices = defaultdict(list)
+        self._reduced_clp_labels = defaultdict(list)
+        self._reduced_matrices = defaultdict(list)
 
         for label, problem in self._bag.items():
-            self._clp_labels[label] = []
-            self._constraint_labels_and_matrices[label] = []
-            self._matrices[label] = []
             descriptor = self._filled_dataset_descriptors[label]
 
             for index in problem.global_axis:
