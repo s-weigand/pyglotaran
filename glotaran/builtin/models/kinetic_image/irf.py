@@ -86,13 +86,12 @@ class IrfMultiGaussian:
 
         return centers, widths, scale, backsweep, backsweep_period
 
-    def calculate(self, index, axis):
-        center, width, scale, _, _ = self.parameter(index)
-        irf = scale[0] * np.exp(-1 * (axis - center[0]) ** 2 / (2 * width[0] ** 2))
-        if len(center) > 1:
-            for i in range(1, len(center)):
-                irf += scale[i] * np.exp(-1 * (axis - center[i]) ** 2 / (2 * width[i] ** 2))
-        return irf
+    def calculate(self, index, axis) -> float:
+        centers, widths, scales, _, _ = self.parameter(index)
+        return sum(
+            scale * np.exp(-1 * (axis - center) ** 2 / (2 * width ** 2))
+            for center, width, scale in zip(centers, widths, scales)
+        )
 
 
 @model_attribute(
