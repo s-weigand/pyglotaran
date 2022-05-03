@@ -114,7 +114,7 @@ def _create_result(
     parameter_history: ParameterHistory,
 ) -> Result:
 
-    success = ls_result is not None
+    success = ls_result is not None and all(np.isfinite(ls_result.x))
 
     number_of_function_evaluation = (
         ls_result.nfev if success else parameter_history.number_of_records
