@@ -41,6 +41,12 @@ jobs:
           pip install wheel
           pip install -r requirements_dev.txt
           pip install .
+      - name: Checkout compare results
+        uses: actions/checkout@v3
+        with:
+          repository: "s-weigand/pyglotaran-examples"
+          ref: no-spectral-irf-if-no-dispersion
+          path: pyglotaran-examples
       - name: ${{ matrix.example_name }}
         id: example-run
         uses: glotaran/pyglotaran-examples@main
