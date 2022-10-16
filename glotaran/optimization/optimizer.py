@@ -134,13 +134,13 @@ class Optimizer:
             initial_parameter,
             lower_bounds,
             upper_bounds,
-        ) = self._scheme.parameters.get_label_value_and_bounds_arrays(exclude_non_vary=True)
+        ) = self._parameters.get_label_value_and_bounds_arrays(exclude_non_vary=True)
         with self._tee:
             try:
                 verbose = 2 if self._verbose else 0
                 self._optimization_result = least_squares(
                     self.objective_function,
-                    initial_parameter.copy(),
+                    initial_parameter,
                     bounds=(lower_bounds, upper_bounds),
                     method=self._method,
                     max_nfev=self._scheme.maximum_number_function_evaluations,
