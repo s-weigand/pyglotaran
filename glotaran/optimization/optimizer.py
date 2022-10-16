@@ -140,7 +140,7 @@ class Optimizer:
                 verbose = 2 if self._verbose else 0
                 self._optimization_result = least_squares(
                     self.objective_function,
-                    initial_parameter,
+                    initial_parameter.copy(),
                     bounds=(lower_bounds, upper_bounds),
                     method=self._method,
                     max_nfev=self._scheme.maximum_number_function_evaluations,
