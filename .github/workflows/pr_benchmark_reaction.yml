@@ -95,3 +95,4 @@ jobs:
           repository: "glotaran/pyglotaran-benchmarks"
           branch: pr-${{steps.bench_diff.outputs.pr_nr}}
           force: true
+# foo
