@@ -20,9 +20,18 @@ from glotaran.parameter import Parameter
 from glotaran.parameter import Parameters
 
 
-class ExperimentModel(BaseModel):
-    """A dataset group for optimization."""
+class ExperimentModelDataset(BaseModel):
+    class Config:
+        """Config for pydantic.BaseModel."""
 
+        arbitrary_types_allowed = True
+        extra = Extra.forbid
+
+    model: DataModel
+    scale: Parameter | float = 1
+
+
+class ExperimentModel(BaseModel):
     class Config:
         """Config for pydantic.BaseModel."""
 
@@ -34,12 +43,9 @@ class ExperimentModel(BaseModel):
     clp_constraints: list[ClpConstraint.get_annotated_type()] = Field(default_factory=list)
     clp_penalties: list[EqualAreaPenalty] = Field(default_factory=list)
     clp_relations: list[ClpRelation] = Field(default_factory=list)
-    datasets: dict[str, DataModel]
+    datasets: dict[str, ExperimentModelDataset]
     residual_function: Literal["variable_projection", "non_negative_least_squares"] = Field(
         "variable_projection", description="The residual function to use."
-    )
-    scale: dict[str, Parameter] = Field(
-        default_factory=dict, description="The scales of of the datasets in the experiment."
     )
 
     @classmethod
