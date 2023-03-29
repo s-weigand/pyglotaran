@@ -156,3 +156,8 @@ repos:
         types: [file]
         types_or: [python, pyi, markdown, rst, jupyter]
         args: [-L doas]
+
+  - repo: https://github.com/s-weigand/pre-commit_mirrors-actionlint
+    rev: "v1.6.23"
+    hooks:
+      - id: actionlint
