@@ -36,7 +36,7 @@ repos:
         types_or: [python, pyi]
 
   - repo: https://github.com/psf/black
-    rev: 23.1.0
+    rev: 23.3.0
     hooks:
       - id: black
         types: [file]
@@ -71,15 +71,15 @@ repos:
     rev: 1.6.4
     hooks:
       - id: nbqa-black
-        additional_dependencies: [black==22.6.0]
+        additional_dependencies: [black==23.3.0]
         args: [--nbqa-mutate]
       - id: nbqa-pyupgrade
-        additional_dependencies: [pyupgrade==2.37.3]
-        args: [--nbqa-mutate, --py38-plus]
+        additional_dependencies: [pyupgrade==3.3.1]
+        args: [--nbqa-mutate, --py310-plus]
       - id: nbqa-flake8
       - id: nbqa-check-ast
       - id: nbqa-isort
-        additional_dependencies: [isort==5.10.1]
+        additional_dependencies: [isort==5.12.0]
         args: [--nbqa-mutate]
 
   # Linters
