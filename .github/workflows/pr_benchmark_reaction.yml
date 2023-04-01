@@ -64,7 +64,7 @@ jobs:
       - name: Show PR Number and Comment
         shell: python
         run: |
-          print(f"PR Number:\n{ ${{ steps.bench_diff.outputs.pr_nr }} }")
+          print("PR Number:\n${{ steps.bench_diff.outputs.pr_nr }}")
           print("Comment Body:")
           print("""${{ steps.bench_diff.outputs.comment }}""")
 
