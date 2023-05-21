@@ -55,10 +55,8 @@ class OneComponentOneChannel:
         }
     )
 
-    initial_parameters = Parameters.from_list(
-        [101e-4, [1, {"vary": False, "non-negative": False}]]
-    )
-    wanted_parameters = Parameters.from_list([101e-3, [1, {"vary": False, "non-negative": False}]])
+    initial_parameters = Parameters.from_list([101e-4, [1, {"vary": False}]])
+    wanted_parameters = Parameters.from_list([101e-3, [1, {"vary": False}]])
 
     time = np.arange(0, 50, 1.5)
     pixel = np.asarray([0])
@@ -102,17 +100,17 @@ class OneComponentOneChannelGaussianIrf:
             0.1,
             1,
             [0.1, {"vary": False}],
-            [1, {"vary": False, "non-negative": False}],
+            [1, {"vary": False}],
         ]
     )
     print(initial_parameters)
     wanted_parameters = Parameters.from_list(
         [
-            [101e-3, {"non-negative": True}],
-            [0.2, {"non-negative": True}],
-            [2, {"non-negative": True}],
+            [101e-3, {"minimum": 0}],
+            [0.2, {"minimum": 0}],
+            [2, {"minimum": 0}],
             [0.1, {"vary": False}],
-            [1, {"vary": False, "non-negative": False}],
+            [1, {"vary": False}],
         ]
     )
 
@@ -159,7 +157,7 @@ class ThreeComponentParallel:
                 ["1", 501e-3],
                 ["2", 202e-4],
                 ["3", 105e-5],
-                {"non-negative": True},  # type: ignore[list-item]
+                {"minimum": 0},  # type: ignore[list-item]
             ],
             "irf": [["center", 1.3], ["width", 7.8]],
         }
@@ -219,7 +217,7 @@ class ThreeComponentSequential:
                 ["1", 501e-3],
                 ["2", 202e-4],
                 ["3", 105e-5],
-                {"non-negative": True},  # type: ignore[list-item]
+                {"minimum": 0},  # type: ignore[list-item]
             ],
             "irf": [["center", 1.3], ["width", 7.8]],
         }
@@ -337,9 +335,7 @@ def test_finalize_data():
         }
     )
 
-    parameters = Parameters.from_list(
-        [101e-4, 101e-3, [1, {"vary": False, "non-negative": False}]]
-    )
+    parameters = Parameters.from_list([101e-4, 101e-3, [1, {"vary": False}]])
 
     time = np.arange(0, 50, 1.5)
     pixel = np.asarray([0, 2])

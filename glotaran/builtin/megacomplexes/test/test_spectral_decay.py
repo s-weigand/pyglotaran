@@ -121,8 +121,8 @@ k_matrix:
 
 PARAMETERS_3C_NO_IRF = """\
 j:
-    - ["1", 1, {"vary": False, "non-negative": False}]
-    - ["0", 0, {"vary": False, "non-negative": False}]
+    - ["1", 1, {"vary": False}]
+    - ["0", 0, {"vary": False}]
 shapes:
     amps: [7, 3, 30, {"vary": False}]
     locs: [620, 670, 720, {"vary": False}]
@@ -150,8 +150,8 @@ irf:
     - ["center", 1.3]
     - ["width", 7.8]
 j:
-    - ["1", 1, {"vary": False, "non-negative": False}]
-    - ["0", 0, {"vary": False, "non-negative": False}]
+    - ["1", 1, {"vary": False}]
+    - ["0", 0, {"vary": False}]
 """
 
 PARAMETERS_3C_BASE_PARALLEL = f"""\
@@ -199,7 +199,7 @@ kinetic:
     - ["1", 500e-3]
     - ["2", 200e-4]
     - ["3", 100e-5]
-    - {{"non-negative": True}}
+    - {{"minimum": 0}}
 {PARAMETERS_3C_BASE_SEQUENTIAL}
 """
 

@@ -146,11 +146,13 @@ def check_qualnames_in_tests(qual_names: Sequence[str], importable_indices: Sequ
     # Since this is always true for tests run with pytest we ignore the branch coverage
     if "PYTEST_CURRENT_TEST" in os.environ:  # pragma: no branch
         for qual_name, slice_index in zip(qual_names, importable_indices):
-            qual_name_parts = qual_name.partition("(")[0].partition("[")[0].split(".")
+            qual_name_parts = (
+                qual_name.partition("(")[0].partition("[")[0].partition("=")[0].split(".")
+            )
             module_name = ".".join(qual_name_parts[:-slice_index])
             object_name = qual_name_parts[-slice_index]
             module = __import__(module_name, fromlist=(object_name))
-            assert hasattr(module, object_name)
+            assert hasattr(module, object_name), f"Missing attribute: {object_name} in {module}"
             if slice_index != 1:
                 item = getattr(module, object_name)
                 hasattr(item, qual_name_parts[-slice_index + 1])

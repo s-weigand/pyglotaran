@@ -42,7 +42,7 @@ class OneCompartmentModelInvertedAxis:
         }
     )
 
-    decay_parameters = Parameters.from_list([101e-4, [1, {"vary": False, "non-negative": False}]])
+    decay_parameters = Parameters.from_list([101e-4, [1, {"vary": False}]])
 
     spectral_model = SpectralModel(
         **{
@@ -104,7 +104,7 @@ class OneCompartmentModelNegativeSkew:
         }
     )
 
-    decay_parameters = Parameters.from_list([101e-4, [1, {"vary": False, "non-negative": False}]])
+    decay_parameters = Parameters.from_list([101e-4, [1, {"vary": False}]])
 
     spectral_model = SpectralModel(
         **{
@@ -172,9 +172,7 @@ class ThreeCompartmentModel:
         }
     )
 
-    decay_parameters = Parameters.from_list(
-        [101e-4, 101e-5, 101e-6, [1, {"vary": False, "non-negative": False}]]
-    )
+    decay_parameters = Parameters.from_list([101e-4, 101e-5, 101e-6, [1, {"vary": False}]])
 
     spectral_model = SpectralModel(
         **{

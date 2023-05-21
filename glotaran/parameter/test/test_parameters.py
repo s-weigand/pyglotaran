@@ -72,7 +72,7 @@ def test_parameter_group_to_from_parameter_dict_list():
         {
             "a": [
                 ["1", 0.25, {"vary": False, "min": 0, "max": 8}],
-                ["2", 0.75, {"expr": "1 - $a.1", "non-negative": True}],
+                ["2", 0.75, {"expr": "1 - $a.1"}],
             ],
             "b": [
                 ["total", 2],
@@ -105,7 +105,6 @@ def test_parameters_equal():
         ("max", np.inf, 1),
         ("expression", None, "$a.1*10"),
         ("standard-error", np.nan, 1),
-        ("non-negative", True, False),
     ),
 )
 def test_parameters_not_equal(key_name: str, value_1: Any, value_2: Any):
@@ -138,7 +137,7 @@ def test_parameter_group_copy():
         {
             "a": [
                 ["1", 0.25, {"vary": False, "min": 0, "max": 8}],
-                ["2", 0.75, {"expr": "1 - $a.1", "non-negative": True}],
+                ["2", 0.75, {"expr": "1 - $a.1"}],
             ],
             "b": [
                 ["total", 2],
@@ -172,8 +171,8 @@ def test_parameter_expressions():
 def test_parameters_array_conversion():
     parameters = Parameters.from_list(
         [
-            ["1", 1, {"non-negative": False, "min": -1, "max": 1, "vary": False}],
-            ["2", 4e2, {"non-negative": True, "min": 10, "max": 8e2, "vary": True}],
+            ["1", 1, {"min": -1, "max": 1, "vary": False}],
+            ["2", 4e2, {"min": 10, "max": 8e2, "vary": True}],
             ["3", 2e4],
         ]
     )
@@ -188,9 +187,9 @@ def test_parameters_array_conversion():
     assert len(upper_bounds) == 3
 
     assert labels == ["1", "2", "3"]
-    assert np.allclose(values, [1, np.log(4e2), 2e4])
-    assert np.allclose(lower_bounds, [-1, np.log(10), -np.inf])
-    assert np.allclose(upper_bounds, [1, np.log(8e2), np.inf])
+    assert np.allclose(values, [1, 4e2, 2e4])
+    assert np.allclose(lower_bounds, [-1, 10, -np.inf])
+    assert np.allclose(upper_bounds, [1, 8e2, np.inf])
 
     (
         labels_only_vary,
@@ -207,11 +206,9 @@ def test_parameters_array_conversion():
     assert labels_only_vary == ["2", "3"]
 
     labels = ["1", "2", "3"]
-    values = [0, np.log(6e2), 42]
+    values = [0, 6e2, 42]
 
     parameters.set_from_label_and_value_arrays(labels, values)
-
-    values[1] = np.exp(values[1])
 
     for i in range(3):
         assert parameters.get(f"{i+1}").value == values[i]
@@ -222,7 +219,7 @@ def test_parameters_to_from_df():
         {
             "a": [
                 ["1", 0.25, {"vary": False, "min": 0, "max": 8}],
-                ["2", 0.75, {"expr": "1 - $a.1", "non-negative": True}],
+                ["2", 0.75, {"expr": "1 - $a.1"}],
             ],
             "b": [
                 ["total", 2],
@@ -244,7 +241,6 @@ def test_parameters_to_from_df():
         "expression",
         "minimum",
         "maximum",
-        "non_negative",
         "vary",
     ]:
         assert column in parameter_df
@@ -275,7 +271,6 @@ def test_parameters_from_dataframe_minimal_required_columns():
         ("minimum", "Column 'minimum' in 'DataFrame' has non numeric values."),
         ("maximum", "Column 'maximum' in 'DataFrame' has non numeric values."),
         ("value", "Column 'value' in 'DataFrame' has non numeric values."),
-        ("non_negative", "Column 'non_negative' in 'DataFrame' has non boolean values."),
         ("vary", "Column 'vary' in 'DataFrame' has non boolean values."),
     ),
 )

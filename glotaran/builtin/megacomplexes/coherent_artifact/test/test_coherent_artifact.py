@@ -53,8 +53,8 @@ def test_coherent_artifact(spectral_dependence: str):
 
     parameter_list = [
         ["rate", 101e-4],
-        ["irf_center", 10, {"vary": False, "non-negative": False}],
-        ["irf_width", 20, {"vary": False, "non-negative": False}],
+        ["irf_center", 10, {"vary": False}],
+        ["irf_width", 20, {"vary": False}],
     ]
 
     irf_spec = model_dict["irf"]["irf1"]
@@ -65,9 +65,9 @@ def test_coherent_artifact(spectral_dependence: str):
         irf_spec["center_dispersion_coefficients"] = ["irf_disp1", "irf_disp2"]
 
         parameter_list += [
-            ["irf_dispc", 300, {"vary": False, "non-negative": False}],
-            ["irf_disp1", 0.01, {"vary": False, "non-negative": False}],
-            ["irf_disp2", 0.001, {"vary": False, "non-negative": False}],
+            ["irf_dispc", 300, {"vary": False}],
+            ["irf_disp1", 0.01, {"vary": False}],
+            ["irf_disp2", 0.001, {"vary": False}],
         ]
     elif spectral_dependence == "shifted":
         irf_spec["shift"] = ["irf_shift1", "irf_shift2", "irf_shift3"]

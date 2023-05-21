@@ -31,12 +31,8 @@ def test_clp_guide():
         },
     )
 
-    initial_parameters = Parameters.from_list(
-        [101e-5, 501e-4, [1, {"vary": False, "non-negative": False}]]
-    )
-    wanted_parameters = Parameters.from_list(
-        [101e-4, 501e-3, [1, {"vary": False, "non-negative": False}]]
-    )
+    initial_parameters = Parameters.from_list([101e-5, 501e-4, [1, {"vary": False}]])
+    wanted_parameters = Parameters.from_list([101e-4, 501e-3, [1, {"vary": False}]])
 
     time = np.arange(0, 50, 1.5)
     pixel = np.arange(600, 750, 5)

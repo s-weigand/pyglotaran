@@ -37,7 +37,7 @@ def yaml_reference_subset() -> Parameters:
 def test_references(yaml_reference: Parameters, reference_path: Path):
     """References are the same"""
     result = load_parameters(reference_path)
-    assert result == yaml_reference
+    assert result == yaml_reference, f"Failed for: {reference_path}"
 
 
 def test_alternative_notations(yaml_reference: Parameters):

@@ -17,6 +17,7 @@ from attrs import fields
 from attrs import filters
 from attrs import validators
 
+from glotaran.deprecation import warn_deprecated
 from glotaran.typing.types import _SupportsArray
 from glotaran.utils.attrs_helper import no_default_vals_in_repr
 from glotaran.utils.helpers import nan_or_equal
@@ -72,7 +73,9 @@ def serialize_options(options: dict[str, Any]) -> dict[str, Any]:
         The serialized options.
 
     """
-    return {OPTION_NAMES_SERIALIZED.get(k, k): v for k, v in options.items()}
+    return {
+        OPTION_NAMES_SERIALIZED.get(k, k): v for k, v in options.items() if k != "non_negative"
+    }
 
 
 PARAMETER_EXPRESSION_REGEX = re.compile(r"\$(?P<parameter_expression>[\w\d\.]+)((?![\w\d\.]+)|$)")
@@ -141,6 +144,19 @@ class Parameter(_SupportsArray):
 
     transformed_expression: str | None = ib(default=None, init=False, repr=False)
 
+    def __attrs_post_init__(self):
+        """Replace deprecated ``non_negative`` with minimum."""
+        if self.non_negative is True:
+            warn_deprecated(
+                deprecated_qual_name_usage="glotaran.parameter.Parameter.non_negative",
+                new_qual_name_usage="glotaran.parameter.Parameter.minimum=0",
+                to_be_removed_in_version="0.8.0",
+                importable_indices=(2, 2),
+                stacklevel=4,
+            )
+            self.non_negative = False
+            self.minimum = max(self.minimum, 0)
+
     @property
     def label_short(self) -> str:
         """Get short label.
@@ -206,7 +222,12 @@ class Parameter(_SupportsArray):
         dict[str, Any]
             The parameter as dictionary.
         """
-        return asdict(self, filter=filters.exclude(fields(Parameter).transformed_expression))
+        return asdict(
+            self,
+            filter=filters.exclude(
+                fields(Parameter).transformed_expression, fields(Parameter).non_negative
+            ),
+        )
 
     def _deep_equals(self, other: Parameter) -> bool:
         """Compare all attributes for equality not only ``value`` like ``__eq__`` does.
@@ -252,33 +273,24 @@ class Parameter(_SupportsArray):
         return [label, value, serialize_options(options)]
 
     def get_value_and_bounds_for_optimization(self) -> tuple[float, float, float]:
-        """Get the parameter value and bounds with expression and non-negative constraints applied.
+        """Get the parameter value and bounds with expression.
 
         Returns
         -------
         tuple[float, float, float]
             A tuple containing the value, the lower and the upper bound.
         """
-        value = self.value
-        minimum = self.minimum
-        maximum = self.maximum
-
-        if self.non_negative:
-            value = _log_value(value)
-            minimum = _log_value(minimum)
-            maximum = _log_value(maximum)
-
-        return value, minimum, maximum
+        return self.value, self.minimum, self.maximum
 
     def set_value_from_optimization(self, value: float):
-        """Set the value from an optimization result and reverses non-negative transformation.
+        """Set the value from an optimization.
 
         Parameters
         ----------
         value : float
             Value from optimization.
         """
-        self.value = np.exp(value) if self.non_negative else value
+        self.value = value
 
     def markdown(
         self,
@@ -337,7 +349,7 @@ class Parameter(_SupportsArray):
         return (
             f"__{self.label}__: _Value_: {self.value}, _StdErr_: {self.standard_error}, _Min_:"
             f" {self.minimum}, _Max_: {self.maximum}, _Vary_: {self.vary},"
-            f" _Non-Negative_: {self.non_negative}, _Expr_: {self.expression}"
+            f" _Expr_: {self.expression}"
         )
 
     def __abs__(self):

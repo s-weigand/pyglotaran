@@ -81,9 +81,9 @@ irf:
 
 PARAMETERS_BASE = """\
 j:
-    - ['1', 1, {'vary': False, 'non-negative': False}]
+    - ['1', 1, {'vary': False}]
 kinetic:
-    - ['1', 0.5, {'non-negative': False}]
+    - ['1', 0.5]
 """
 
 PARAMETERS_NO_IRF_DISPERSION = f"""\

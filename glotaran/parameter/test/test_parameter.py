@@ -19,7 +19,6 @@ from glotaran.parameter import Parameter
         ("maximum", np.inf, 1),
         ("expression", None, "$a.1*10"),
         ("standard_error", np.nan, 1),
-        ("non_negative", True, False),
     ),
 )
 def test_parameter__deep_equals(key_name: str, value_1: Any, value_2: Any):
@@ -81,27 +80,24 @@ def test_parameter_from_list():
 
 def test_parameter_options():
     params = [
-        ["5", 1, {"non-negative": False, "min": -1, "max": 1, "vary": False}],
-        ["6", 4e2, {"non-negative": True, "min": -7e2, "max": 8e2, "vary": True}],
+        ["5", 1, {"min": -1, "max": 1, "vary": False}],
+        ["6", 4e2, {"min": -7e2, "max": 8e2, "vary": True}],
         ["7", 2e4],
     ]
 
     parameters = [Parameter.from_list(v) for v in params]
 
     assert parameters[0].value == 1.0
-    assert not parameters[0].non_negative
     assert parameters[0].minimum == -1
     assert parameters[0].maximum == 1
     assert not parameters[0].vary
 
     assert parameters[1].value == 4e2
-    assert parameters[1].non_negative
     assert parameters[1].minimum == -7e2
     assert parameters[1].maximum == 8e2
     assert parameters[1].vary
 
     assert parameters[2].value == 2e4
-    assert not parameters[2].non_negative
     assert parameters[2].minimum == float("-inf")
     assert parameters[2].maximum == float("inf")
     assert parameters[2].vary
@@ -123,32 +119,6 @@ def test_parameter_minimum_not_numeric_error():
     """Error if minimum isn't numeric."""
     with pytest.raises(TypeError):
         Parameter(label="", minimum="foo")
-
-
-def test_parameter_non_negative():
-    notnonneg = Parameter(label="", value=1, non_negative=False)
-    valuenotnoneg, _, _ = notnonneg.get_value_and_bounds_for_optimization()
-    assert np.allclose(1, valuenotnoneg)
-    notnonneg.set_value_from_optimization(valuenotnoneg)
-    assert np.allclose(1, notnonneg.value)
-
-    nonneg1 = Parameter(label="", value=1, non_negative=True)
-    value1, _, _ = nonneg1.get_value_and_bounds_for_optimization()
-    assert not np.allclose(1, value1)
-    nonneg1.set_value_from_optimization(value1)
-    assert np.allclose(1, nonneg1.value)
-
-    nonneg2 = Parameter(label="", value=2, non_negative=True)
-    value2, _, _ = nonneg2.get_value_and_bounds_for_optimization()
-    assert not np.allclose(2, value2)
-    nonneg2.set_value_from_optimization(value2)
-    assert np.allclose(2, nonneg2.value)
-
-    nonnegminmax = Parameter(label="", value=5, minimum=3, maximum=6, non_negative=True)
-    value5, minimum, maximum = nonnegminmax.get_value_and_bounds_for_optimization()
-    assert not np.allclose(5, value5)
-    assert not np.allclose(3, minimum)
-    assert not np.allclose(6, maximum)
 
 
 @pytest.mark.parametrize(
@@ -229,7 +199,6 @@ def test_parameter_pickle(tmpdir):
         expression="testexpression",
         minimum=1,
         maximum=2,
-        non_negative=True,
         value=42,
         vary=False,
     )
@@ -279,7 +248,6 @@ def test_parameter_dict_roundtrip():
         expression="1",
         maximum=2,
         minimum=1,
-        non_negative=True,
         value=42,
         vary=False,
     )
@@ -292,7 +260,6 @@ def test_parameter_dict_roundtrip():
     assert param.expression == param_from_dict.expression
     assert param.maximum == param_from_dict.maximum
     assert param.minimum == param_from_dict.minimum
-    assert param.non_negative == param_from_dict.non_negative
     assert param.value == param_from_dict.value
     assert param.vary == param_from_dict.vary
 
@@ -303,7 +270,6 @@ def test_parameter_list_roundtrip():
         expression="1",
         maximum=2,
         minimum=1,
-        non_negative=True,
         value=42,
         vary=False,
     )
@@ -316,6 +282,5 @@ def test_parameter_list_roundtrip():
     assert param.expression == param_from_list.expression
     assert param.maximum == param_from_list.maximum
     assert param.minimum == param_from_list.minimum
-    assert param.non_negative == param_from_list.non_negative
     assert param.value == param_from_list.value
     assert param.vary == param_from_list.vary

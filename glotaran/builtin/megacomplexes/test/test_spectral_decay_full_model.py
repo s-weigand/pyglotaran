@@ -92,8 +92,8 @@ irf:
     - ["center", 1.3]
     - ["width", 7.8]
 j:
-    - ["1", 1, {"vary": False, "non-negative": False}]
-    - ["0", 0, {"vary": False, "non-negative": False}]
+    - ["1", 1, {"vary": False}]
+    - ["0", 0, {"vary": False}]
 """
 
 PARAMETERS_3C_BASE_PARALLEL = f"""\
@@ -126,17 +126,17 @@ kinetic:
 
 PARAMETERS_3C_INITIAL_PARALLEL = f"""\
 kinetic:
-    - ["1", 300e-3, {{non-negative: true}}]
-    - ["2", 500e-4, {{non-negative: true}}]
-    - ["3", 700e-5, {{non-negative: true}}]
+    - ["1", 300e-3, {{minimum: 0}}]
+    - ["2", 500e-4, {{minimum: 0}}]
+    - ["3", 700e-5, {{minimum: 0}}]
 {PARAMETERS_3C_BASE_PARALLEL}
 """
 
 PARAMETERS_3C_SIM_SEQUENTIAL = f"""\
 kinetic:
-    - ["1", 501e-3, {{non-negative: true}}]
-    - ["2", 202e-4, {{non-negative: true}}]
-    - ["3", 105e-5, {{non-negative: true}}]
+    - ["1", 501e-3, {{minimum: 0}}]
+    - ["2", 202e-4, {{minimum: 0}}]
+    - ["3", 105e-5, {{minimum: 0}}]
 {PARAMETERS_3C_BASE_SEQUENTIAL}
 """
 
@@ -145,7 +145,7 @@ kinetic:
     - ["1", 500e-3]
     - ["2", 200e-4]
     - ["3", 100e-5]
-    - {{"non-negative": True}}
+    - {{"minimum": 0}}
 {PARAMETERS_3C_BASE_SEQUENTIAL}
 """
 

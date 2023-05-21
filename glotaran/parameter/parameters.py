@@ -147,8 +147,8 @@ class Parameters:
         ------
         ValueError
             Raised if the columns 'label' or 'value' doesn't exist. Also raised if the columns
-            'minimum', 'maximum' or 'values' contain non numeric values or if the columns
-            'non-negative' or 'vary' are no boolean.
+            'minimum', 'maximum' or 'values' contain non numeric values or if the column
+            'vary' is no boolean.
 
         Returns
         -------
@@ -165,7 +165,7 @@ class Parameters:
             if any(not np.isreal(v) for v in df[column_name]):
                 raise ValueError(f"Column '{column_name}' in '{source}' has non numeric values.")
 
-        for column_name in filter(lambda x: x in df.columns, ["non_negative", "vary"]):
+        for column_name in filter(lambda x: x in df.columns, ["vary"]):
             df[column_name] = [v != 0 if isinstance(v, int) else v for v in df[column_name]]
             if any(not isinstance(v, bool) for v in df[column_name]):
                 raise ValueError(f"Column '{column_name}' in '{source}' has non boolean values.")
@@ -511,7 +511,6 @@ def param_dict_to_markdown(
         "_Minimum_",
         "_Maximum_",
         "_Vary_",
-        "_Non-Negative_",
         "_Expression_",
     ]
     if label is not None:
@@ -526,7 +525,6 @@ def param_dict_to_markdown(
                 parameter.minimum,
                 parameter.maximum,
                 parameter.vary,
-                parameter.non_negative,
                 f"`{parameter.expression}`",
             ]
             for parameter in parameters

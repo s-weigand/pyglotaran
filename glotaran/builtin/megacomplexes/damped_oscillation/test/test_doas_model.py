@@ -292,8 +292,8 @@ class OneOscillationWithSequentialModel:
     wanted_parameter = Parameters.from_dict(
         {
             "j": [
-                ["1", 1, {"vary": False, "non-negative": False}],
-                ["0", 0, {"vary": False, "non-negative": False}],
+                ["1", 1, {"vary": False}],
+                ["0", 0, {"vary": False}],
             ],
             "kinetic": [
                 ["1", 0.2],
@@ -311,8 +311,8 @@ class OneOscillationWithSequentialModel:
     parameter = Parameters.from_dict(
         {
             "j": [
-                ["1", 1, {"vary": False, "non-negative": False}],
-                ["0", 0, {"vary": False, "non-negative": False}],
+                ["1", 1, {"vary": False}],
+                ["0", 0, {"vary": False}],
             ],
             "kinetic": [
                 ["1", 0.2],
