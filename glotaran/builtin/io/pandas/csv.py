@@ -45,7 +45,7 @@ class CsvProjectIo(ProjectIoInterface):
         *,
         sep: str = ",",
         as_optimized: bool = True,
-        replace_infinfinity: bool = True,
+        replace_infinity: bool = True,
     ) -> None:
         """Save a :class:`Parameters` to a CSV file.
 
@@ -59,11 +59,11 @@ class CsvProjectIo(ProjectIoInterface):
             Other separators can be used optionally., by default ','
         as_optimized : bool
             Weather to include properties which are the result of optimization.
-        replace_infinfinity : bool
+        replace_infinity : bool
             Weather to replace infinity values with empty strings.
         """
         df = parameters.to_dataframe()
-        if replace_infinfinity is True:
+        if replace_infinity is True:
             safe_dataframe_replace(df, "minimum", -np.inf, "")
             safe_dataframe_replace(df, "maximum", np.inf, "")
         df.to_csv(file_name, na_rep="None", index=False, sep=sep)
