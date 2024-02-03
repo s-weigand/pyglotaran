@@ -35,7 +35,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
       - name: Install pyglotaran
@@ -57,15 +57,15 @@ jobs:
           pip freeze
       - name: Upload Example Notebooks Artifact
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: example-notebooks
+          name: example-notebooks-${{ matrix.example_name }}
           path: "*.ipynb"
 
       - name: Upload Example Results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: example-results
+          name: example-results-${{ matrix.example_name }}
           path: ~/pyglotaran_examples_results
 
   compare-results:
@@ -81,9 +81,9 @@ jobs:
           path: comparison-results
 
       - name: Download result artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          name: example-results
+          name: example-results-*
           path: comparison-results-current
 
       - name: Show used versions for result creation
@@ -97,7 +97,7 @@ jobs:
           echo "::endgroup::"
 
       - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
