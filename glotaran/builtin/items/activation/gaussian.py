@@ -92,10 +92,10 @@ class GaussianActivationParameters:
         center: float,
         center_coefficients: list[float],
         width_coefficients: list[float],
-        reciproke_global_axis: bool,
+        reciprocal_global_axis: bool,
     ):
         distance = (
-            (1e3 / index - 1e3 / center) if reciproke_global_axis else (index - center) / 100
+            (1e3 / index - 1e3 / center) if reciprocal_global_axis else (index - center) / 100
         )
         for i, coefficient in enumerate(center_coefficients):
             self.center += coefficient * np.power(distance, i + 1)
@@ -128,7 +128,9 @@ class MultiGaussianActivation(Activation):
         default=None, description="The period of the backsweep in a streak experiment."
     )
     dispersion_center: ParameterType | None = Attribute(
-        default=None, validator=validate_dispersion, description="The center of the dispersion."
+        default=None,
+        validator=validate_dispersion,
+        description="The center of the dispersion.",
     )
     center_dispersion_coefficients: list[ParameterType] = Attribute(
         factory=list, description="The center coefficients of the dispersion."
@@ -136,7 +138,7 @@ class MultiGaussianActivation(Activation):
     width_dispersion_coefficients: list[ParameterType] = Attribute(
         factory=list, description="The width coefficients of the dispersion."
     )
-    reciproke_global_axis: bool = Attribute(
+    reciprocal_global_axis: bool = Attribute(
         default=False,
         description="Set `True` if the global axis is reciproke (e.g. for wavennumbers),",
     )
@@ -206,7 +208,7 @@ class MultiGaussianActivation(Activation):
                         self.dispersion_center,  # type:ignore[arg-type]
                         self.center_dispersion_coefficients,  # type:ignore[arg-type]
                         self.width_dispersion_coefficients,  # type:ignore[arg-type]
-                        self.reciproke_global_axis,
+                        self.reciprocal_global_axis,
                     )
 
         return global_parameters
