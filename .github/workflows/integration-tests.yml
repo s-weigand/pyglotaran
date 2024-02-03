@@ -18,10 +18,11 @@ jobs:
     steps:
       - name: Set example list output
         id: create-example-list
-        uses: glotaran/pyglotaran-examples@main
+        uses: s-weigand/pyglotaran-examples@port-examples
         with:
           example_name: set example list
           set_example_list: true
+          examples_branch: port-examples
 
   run-examples:
     name: "Run Example: "
@@ -40,21 +41,25 @@ jobs:
         run: |
           pip install wheel
           pip install -r requirements_pinned.txt
+          pip install git+https://github.com/glotaran/pyglotaran-extras.git@staging_support
           pip install .
       - name: ${{ matrix.example_name }}
         id: example-run
-        uses: glotaran/pyglotaran-examples@main
+        uses: s-weigand/pyglotaran-examples@port-examples
         with:
           example_name: ${{ matrix.example_name }}
+          examples_branch: port-examples
+          install_extras: false
       - name: Installed packages
         if: always()
         run: |
           pip freeze
-      - name: Upload Example Plots Artifact
+      - name: Upload Example Notebooks Artifact
+        if: always()
         uses: actions/upload-artifact@v3
         with:
-          name: example-plots
-          path: ${{ steps.example-run.outputs.plots-path }}
+          name: example-notebooks
+          path: "*.ipynb"
 
       - name: Upload Example Results
         uses: actions/upload-artifact@v3
