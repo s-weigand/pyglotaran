@@ -18,6 +18,7 @@ class ClpGuideElement(Element):
     register_as: ClassVar[str] = "clp-guide"
     _exclusive: bool = True
     target: str
+    dimension: str
 
     def calculate_matrix(
         self,
