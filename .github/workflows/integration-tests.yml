@@ -44,6 +44,7 @@ jobs:
           pip install -r requirements_pinned.txt
           pip install git+https://github.com/glotaran/pyglotaran-extras.git@staging_support
           pip install .
+
       - name: ${{ matrix.example_name }}
         id: example-run
         uses: s-weigand/pyglotaran-examples@port-examples
@@ -51,22 +52,18 @@ jobs:
           example_name: ${{ matrix.example_name }}
           examples_branch: port-examples
           install_extras: false
+
       - name: Installed packages
         if: always()
         run: |
           pip freeze
+
       - name: Upload Example Notebooks Artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: example-notebooks-${{ matrix.example_name }}
-          path: "*.ipynb"
-
-      - name: Upload Example Results
-        uses: actions/upload-artifact@v4
-        with:
-          name: example-results-${{ matrix.example_name }}
-          path: ~/pyglotaran_examples_results
+          path: ${{ steps.example-run.outputs.artifact-paths }}
 
   compare-results:
     name: Compare Results
