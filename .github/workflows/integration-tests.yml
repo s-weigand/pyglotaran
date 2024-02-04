@@ -63,7 +63,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: example-notebooks-${{ matrix.example_name }}
-          path: ${{ steps.example-run.outputs.artifact-paths }}
+          path: |
+            ${{ join(fromJson(steps.example-run.outputs.artifact-paths), '\n') }}
 
   compare-results:
     name: Compare Results
