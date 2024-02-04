@@ -63,16 +63,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: example-notebooks-${{ matrix.example_name }}
-          path: |
-            ${{ join(fromJson(steps.example-run.outputs.artifact-paths), '\n') }}
+          path: ${{ steps.example-run.outputs.notebook-path }}
 
       - name: Upload Example Notebooks Artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: example-results-${{ matrix.example_name }}
-          path: |
-            /home/runner/pyglotaran_examples_results_staging/**/*
+          path: /home/runner/pyglotaran_examples_results_staging/**/*
 
   compare-results:
     name: Compare Results
