@@ -6,6 +6,7 @@ from typing import Literal
 
 from pydantic import BaseModel
 from pydantic import ConfigDict
+from pydantic import Field
 
 from glotaran.builtin.io.yml.utils import write_dict
 from glotaran.io import save_dataset
@@ -23,7 +24,10 @@ if TYPE_CHECKING:
 class SavingOptions(BaseModel):
     """A collection of options for result saving."""
 
-    data_filter: list[str] | None = None
+    data_filter: list[str] = Field(
+        default_factory=list,
+        description="List of per dataset optimization result attributes to exclude.",
+    )
     data_format: Literal["nc"] = "nc"
     parameter_format: Literal["csv"] = "csv"
 
@@ -52,8 +56,18 @@ class Result(BaseModel):
             raise GlotaranUserError(
                 "Save path already exists. Use allow_overwrite=True to overwrite."
             )
-        result_dict: dict[str, Any] = {"data": {}, "experiments": {}}
-        path.mkdir(exist_ok=True, parents=True)
+        result_dict: dict[str, Any] = {
+            "data": {},
+            "experiments": {},
+            "optimization_info": self.optimization_info.model_dump(
+                exclude={
+                    "parameter_history",
+                    "optimization_history",
+                    "covariance_matrix",
+                    "jacobian",
+                }
+            ),
+        }
 
         # TODO: Save scheme or experiments
         #  experiment_folder = path / "experiments"
@@ -63,29 +77,54 @@ class Result(BaseModel):
         #      result_dict["experiments"][label] = experiment_path
         #      write_dict(experiment.model_dump(), experiment_path)
 
-        data_path = path / "data"
-        data_path.mkdir(exist_ok=True)
-        for label, data in self.datasets.items():
-            dataset_path = data_path / f"{label}.{options.data_format}"
-            result_dict["data"][label] = str(dataset_path)
-            if options.data_filter is not None:
-                data = data[options.data_filter]
-            save_dataset(data, dataset_path, allow_overwrite=allow_overwrite)
+        data_path = path / "datasets"
+        for label, optimization_result in self.datasets.items():
+            dataset_path = data_path / label
+            data_path.mkdir(parents=True, exist_ok=True)
+            result_dict["data"][label] = dataset_path.relative_to(path).as_posix()
+            for top_level_dataset_attr in ["input_data", "residuals", "fitted_data"]:
+                if top_level_dataset_attr not in options.data_filter:
+                    value = getattr(optimization_result, top_level_dataset_attr)
+                    if value is None:
+                        continue
+                    save_dataset(
+                        value,
+                        dataset_path / f"{top_level_dataset_attr}.{options.data_format}",
+                        allow_overwrite=allow_overwrite,
+                    )
+            if "elements" not in options.data_filter:
+                for element_label, element_result in optimization_result.elements.items():
+                    save_dataset(
+                        element_result,
+                        dataset_path / "elements" / f"{element_label}.{options.data_format}",
+                        allow_overwrite=allow_overwrite,
+                    )
+            if "activations" not in options.data_filter:
+                for activation_label, activation_result in optimization_result.activations.items():
+                    save_dataset(
+                        activation_result,
+                        dataset_path / "activations" / f"{activation_label}.{options.data_format}",
+                        allow_overwrite=allow_overwrite,
+                    )
 
         optimization_history_path = path / "optimization_history.csv"
-        result_dict["optimization_history"] = str(optimization_history_path)
+        result_dict["optimization_history"] = optimization_history_path.relative_to(
+            path
+        ).as_posix()
         self.optimization_info.optimization_history.to_csv(optimization_history_path)
 
-        parameters_initial_path = path / f"parameters_initial.{options.parameter_format}"
-        result_dict["parameters_initial"] = str(parameters_initial_path)
+        initial_parameters_path = path / f"initial_parameters.{options.parameter_format}"
+        result_dict["initial_parameters"] = initial_parameters_path.relative_to(path).as_posix()
         save_parameters(
             self.initial_parameters,
-            parameters_initial_path,
+            initial_parameters_path,
             allow_overwrite=allow_overwrite,
         )
 
         parameters_optimized_path = path / f"parameters_optimized.{options.parameter_format}"
-        result_dict["parameters_optimized"] = str(parameters_optimized_path)
+        result_dict["parameters_optimized"] = parameters_optimized_path.relative_to(
+            path
+        ).as_posix()
         save_parameters(
             self.optimized_parameters,
             parameters_optimized_path,

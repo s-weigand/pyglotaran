@@ -11,6 +11,7 @@ import xarray as xr
 from pydantic import BaseModel
 from pydantic import ConfigDict
 from pydantic import Field
+from warnings import warn
 
 from glotaran.model.data_model import DataModel
 from glotaran.model.data_model import iterate_data_model_elements
@@ -52,9 +53,13 @@ class OptimizationResult(BaseModel):
     residuals: xr.DataArray | xr.Dataset | None = None
 
     @property
-    def fitted_data(self) -> xr.Dataset:
+    def fitted_data(self) -> xr.Dataset | None:
         if self.input_data is None or self.residuals is None:
-            raise ValueError("Data and residuals must be set to calculate fitted data.")
+            warn(
+                UserWarning("Data and residuals must be set to calculate fitted data."),
+                stacklevel=2,
+            )
+            raise None
         return self.input_data - self.residuals
 
 
