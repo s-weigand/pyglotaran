@@ -12,6 +12,7 @@ from glotaran.model import DatasetGroup
 from glotaran.model import DatasetModel
 from glotaran.model import EqualAreaPenalty
 from glotaran.model.dataset_model import has_dataset_model_global_model
+from glotaran.model.dataset_model import is_dataset_single_amplitude_model
 from glotaran.model.item import fill_item
 from glotaran.optimization.data_provider import DataProvider
 from glotaran.optimization.data_provider import DataProviderLinked
@@ -343,7 +344,7 @@ class EstimationProviderUnlinked(EstimationProvider):
 
             if has_dataset_model_global_model(dataset_model):
                 residuals[label] = xr.DataArray(
-                    np.array(self._residuals[label]).T.reshape(model_axis.size, global_axis.size),
+                    np.array(self._residuals[label]).reshape(global_axis.size, model_axis.size).T,
                     coords={global_dimension: global_axis, model_dimension: model_axis},
                     dims=[model_dimension, global_dimension],
                 )
@@ -352,7 +353,9 @@ class EstimationProviderUnlinked(EstimationProvider):
                     label
                 ).clp_labels
                 clps[label] = xr.DataArray(
-                    np.array(self._clps[label]).reshape((len(global_clp_labels), len(clp_labels))),
+                    np.diag(self._clps[label])
+                    if is_dataset_single_amplitude_model(dataset_model)
+                    else np.array(self._clps[label]).reshape((len(global_clp_labels), len(clp_labels))),
                     coords={
                         "global_clp_label": global_clp_labels,
                         "clp_label": clp_labels,
