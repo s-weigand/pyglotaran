@@ -14,6 +14,7 @@ import xarray as xr
 from glotaran.model import DatasetGroup
 from glotaran.model import DatasetModel
 from glotaran.model.dataset_model import has_dataset_model_global_model
+from glotaran.model.dataset_model import is_dataset_single_amplitude_model
 from glotaran.model.dataset_model import iterate_dataset_model_global_megacomplexes
 from glotaran.model.dataset_model import iterate_dataset_model_megacomplexes
 from glotaran.model.interval_item import IntervalItem
@@ -592,7 +593,14 @@ class MatrixProviderUnlinked(MatrixProvider):
                 matrix_container = self.get_matrix_container(label)
                 matrix = matrix_container.matrix
 
-                if matrix_container.is_index_dependent:
+                if is_dataset_single_amplitude_model(dataset_model):
+                    full_matrix = np.column_stack(
+                        [
+                            np.kron(global_matrix[:, i], matrix[:, i])
+                            for i in range(global_matrix.shape[-1])
+                        ]
+                    )
+                elif matrix_container.is_index_dependent:
                     full_matrix = np.concatenate(
                         [
                             np.kron(global_matrix[i, :], matrix[i, :, :])
