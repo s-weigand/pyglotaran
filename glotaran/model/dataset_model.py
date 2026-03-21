@@ -214,9 +214,10 @@ def has_dataset_model_global_model(dataset_model: DatasetModel) -> bool:
         dataset_model.global_megacomplex is not None and len(dataset_model.global_megacomplex) != 0
     )
 
+
 def is_dataset_single_amplitude_model(dataset_model: DatasetModel) -> bool:
     """Check if the model is a single amplitude model.
-    
+
     Parameters
     ----------
     dataset_model: DatasetModel
@@ -227,6 +228,7 @@ def is_dataset_single_amplitude_model(dataset_model: DatasetModel) -> bool:
     bool
     """
     return dataset_model.single_amplitude_model
+
 
 def get_dataset_model_model_dimension(dataset_model: DatasetModel) -> str:
     """Get the dataset model's model dimension.

@@ -353,9 +353,13 @@ class EstimationProviderUnlinked(EstimationProvider):
                     label
                 ).clp_labels
                 clps[label] = xr.DataArray(
-                    np.diag(self._clps[label])
-                    if is_dataset_single_amplitude_model(dataset_model)
-                    else np.array(self._clps[label]).reshape((len(global_clp_labels), len(clp_labels))),
+                    (
+                        np.diag(self._clps[label])
+                        if is_dataset_single_amplitude_model(dataset_model)
+                        else np.array(self._clps[label]).reshape(
+                            (len(global_clp_labels), len(clp_labels))
+                        )
+                    ),
                     coords={
                         "global_clp_label": global_clp_labels,
                         "clp_label": clp_labels,
