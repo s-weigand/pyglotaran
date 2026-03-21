@@ -627,9 +627,12 @@ class MatrixProviderUnlinked(MatrixProvider):
         nr_of_clps = 0
         for dataset_label, dataset_model in self.group.dataset_models.items():
             if has_dataset_model_global_model(dataset_model):
-                model_clp_labels = self.get_matrix_container(dataset_label).clp_labels
                 global_clp_labels = self.get_global_matrix_container(dataset_label).clp_labels
-                nr_of_clps += len(model_clp_labels) * len(global_clp_labels)
+                if is_dataset_single_amplitude_model(dataset_model):
+                    nr_of_clps += len(global_clp_labels)
+                else:
+                    model_clp_labels = self.get_matrix_container(dataset_label).clp_labels
+                    nr_of_clps += len(model_clp_labels) * len(global_clp_labels)
             else:
                 global_axis_indexes = range(
                     len(self._data_provider.get_global_axis(dataset_label))
